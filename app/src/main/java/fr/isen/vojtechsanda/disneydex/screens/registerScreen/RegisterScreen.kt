@@ -1,40 +1,43 @@
 package fr.isen.vojtechsanda.disneydex.screens.registerScreen
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationBody
 import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationHero
+import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationTitle
 import fr.isen.vojtechsanda.disneydex.components.layout.PublicScaffold
+import fr.isen.vojtechsanda.disneydex.routing.LoginRoute
 import fr.isen.vojtechsanda.disneydex.screens.registerScreen.components.RegisterForm
 
 @Composable
-fun RegisterScreen() {
+fun RegisterScreen(navController: NavHostController) {
     PublicScaffold { modifier ->
-        Column(
-            modifier = modifier.fillMaxSize()
-        ) {
-            // Top Half (Hero Section)
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1.4f),
-            ) {
-                AuthenticationHero()
-            }
-            
-            // Bottom Half (Form Section)
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(2.6f)
-                    .padding(start = 24.dp, end = 24.dp, bottom = 12.dp),
-            ) {
-                RegisterForm()
+        Column(modifier) {
+            AuthenticationHero(Modifier.weight(1.4f))
+
+            AuthenticationBody(Modifier.weight(2.6f)) {
+                AuthenticationTitle(
+                    title = "Create an account",
+                    subtitle = "Register and join the Multiverse!"
+                )
+
+                RegisterForm(
+                    onRegister = { navController.navigate(LoginRoute) }
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                TextButton(onClick = { navController.navigate(LoginRoute) }) {
+                    Text("I already have an account. Log In.", color = Color.LightGray)
+                }
             }
         }
     }

@@ -18,14 +18,14 @@ fun AppRouter() {
 
     NavHost(
         navController = navController,
-        startDestination = LoginRoute
+        startDestination = RegisterRoute
     ) {
         composable<LoginRoute> {
-            LoginScreen()
+            LoginScreen(navController)
         }
 
         composable<RegisterRoute> {
-            RegisterScreen()
+            RegisterScreen(navController)
         }
 
         composable<UniversesRoute> {

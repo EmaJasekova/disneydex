@@ -4,12 +4,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -21,37 +19,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import fr.isen.vojtechsanda.disneydex.ui.theme.loginTextFieldColors
 
 @Composable
-fun LoginForm() {
+fun LoginForm(onLogin: () -> Unit) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Headers
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.Start
-        ) {
-            Text(
-                text = "Welcome back!",
-                fontSize = 24.sp,
-                color = Color.LightGray,
-                modifier = Modifier.padding(bottom = 6.dp),
-            )
-            Text(
-                text = "Continue your journey in the Multiverse!",
-                fontSize = 16.sp,
-                color = Color.Gray,
-                modifier = Modifier.padding(bottom = 14.dp)
-            )
-        }
-
-
         OutlinedTextField(
             label = { Text("Email") },
             value = email,
@@ -62,7 +40,7 @@ fun LoginForm() {
             singleLine = true
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(8.dp))
 
         OutlinedTextField(
             label = { Text("Password") },
@@ -78,18 +56,19 @@ fun LoginForm() {
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(
-            onClick = { println("Logging in with $email") },
+            onClick = {
+                // TODO: Handle login logic here
+
+                email = ""
+                password = ""
+
+                onLogin()
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp)
         ) {
-            Text("Login")
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        TextButton(onClick = { /* Navigate */ }) {
-            Text("I don't have any account. Register.", color = Color.LightGray)
+            Text("Login", color = Color.White)
         }
     }
 }
