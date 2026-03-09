@@ -4,8 +4,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.Button
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,6 +20,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import fr.isen.vojtechsanda.disneydex.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.theme.loginTextFieldColors
 
 @Composable
@@ -44,7 +45,8 @@ fun RegisterForm(
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text, capitalization = KeyboardCapitalization.None
             ),
-            singleLine = true
+            singleLine = true,
+            shape = RoundedCornerShape(8.dp)
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -56,7 +58,8 @@ fun RegisterForm(
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-            singleLine = true
+            singleLine = true,
+            shape = RoundedCornerShape(8.dp)
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -69,7 +72,8 @@ fun RegisterForm(
             colors = loginTextFieldColors(),
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            singleLine = true
+            singleLine = true,
+            shape = RoundedCornerShape(8.dp)
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -83,13 +87,16 @@ fun RegisterForm(
             visualTransformation = PasswordVisualTransformation(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             singleLine = true,
-            isError = password.isNotEmpty() && confirmPassword.isNotEmpty() && password != confirmPassword
+            isError = password.isNotEmpty() && confirmPassword.isNotEmpty() && password != confirmPassword,
+            shape = RoundedCornerShape(8.dp)
         )
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Button(
+        DexButton(
             onClick = {
+                // TODO: Add validation check
+
                 // TODO: Handle registration logic here
 
                 username = ""
