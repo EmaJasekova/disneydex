@@ -1,0 +1,2414 @@
+{
+  "universes": [
+    {
+      "name": "Star Wars",
+      "sagas": [
+        {
+          "name": "Skywalker Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Star Wars: Episode I - The Phantom Menace",
+              "release_date": "1999-05-19"
+            },
+            {
+              "name": "Star Wars: Episode II - Attack of the Clones",
+              "release_date": "2002-05-16"
+            },
+            {
+              "name": "Star Wars: Episode III - Revenge of the Sith",
+              "release_date": "2005-05-19"
+            },
+            {
+              "name": "Star Wars: Episode IV - A New Hope",
+              "release_date": "1977-05-25"
+            },
+            {
+              "name": "Star Wars: Episode V - The Empire Strikes Back",
+              "release_date": "1980-05-21"
+            },
+            {
+              "name": "Star Wars: Episode VI - Return of the Jedi",
+              "release_date": "1983-05-25"
+            },
+            {
+              "name": "Star Wars: Episode VII - The Force Awakens",
+              "release_date": "2015-12-18"
+            },
+            {
+              "name": "Star Wars: Episode VIII - The Last Jedi",
+              "release_date": "2017-12-15"
+            },
+            {
+              "name": "Star Wars: Episode IX - The Rise of Skywalker",
+              "release_date": "2019-12-20"
+            }
+          ]
+        },
+        {
+          "name": "Spin-offs",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Rogue One: A Star Wars Story",
+              "release_date": "2016-12-16"
+            },
+            {
+              "name": "Solo: A Star Wars Story",
+              "release_date": "2018-05-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marvel Cinematic Universe",
+      "sagas": [
+        {
+          "name": "The Infinity Saga - Phase 1",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Iron Man",
+              "release_date": "2008-05-02"
+            },
+            {
+              "name": "The Incredible Hulk",
+              "release_date": "2008-06-13"
+            },
+            {
+              "name": "Iron Man 2",
+              "release_date": "2010-05-07"
+            },
+            {
+              "name": "Thor",
+              "release_date": "2011-05-06"
+            },
+            {
+              "name": "Captain America: The First Avenger",
+              "release_date": "2011-07-22"
+            },
+            {
+              "name": "The Avengers",
+              "release_date": "2012-05-04"
+            }
+          ]
+        },
+        {
+          "name": "The Infinity Saga - Phase 2",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Iron Man 3",
+              "release_date": "2013-05-03"
+            },
+            {
+              "name": "Thor: The Dark World",
+              "release_date": "2013-11-08"
+            },
+            {
+              "name": "Captain America: The Winter Soldier",
+              "release_date": "2014-04-04"
+            },
+            {
+              "name": "Guardians of the Galaxy",
+              "release_date": "2014-08-01"
+            },
+            {
+              "name": "Avengers: Age of Ultron",
+              "release_date": "2015-05-01"
+            },
+            {
+              "name": "Ant-Man",
+              "release_date": "2015-07-17"
+            }
+          ]
+        },
+        {
+          "name": "The Infinity Saga - Phase 3",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Captain America: Civil War",
+              "release_date": "2016-05-06"
+            },
+            {
+              "name": "Doctor Strange",
+              "release_date": "2016-11-04"
+            },
+            {
+              "name": "Guardians of the Galaxy Vol. 2",
+              "release_date": "2017-05-05"
+            },
+            {
+              "name": "Spider-Man: Homecoming",
+              "release_date": "2017-07-07"
+            },
+            {
+              "name": "Thor: Ragnarok",
+              "release_date": "2017-11-03"
+            },
+            {
+              "name": "Black Panther",
+              "release_date": "2018-02-16"
+            },
+            {
+              "name": "Avengers: Infinity War",
+              "release_date": "2018-04-27"
+            },
+            {
+              "name": "Ant-Man and the Wasp",
+              "release_date": "2018-07-06"
+            },
+            {
+              "name": "Captain Marvel",
+              "release_date": "2019-03-08"
+            },
+            {
+              "name": "Avengers: Endgame",
+              "release_date": "2019-04-26"
+            },
+            {
+              "name": "Spider-Man: Far From Home",
+              "release_date": "2019-07-02"
+            }
+          ]
+        },
+        {
+          "name": "The Multiverse Saga - Phase 4",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Black Widow",
+              "release_date": "2021-07-09"
+            },
+            {
+              "name": "Shang-Chi and the Legend of the Ten Rings",
+              "release_date": "2021-09-03"
+            },
+            {
+              "name": "Eternals",
+              "release_date": "2021-11-05"
+            },
+            {
+              "name": "Spider-Man: No Way Home",
+              "release_date": "2021-12-17"
+            },
+            {
+              "name": "Doctor Strange in the Multiverse of Madness",
+              "release_date": "2022-05-06"
+            },
+            {
+              "name": "Thor: Love and Thunder",
+              "release_date": "2022-07-08"
+            },
+            {
+              "name": "Black Panther: Wakanda Forever",
+              "release_date": "2022-11-11"
+            }
+          ]
+        },
+        {
+          "name": "The Multiverse Saga - Phase 5",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Ant-Man and the Wasp: Quantumania",
+              "release_date": "2023-02-17"
+            },
+            {
+              "name": "Guardians of the Galaxy Vol. 3",
+              "release_date": "2023-05-05"
+            },
+            {
+              "name": "The Marvels",
+              "release_date": "2023-11-10"
+            },
+            {
+              "name": "Deadpool & Wolverine",
+              "release_date": "2024-07-26"
+            },
+            {
+              "name": "Captain America: Brave New World",
+              "release_date": "2025-02-14"
+            },
+            {
+              "name": "Thunderbolts*",
+              "release_date": "2025-05-02"
+            }
+          ]
+        },
+        {
+          "name": "The Multiverse Saga - Phase 6",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "The Fantastic Four: First Steps",
+              "release_date": "2025-07-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "X-Men Cinematic Universe",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "X-Men",
+              "release_date": "2000-07-14"
+            },
+            {
+              "name": "X2: X-Men United",
+              "release_date": "2003-05-02"
+            },
+            {
+              "name": "X-Men: The Last Stand",
+              "release_date": "2006-05-26"
+            },
+            {
+              "name": "X-Men Origins: Wolverine",
+              "release_date": "2009-05-01"
+            },
+            {
+              "name": "X-Men: First Class",
+              "release_date": "2011-06-03"
+            },
+            {
+              "name": "The Wolverine",
+              "release_date": "2013-07-26"
+            },
+            {
+              "name": "X-Men: Days of Future Past",
+              "release_date": "2014-05-23"
+            },
+            {
+              "name": "Deadpool",
+              "release_date": "2016-02-12"
+            },
+            {
+              "name": "X-Men: Apocalypse",
+              "release_date": "2016-05-27"
+            },
+            {
+              "name": "Logan",
+              "release_date": "2017-03-03"
+            },
+            {
+              "name": "Deadpool 2",
+              "release_date": "2018-05-18"
+            },
+            {
+              "name": "Once Upon a Deadpool",
+              "release_date": "2018-12-12"
+            },
+            {
+              "name": "Dark Phoenix",
+              "release_date": "2019-06-07"
+            },
+            {
+              "name": "The New Mutants",
+              "release_date": "2020-08-28"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Indiana Jones",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Raiders of the Lost Ark",
+              "release_date": "1981-06-12"
+            },
+            {
+              "name": "Indiana Jones and the Temple of Doom",
+              "release_date": "1984-05-23"
+            },
+            {
+              "name": "Indiana Jones and the Last Crusade",
+              "release_date": "1989-05-24"
+            },
+            {
+              "name": "Indiana Jones and the Kingdom of the Crystal Skull",
+              "release_date": "2008-05-22"
+            },
+            {
+              "name": "Indiana Jones and the Dial of Destiny",
+              "release_date": "2023-06-30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pirates of the Caribbean",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
+              "release_date": "2003-07-09"
+            },
+            {
+              "name": "Pirates of the Caribbean: Dead Man's Chest",
+              "release_date": "2006-07-07"
+            },
+            {
+              "name": "Pirates of the Caribbean: At World's End",
+              "release_date": "2007-05-25"
+            },
+            {
+              "name": "Pirates of the Caribbean: On Stranger Tides",
+              "release_date": "2011-05-20"
+            },
+            {
+              "name": "Pirates of the Caribbean: Dead Men Tell No Tales",
+              "release_date": "2017-05-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Herbie",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Love Bug",
+              "release_date": "1969-03-13"
+            },
+            {
+              "name": "Herbie Rides Again",
+              "release_date": "1974-06-06"
+            },
+            {
+              "name": "Herbie Goes to Monte Carlo",
+              "release_date": "1977-06-24"
+            },
+            {
+              "name": "Herbie Goes Bananas",
+              "release_date": "1980-06-25"
+            },
+            {
+              "name": "Herbie: Fully Loaded",
+              "release_date": "2005-06-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spider-Man",
+      "sagas": [
+        {
+          "name": "Spider-Man Trilogy",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Spider-Man",
+              "release_date": "2002-05-03"
+            },
+            {
+              "name": "Spider-Man 2",
+              "release_date": "2004-06-30"
+            },
+            {
+              "name": "Spider-Man 3",
+              "release_date": "2007-05-04"
+            }
+          ]
+        },
+        {
+          "name": "The Amazing Spider-Man Duology",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "The Amazing Spider-Man",
+              "release_date": "2012-07-03"
+            },
+            {
+              "name": "The Amazing Spider-Man 2",
+              "release_date": "2014-05-02"
+            }
+          ]
+        },
+        {
+          "name": "Sony's Spider-Man Universe",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Venom",
+              "release_date": "2018-10-05"
+            },
+            {
+              "name": "Venom: Let There Be Carnage",
+              "release_date": "2021-10-01"
+            },
+            {
+              "name": "Morbius",
+              "release_date": "2022-04-01"
+            },
+            {
+              "name": "Madame Web",
+              "release_date": "2024-02-14"
+            },
+            {
+              "name": "Venom: The Last Dance",
+              "release_date": "2024-10-25"
+            },
+            {
+              "name": "Kraven the Hunter",
+              "release_date": "2024-12-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Planet of the Apes",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Planet of the Apes",
+              "release_date": "1968-02-08"
+            },
+            {
+              "name": "Beneath the Planet of the Apes",
+              "release_date": "1970-05-26"
+            },
+            {
+              "name": "Escape from the Planet of the Apes",
+              "release_date": "1971-05-21"
+            },
+            {
+              "name": "Conquest of the Planet of the Apes",
+              "release_date": "1972-06-14"
+            },
+            {
+              "name": "Battle for the Planet of the Apes",
+              "release_date": "1973-06-15"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Planet of the Apes",
+              "release_date": "2001-07-27"
+            }
+          ]
+        },
+        {
+          "name": "Reboot",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Rise of the Planet of the Apes",
+              "release_date": "2011-08-05"
+            },
+            {
+              "name": "Dawn of the Planet of the Apes",
+              "release_date": "2014-07-11"
+            },
+            {
+              "name": "War for the Planet of the Apes",
+              "release_date": "2017-07-14"
+            },
+            {
+              "name": "Kingdom of the Planet of the Apes",
+              "release_date": "2024-05-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alien & Predator",
+      "sagas": [
+        {
+          "name": "Alien",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Alien",
+              "release_date": "1979-05-25"
+            },
+            {
+              "name": "Aliens",
+              "release_date": "1986-07-18"
+            },
+            {
+              "name": "Alien 3",
+              "release_date": "1992-05-22"
+            },
+            {
+              "name": "Alien Resurrection",
+              "release_date": "1997-11-26"
+            },
+            {
+              "name": "Prometheus",
+              "release_date": "2012-06-08"
+            },
+            {
+              "name": "Alien: Covenant",
+              "release_date": "2017-05-19"
+            },
+            {
+              "name": "Alien: Romulus",
+              "release_date": "2024-08-16"
+            }
+          ]
+        },
+        {
+          "name": "Predator",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Predator",
+              "release_date": "1987-06-12"
+            },
+            {
+              "name": "Predator 2",
+              "release_date": "1990-11-21"
+            },
+            {
+              "name": "Predators",
+              "release_date": "2010-07-09"
+            },
+            {
+              "name": "The Predator",
+              "release_date": "2018-09-14"
+            },
+            {
+              "name": "Predator: Badlands",
+              "release_date": "2025-11-07"
+            }
+          ]
+        },
+        {
+          "name": "Alien vs. Predator",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Alien vs. Predator",
+              "release_date": "2004-08-13"
+            },
+            {
+              "name": "Aliens vs. Predator: Requiem",
+              "release_date": "2007-12-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Die Hard",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Action",
+          "movies": [
+            {
+              "name": "Die Hard",
+              "release_date": "1988-07-15"
+            },
+            {
+              "name": "Die Hard 2",
+              "release_date": "1990-07-04"
+            },
+            {
+              "name": "Die Hard with a Vengeance",
+              "release_date": "1995-05-19"
+            },
+            {
+              "name": "Live Free or Die Hard",
+              "release_date": "2007-06-27"
+            },
+            {
+              "name": "A Good Day to Die Hard",
+              "release_date": "2013-02-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Avatar",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Avatar",
+              "release_date": "2009-12-18"
+            },
+            {
+              "name": "Avatar: The Way of Water",
+              "release_date": "2022-12-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tron",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Tron",
+              "release_date": "1982-07-09"
+            },
+            {
+              "name": "Tron: Legacy",
+              "release_date": "2010-12-17"
+            },
+            {
+              "name": "Tron: Ares",
+              "release_date": "2025-10-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "National Treasure",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "National Treasure",
+              "release_date": "2004-11-19"
+            },
+            {
+              "name": "National Treasure: Book of Secrets",
+              "release_date": "2007-12-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dexter Riley",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Computer Wore Tennis Shoes",
+              "release_date": "1969-12-31"
+            },
+            {
+              "name": "Now You See Him, Now You Don't",
+              "release_date": "1972-07-12"
+            },
+            {
+              "name": "The Strongest Man in the World",
+              "release_date": "1975-02-06"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flubber",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Absent-Minded Professor",
+              "release_date": "1961-03-16"
+            },
+            {
+              "name": "Son of Flubber",
+              "release_date": "1963-01-16"
+            }
+          ]
+        },
+        {
+          "name": "Cinematic Remake",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Flubber",
+              "release_date": "1997-11-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Freaky Friday",
+      "sagas": [
+        {
+          "name": "Original Film",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Freaky Friday",
+              "release_date": "1977-01-21"
+            }
+          ]
+        },
+        {
+          "name": "Cinematic Remake",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Freaky Friday",
+              "release_date": "2003-08-06"
+            },
+            {
+              "name": "Freakier Friday",
+              "release_date": "2025-08-08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Homeward Bound",
+      "sagas": [
+        {
+          "name": "Original Film",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "The Incredible Journey",
+              "release_date": "1963-11-20"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Homeward Bound: The Incredible Journey",
+              "release_date": "1993-02-03"
+            },
+            {
+              "name": "Homeward Bound II: Lost in San Francisco",
+              "release_date": "1996-03-08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Witch Mountain",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Escape to Witch Mountain",
+              "release_date": "1975-03-21"
+            },
+            {
+              "name": "Return from Witch Mountain",
+              "release_date": "1978-03-10"
+            }
+          ]
+        },
+        {
+          "name": "Cinematic Remake",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Race to Witch Mountain",
+              "release_date": "2009-03-13"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Chronicles of Narnia",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+              "release_date": "2005-12-09"
+            },
+            {
+              "name": "The Chronicles of Narnia: Prince Caspian",
+              "release_date": "2008-05-16"
+            },
+            {
+              "name": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+              "release_date": "2010-12-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Muppets",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Puppetry",
+          "movies": [
+            {
+              "name": "The Muppet Movie",
+              "release_date": "1979-06-22"
+            },
+            {
+              "name": "The Great Muppet Caper",
+              "release_date": "1981-06-26"
+            },
+            {
+              "name": "The Muppets Take Manhattan",
+              "release_date": "1984-07-13"
+            },
+            {
+              "name": "The Muppet Christmas Carol",
+              "release_date": "1992-12-11"
+            },
+            {
+              "name": "Muppet Treasure Island",
+              "release_date": "1996-02-16"
+            },
+            {
+              "name": "Muppets from Space",
+              "release_date": "1999-07-14"
+            },
+            {
+              "name": "The Muppets",
+              "release_date": "2011-11-23"
+            },
+            {
+              "name": "Muppets Most Wanted",
+              "release_date": "2014-03-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Mighty Ducks",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Sports",
+          "movies": [
+            {
+              "name": "The Mighty Ducks",
+              "release_date": "1992-10-02"
+            },
+            {
+              "name": "D2: The Mighty Ducks",
+              "release_date": "1994-03-25"
+            },
+            {
+              "name": "D3: The Mighty Ducks",
+              "release_date": "1996-10-04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Shaggy Dog",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Shaggy Dog",
+              "release_date": "1959-03-19"
+            },
+            {
+              "name": "The Shaggy D.A.",
+              "release_date": "1976-12-17"
+            }
+          ]
+        },
+        {
+          "name": "Cinematic Remake",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Shaggy Dog",
+              "release_date": "2006-03-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Santa Clause",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Santa Clause",
+              "release_date": "1994-11-11"
+            },
+            {
+              "name": "The Santa Clause 2",
+              "release_date": "2002-11-01"
+            },
+            {
+              "name": "The Santa Clause 3: The Escape Clause",
+              "release_date": "2006-11-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Alvin and the Chipmunks",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Alvin and the Chipmunks",
+              "release_date": "2007-12-14"
+            },
+            {
+              "name": "Alvin and the Chipmunks: The Squeakquel",
+              "release_date": "2009-12-23"
+            },
+            {
+              "name": "Alvin and the Chipmunks: Chipwrecked",
+              "release_date": "2011-12-16"
+            },
+            {
+              "name": "Alvin and the Chipmunks: The Road Chip",
+              "release_date": "2015-12-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Big Momma",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Big Momma's House",
+              "release_date": "2000-06-02"
+            },
+            {
+              "name": "Big Momma's House 2",
+              "release_date": "2006-01-27"
+            },
+            {
+              "name": "Big Mommas: Like Father, Like Son",
+              "release_date": "2011-02-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Charlie Chan",
+      "sagas": [
+        {
+          "name": "Spin-offs",
+          "genre": "Mystery",
+          "movies": [
+            {
+              "name": "Behind That Curtain",
+              "release_date": "1929-06-28"
+            },
+            {
+              "name": "Eran Trece",
+              "release_date": "1931-11-15"
+            }
+          ]
+        },
+        {
+          "name": "Warner Oland Saga",
+          "genre": "Mystery",
+          "movies": [
+            {
+              "name": "Charlie Chan Carries On",
+              "release_date": "1931-04-12"
+            },
+            {
+              "name": "The Black Camel",
+              "release_date": "1931-06-21"
+            },
+            {
+              "name": "Charlie Chan's Chance",
+              "release_date": "1932-01-24"
+            },
+            {
+              "name": "Charlie Chan's Greatest Case",
+              "release_date": "1933-09-15"
+            },
+            {
+              "name": "The Chinese Parrot",
+              "release_date": "1934-01-01"
+            },
+            {
+              "name": "Charlie Chan in London",
+              "release_date": "1934-09-12"
+            },
+            {
+              "name": "Charlie Chan in Paris",
+              "release_date": "1935-01-21"
+            },
+            {
+              "name": "Charlie Chan in Egypt",
+              "release_date": "1935-06-21"
+            },
+            {
+              "name": "Charlie Chan in Shanghai",
+              "release_date": "1935-10-14"
+            },
+            {
+              "name": "Charlie Chan's Secret",
+              "release_date": "1936-01-10"
+            },
+            {
+              "name": "Charlie Chan at the Circus",
+              "release_date": "1936-03-27"
+            },
+            {
+              "name": "Charlie Chan at the Race Track",
+              "release_date": "1936-08-07"
+            },
+            {
+              "name": "Charlie Chan at the Opera",
+              "release_date": "1937-01-08"
+            },
+            {
+              "name": "Charlie Chan at the Olympics",
+              "release_date": "1937-05-21"
+            },
+            {
+              "name": "Charlie Chan on Broadway",
+              "release_date": "1937-10-22"
+            },
+            {
+              "name": "Charlie Chan at Monte Carlo",
+              "release_date": "1938-01-21"
+            }
+          ]
+        },
+        {
+          "name": "Sidney Toler Saga",
+          "genre": "Mystery",
+          "movies": [
+            {
+              "name": "Charlie Chan in Honolulu",
+              "release_date": "1939-01-13"
+            },
+            {
+              "name": "Charlie Chan in Reno",
+              "release_date": "1939-06-16"
+            },
+            {
+              "name": "Charlie Chan at Treasure Island",
+              "release_date": "1939-09-08"
+            },
+            {
+              "name": "City in Darkness",
+              "release_date": "1939-12-01"
+            },
+            {
+              "name": "Charlie Chan in Panama",
+              "release_date": "1940-03-01"
+            },
+            {
+              "name": "Murder Over New York",
+              "release_date": "1940-12-13"
+            },
+            {
+              "name": "Charlie Chan at the Wax Museum",
+              "release_date": "1940-09-06"
+            },
+            {
+              "name": "Murder Over New York",
+              "release_date": "1940-12-13"
+            },
+            {
+              "name": "Dead Men Tell",
+              "release_date": "1941-03-28"
+            },
+            {
+              "name": "Charlie Chan in Rio",
+              "release_date": "1941-09-05"
+            },
+            {
+              "name": "Castle in the Desert",
+              "release_date": "1942-02-27"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cisco Kid",
+      "sagas": [
+        {
+          "name": "Warner Baxter Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "In Old Arizona",
+              "release_date": "1929-01-20"
+            },
+            {
+              "name": "The Arizona Kid",
+              "release_date": "1930-05-25"
+            },
+            {
+              "name": "The Cisco Kid",
+              "release_date": "1931-11-01"
+            },
+            {
+              "name": "Return of the Cisco Kid",
+              "release_date": "1939-04-28"
+            }
+          ]
+        },
+        {
+          "name": "Cesar Romero Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "The Cisco Kid and the Lady",
+              "release_date": "1939-12-29"
+            },
+            {
+              "name": "Viva Cisco Kid",
+              "release_date": "1940-04-12"
+            },
+            {
+              "name": "Lucky Cisco Kid",
+              "release_date": "1940-06-28"
+            },
+            {
+              "name": "The Gay Caballero",
+              "release_date": "1940-10-04"
+            },
+            {
+              "name": "Romance of the Rio Grande",
+              "release_date": "1941-01-17"
+            },
+            {
+              "name": "Ride on Vaquero",
+              "release_date": "1941-04-18"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Doctor Dolittle",
+      "sagas": [
+        {
+          "name": "Original Film",
+          "genre": "Musical",
+          "movies": [
+            {
+              "name": "Doctor Dolittle",
+              "release_date": "1967-12-19"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Dr. Dolittle",
+              "release_date": "1998-06-26"
+            },
+            {
+              "name": "Dr. Dolittle 2",
+              "release_date": "2001-06-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flicka",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "My Friend Flicka",
+              "release_date": "1943-05-26"
+            },
+            {
+              "name": "Thunderhead, Son of Flicka",
+              "release_date": "1945-03-15"
+            },
+            {
+              "name": "Green Grass of Wyoming",
+              "release_date": "1948-06-03"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Flicka",
+              "release_date": "2006-10-20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hercule Poirot",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Crime",
+          "movies": [
+            {
+              "name": "Murder on the Orient Express",
+              "release_date": "2017-11-10"
+            },
+            {
+              "name": "Death on the Nile",
+              "release_date": "2022-02-11"
+            },
+            {
+              "name": "A Haunting in Venice",
+              "release_date": "2023-09-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Highlander",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Highlander",
+              "release_date": "1986-03-07"
+            },
+            {
+              "name": "Highlander: The Final Dimension",
+              "release_date": "1995-01-27"
+            },
+            {
+              "name": "Highlander: Endgame",
+              "release_date": "2000-09-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Independence Day",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Independence Day",
+              "release_date": "1996-07-03"
+            },
+            {
+              "name": "Independence Day: Resurgence",
+              "release_date": "2016-06-24"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jones Family",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Every Saturday Night",
+              "release_date": "1936-02-07"
+            },
+            {
+              "name": "Educating Father",
+              "release_date": "1936-07-10"
+            },
+            {
+              "name": "Back to Nature",
+              "release_date": "1936-09-18"
+            },
+            {
+              "name": "Off to the Races",
+              "release_date": "1937-02-19"
+            },
+            {
+              "name": "Big Business",
+              "release_date": "1937-06-18"
+            },
+            {
+              "name": "Hot Water",
+              "release_date": "1937-09-24"
+            },
+            {
+              "name": "Borrowing Trouble",
+              "release_date": "1937-12-10"
+            },
+            {
+              "name": "Love on a Budget",
+              "release_date": "1938-02-25"
+            },
+            {
+              "name": "A Trip to Paris",
+              "release_date": "1938-05-06"
+            },
+            {
+              "name": "Safety in Numbers",
+              "release_date": "1938-09-09"
+            },
+            {
+              "name": "Down on the Farm",
+              "release_date": "1938-12-16"
+            },
+            {
+              "name": "Everybody's Baby",
+              "release_date": "1939-03-24"
+            },
+            {
+              "name": "The Jones Family in Hollywood",
+              "release_date": "1939-06-02"
+            },
+            {
+              "name": "Quick Millions",
+              "release_date": "1939-08-25"
+            },
+            {
+              "name": "Too Busy to Work",
+              "release_date": "1939-12-01"
+            },
+            {
+              "name": "Young as You Feel",
+              "release_date": "1940-02-16"
+            },
+            {
+              "name": "On Their Own",
+              "release_date": "1940-05-17"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Diary of a Wimpy Kid",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Diary of a Wimpy Kid",
+              "release_date": "2010-03-19"
+            },
+            {
+              "name": "Diary of a Wimpy Kid: Rodrick Rules",
+              "release_date": "2011-03-25"
+            },
+            {
+              "name": "Diary of a Wimpy Kid: Dog Days",
+              "release_date": "2012-08-03"
+            },
+            {
+              "name": "Diary of a Wimpy Kid: The Long Haul",
+              "release_date": "2017-05-19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kingsman",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Kingsman: The Secret Service",
+              "release_date": "2015-02-13"
+            },
+            {
+              "name": "Kingsman: The Golden Circle",
+              "release_date": "2017-09-22"
+            },
+            {
+              "name": "The King's Man",
+              "release_date": "2021-12-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Inspector Hornleigh",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Inspector Hornleigh",
+              "release_date": "1939-03-10"
+            },
+            {
+              "name": "Inspector Hornleigh on Holiday",
+              "release_date": "1939-12-01"
+            },
+            {
+              "name": "Night Train to Munich",
+              "release_date": "1941-05-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Omen",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "The Omen",
+              "release_date": "1976-06-25"
+            },
+            {
+              "name": "Damien: Omen II",
+              "release_date": "1978-06-09"
+            },
+            {
+              "name": "Omen III: The Final Conflict",
+              "release_date": "1981-03-20"
+            },
+            {
+              "name": "The First Omen",
+              "release_date": "2024-04-05"
+            }
+          ]
+        },
+        {
+          "name": "Reboot",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "The Omen",
+              "release_date": "2006-06-06"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Fly",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "The Fly",
+              "release_date": "1958-08-29"
+            },
+            {
+              "name": "Return of the Fly",
+              "release_date": "1959-07-01"
+            },
+            {
+              "name": "Curse of the Fly",
+              "release_date": "1965-05-01"
+            }
+          ]
+        },
+        {
+          "name": "Reboot",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "The Fly",
+              "release_date": "1986-08-15"
+            },
+            {
+              "name": "The Fly II",
+              "release_date": "1989-02-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Night at the Museum",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Night at the Museum",
+              "release_date": "2006-12-22"
+            },
+            {
+              "name": "Night at the Museum: Battle of the Smithsonian",
+              "release_date": "2009-05-22"
+            },
+            {
+              "name": "Night at the Museum: Secret of the Tomb",
+              "release_date": "2014-12-19"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Maze Runner",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "The Maze Runner",
+              "release_date": "2014-09-19"
+            },
+            {
+              "name": "Maze Runner: The Scorch Trials",
+              "release_date": "2015-09-18"
+            },
+            {
+              "name": "Maze Runner: The Death Cure",
+              "release_date": "2018-01-26"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Riders of the Purple Sage",
+      "sagas": [
+        {
+          "name": "William Farnum Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "Riders of the Purple Sage",
+              "release_date": "1918-09-01"
+            },
+            {
+              "name": "The Rainbow Trail",
+              "release_date": "1918-09-01"
+            }
+          ]
+        },
+        {
+          "name": "Tom Mix Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "Riders of the Purple Sage",
+              "release_date": "1925-03-15"
+            },
+            {
+              "name": "The Rainbow Trail",
+              "release_date": "1925-05-24"
+            }
+          ]
+        },
+        {
+          "name": "George O'Brien Saga",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "Riders of the Purple Sage",
+              "release_date": "1931-10-18"
+            },
+            {
+              "name": "The Rainbow Trail",
+              "release_date": "1932-01-03"
+            }
+          ]
+        },
+        {
+          "name": "George Montgomery Remake",
+          "genre": "Western",
+          "movies": [
+            {
+              "name": "Riders of the Purple Sage",
+              "release_date": "1941-10-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Home Alone",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Home Alone",
+              "release_date": "1990-11-16"
+            },
+            {
+              "name": "Home Alone 2: Lost in New York",
+              "release_date": "1992-11-20"
+            },
+            {
+              "name": "Home Alone 3",
+              "release_date": "1997-12-12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Michael Shayne",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Drama",
+          "movies": [
+            {
+              "name": "Michael Shayne, Private Detective",
+              "release_date": "1941-01-10"
+            },
+            {
+              "name": "Sleepers West",
+              "release_date": "1941-03-14"
+            },
+            {
+              "name": "Dressed to Kill",
+              "release_date": "1941-08-08"
+            },
+            {
+              "name": "Blue, White and Perfect",
+              "release_date": "1942-01-09"
+            },
+            {
+              "name": "The Man Who Wouldn't Die",
+              "release_date": "1942-05-01"
+            },
+            {
+              "name": "Just Off Broadway",
+              "release_date": "1942-09-25"
+            },
+            {
+              "name": "Time to Kill",
+              "release_date": "1943-01-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mr. Belvedere",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Sitting Pretty",
+              "release_date": "1948-03-10"
+            },
+            {
+              "name": "Mr. Belvedere Goes to College",
+              "release_date": "1949-04-15"
+            },
+            {
+              "name": "Mr. Belvedere Rings the Bell",
+              "release_date": "1951-08-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mr. Moto",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Drama",
+          "movies": [
+            {
+              "name": "Think Fast, Mr. Moto",
+              "release_date": "1937-08-27"
+            },
+            {
+              "name": "Thank You, Mr. Moto",
+              "release_date": "1937-12-24"
+            },
+            {
+              "name": "Mr. Moto's Gamble",
+              "release_date": "1938-03-25"
+            },
+            {
+              "name": "Mr. Moto Takes a Chance",
+              "release_date": "1938-06-24"
+            },
+            {
+              "name": "Mysterious Mr. Moto",
+              "release_date": "1938-10-21"
+            },
+            {
+              "name": "Mr. Moto's Last Warning",
+              "release_date": "1939-01-20"
+            },
+            {
+              "name": "Mr. Moto in Danger Island",
+              "release_date": "1939-04-07"
+            },
+            {
+              "name": "Mr. Moto Takes a Vacation",
+              "release_date": "1939-07-07"
+            }
+          ]
+        },
+        {
+          "name": "Reboot",
+          "genre": "Action",
+          "movies": [
+            {
+              "name": "The Return of Mr. Moto",
+              "release_date": "1965-12-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Percy Jackson",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Percy Jackson & the Olympians: The Lightning Thief",
+              "release_date": "2010-02-12"
+            },
+            {
+              "name": "Percy Jackson: Sea of Monsters",
+              "release_date": "2013-08-07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Porky's",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Porky's",
+              "release_date": "1982-03-19"
+            },
+            {
+              "name": "Porky's II: The Next Day",
+              "release_date": "1983-06-24"
+            },
+            {
+              "name": "Porky's Revenge!",
+              "release_date": "1985-03-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quirt & Flagg",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "What Price Glory",
+              "release_date": "1927-08-28"
+            },
+            {
+              "name": "The Cock-Eyed World",
+              "release_date": "1929-10-20"
+            },
+            {
+              "name": "Women of All Nations",
+              "release_date": "1931-05-31"
+            },
+            {
+              "name": "Hot Pepper",
+              "release_date": "1933-01-22"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Musical",
+          "movies": [
+            {
+              "name": "What Price Glory",
+              "release_date": "1952-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Taken",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Action",
+          "movies": [
+            {
+              "name": "Taken",
+              "release_date": "2009-01-30"
+            },
+            {
+              "name": "Taken 2",
+              "release_date": "2012-10-05"
+            },
+            {
+              "name": "Taken 3",
+              "release_date": "2015-01-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cheaper by the Dozen",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Cheaper by the Dozen",
+              "release_date": "1950-03-31"
+            },
+            {
+              "name": "Belles on Their Toes",
+              "release_date": "1952-05-02"
+            }
+          ]
+        },
+        {
+          "name": "Remake",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Cheaper by the Dozen",
+              "release_date": "2003-12-25"
+            },
+            {
+              "name": "Cheaper by the Dozen 2",
+              "release_date": "2005-12-21"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Blade",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Blade",
+              "release_date": "1998-08-21"
+            },
+            {
+              "name": "Blade II",
+              "release_date": "2002-03-22"
+            },
+            {
+              "name": "Blade: Trinity",
+              "release_date": "2004-12-08"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fantastic Four",
+      "sagas": [
+        {
+          "name": "Original Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Fantastic Four",
+              "release_date": "2005-07-08"
+            },
+            {
+              "name": "Fantastic Four: Rise of the Silver Surfer",
+              "release_date": "2007-06-15"
+            }
+          ]
+        },
+        {
+          "name": "Reboot",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Fantastic Four",
+              "release_date": "2015-08-07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Men in Black",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Science Fiction",
+          "movies": [
+            {
+              "name": "Men in Black",
+              "release_date": "1997-07-02"
+            },
+            {
+              "name": "Men in Black II",
+              "release_date": "2002-07-03"
+            },
+            {
+              "name": "Men in Black 3",
+              "release_date": "2012-05-25"
+            },
+            {
+              "name": "Men in Black: International",
+              "release_date": "2019-06-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ernest",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Ernest Goes to Camp",
+              "release_date": "1987-05-22"
+            },
+            {
+              "name": "Ernest Saves Christmas",
+              "release_date": "1988-11-11"
+            },
+            {
+              "name": "Ernest Goes to Jail",
+              "release_date": "1990-04-06"
+            },
+            {
+              "name": "Ernest Scared Stupid",
+              "release_date": "1991-10-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Step Up",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Dance",
+          "movies": [
+            {
+              "name": "Step Up",
+              "release_date": "2006-08-11"
+            },
+            {
+              "name": "Step Up 2: The Streets",
+              "release_date": "2008-02-14"
+            },
+            {
+              "name": "Step Up 3D",
+              "release_date": "2010-08-06"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Halloween",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "Halloween",
+              "release_date": "1978-10-25"
+            },
+            {
+              "name": "Halloween II",
+              "release_date": "1981-10-30"
+            },
+            {
+              "name": "Halloween: The Curse of Michael Myers",
+              "release_date": "1995-09-29"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scary Movie",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Horror Comedy",
+          "movies": [
+            {
+              "name": "Scary Movie",
+              "release_date": "2000-07-07"
+            },
+            {
+              "name": "Scary Movie 2",
+              "release_date": "2001-07-04"
+            },
+            {
+              "name": "Scary Movie 3",
+              "release_date": "2003-10-24"
+            },
+            {
+              "name": "Scary Movie 4",
+              "release_date": "2006-04-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scream",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Horror",
+          "movies": [
+            {
+              "name": "Scream",
+              "release_date": "1996-12-20"
+            },
+            {
+              "name": "Scream 2",
+              "release_date": "1997-12-12"
+            },
+            {
+              "name": "Scream 3",
+              "release_date": "2000-02-04"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spy Kids",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Adventure",
+          "movies": [
+            {
+              "name": "Spy Kids",
+              "release_date": "2001-03-30"
+            },
+            {
+              "name": "Spy Kids 2: The Island of Lost Dreams",
+              "release_date": "2002-08-07"
+            },
+            {
+              "name": "Spy Kids 3-D: Game Over",
+              "release_date": "2003-07-25"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anja & Viktor",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Anja & Viktor 1",
+              "release_date": "2001-08-03"
+            },
+            {
+              "name": "Anja & Viktor 2",
+              "release_date": "2003-04-04"
+            },
+            {
+              "name": "Anja & Viktor 3",
+              "release_date": "2007-02-09"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baaghi",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Action",
+          "movies": [
+            {
+              "name": "Baaghi",
+              "release_date": "2016-04-29"
+            },
+            {
+              "name": "Baaghi 2",
+              "release_date": "2018-03-30"
+            },
+            {
+              "name": "Baaghi 3",
+              "release_date": "2020-03-06"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hamilton",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Action",
+          "movies": [
+            {
+              "name": "Hamilton 1",
+              "release_date": "1998-01-30"
+            },
+            {
+              "name": "Hamilton 2",
+              "release_date": "2012-01-13"
+            },
+            {
+              "name": "Hamilton 3",
+              "release_date": "2012-09-07"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Wild Soccer Bunch",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Family",
+          "movies": [
+            {
+              "name": "The Wild Soccer Bunch 1",
+              "release_date": "2003-10-02"
+            },
+            {
+              "name": "The Wild Soccer Bunch 2",
+              "release_date": "2005-02-17"
+            },
+            {
+              "name": "The Wild Soccer Bunch 3",
+              "release_date": "2006-03-02"
+            },
+            {
+              "name": "The Wild Soccer Bunch 4",
+              "release_date": "2007-02-01"
+            },
+            {
+              "name": "The Wild Soccer Bunch 5",
+              "release_date": "2008-02-21"
+            },
+            {
+              "name": "The Wild Soccer Bunch 6",
+              "release_date": "2016-02-11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Unstable",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "The Unstable 1",
+              "release_date": "2010-01-01"
+            },
+            {
+              "name": "The Unstable 2",
+              "release_date": "2012-01-01"
+            },
+            {
+              "name": "The Unstable 3",
+              "release_date": "2014-01-01"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lilly the Witch",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "Lilly the Witch 1",
+              "release_date": "2009-02-19"
+            },
+            {
+              "name": "Lilly the Witch 2",
+              "release_date": "2011-02-17"
+            },
+            {
+              "name": "Lilly the Witch 3",
+              "release_date": "2017-02-16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ricky Rapper",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Comedy",
+          "movies": [
+            {
+              "name": "Ricky Rapper 1",
+              "release_date": "2008-02-15"
+            },
+            {
+              "name": "Ricky Rapper 2",
+              "release_date": "2010-02-12"
+            },
+            {
+              "name": "Ricky Rapper 3",
+              "release_date": "2012-02-10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Last Warrior",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Fantasy",
+          "movies": [
+            {
+              "name": "The Last Warrior 1",
+              "release_date": "2017-10-26"
+            },
+            {
+              "name": "The Last Warrior 2",
+              "release_date": "2021-01-01"
+            },
+            {
+              "name": "The Last Warrior 3",
+              "release_date": "2021-12-23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Three Colors",
+      "sagas": [
+        {
+          "name": "Main Saga",
+          "genre": "Drama",
+          "movies": [
+            {
+              "name": "Three Colors: Blue",
+              "release_date": "1993-09-08"
+            },
+            {
+              "name": "Three Colors: White",
+              "release_date": "1994-01-26"
+            },
+            {
+              "name": "Three Colors: Red",
+              "release_date": "1994-05-27"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
