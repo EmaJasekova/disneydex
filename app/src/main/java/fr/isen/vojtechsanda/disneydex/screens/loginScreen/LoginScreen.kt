@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationBody
 import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationHero
@@ -32,7 +33,11 @@ fun LoginScreen(navController: NavHostController) {
 
                 LoginForm(
                     onLogin = {
-                        navController.navigate(UniversesRoute)
+                        navController.navigate(UniversesRoute) {
+                            popUpTo(navController.graph.findStartDestination().id) {
+                                inclusive = true
+                            }
+                        }
                     }
                 )
 
