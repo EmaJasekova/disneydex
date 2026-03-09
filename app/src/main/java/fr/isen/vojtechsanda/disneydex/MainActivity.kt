@@ -1,27 +1,25 @@
 package fr.isen.vojtechsanda.disneydex
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import com.google.firebase.Firebase
-import com.google.firebase.database.database
-import fr.isen.vojtechsanda.disneydex.ui.theme.DisneydexTheme
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
-import android.util.Log
-import androidx.compose.ui.graphics.Color
+import com.google.firebase.database.database
 import com.google.firebase.database.getValue
-import fr.isen.vojtechsanda.disneydex.screens.loginScreen.LoginScreen
 import fr.isen.vojtechsanda.disneydex.screens.registerScreen.RegisterScreen
+import fr.isen.vojtechsanda.disneydex.ui.theme.BackgroundColor
+import fr.isen.vojtechsanda.disneydex.ui.theme.DisneydexTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,14 +30,14 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     //we use 0xFF then add the color code in hex format
-                    containerColor = Color(0xFF333332)
+                    containerColor = BackgroundColor
                 ) { innerPadding ->
-                    LoginScreen(
-                        modifier = Modifier.padding(innerPadding)
+//                    LoginScreen(modifier = Modifier.padding(innerPadding))
+                    RegisterScreen(modifier = Modifier.padding(
+                        top = 0.dp,
+                        bottom = innerPadding.calculateBottomPadding()
+                        )
                     )
-//                    RegisterScreen(
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
                 }
             }
         }
@@ -66,20 +64,5 @@ class MainActivity : ComponentActivity() {
     //Use this to be able to read from database, use TAG to see the message in the logcat
     companion object {
         private const val TAG = "MainActivity"
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!", modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DisneydexTheme {
-        Greeting("Android")
     }
 }

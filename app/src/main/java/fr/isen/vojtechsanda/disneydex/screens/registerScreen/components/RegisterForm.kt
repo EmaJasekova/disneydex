@@ -1,10 +1,19 @@
 package fr.isen.vojtechsanda.disneydex.screens.registerScreen.components
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -14,6 +23,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import fr.isen.vojtechsanda.disneydex.ui.theme.loginTextFieldColors
 
 @Composable
 fun RegisterForm() {
@@ -25,14 +35,14 @@ fun RegisterForm() {
     Column(
         modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Headers/////////////////
+        // Headers
         Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.Start // Aligns text to the left
+            horizontalAlignment = Alignment.Start
         ) {
             Text(
                 text = "Create an account",
-                fontSize = 25.sp,
+                fontSize = 24.sp,
                 color = Color.LightGray,
                 modifier = Modifier.padding(bottom = 6.dp),
             )
@@ -43,12 +53,11 @@ fun RegisterForm() {
                 modifier = Modifier.padding(bottom = 14.dp)
             )
         }
-        //////////////////////////
         // Username Field
         OutlinedTextField(
+            label = { Text("Username") },
             value = username,
             onValueChange = { username = it },
-            label = { Text("Username") },
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             keyboardOptions = KeyboardOptions(
@@ -60,21 +69,21 @@ fun RegisterForm() {
         Spacer(modifier = Modifier.height(10.dp))
         // Email Field
         OutlinedTextField(
+            label = { Text("Email") },
             value = email,
             onValueChange = { email = it },
-            label = { Text("Email") },
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             singleLine = true
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(12.dp))
         // Password Field
         OutlinedTextField(
+            label = { Text("Password") },
             value = password,
             onValueChange = { password = it },
-            label = { Text("Password") },
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             visualTransformation = PasswordVisualTransformation(),
@@ -82,12 +91,12 @@ fun RegisterForm() {
             singleLine = true
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(12.dp))
         // Confirm Password
         OutlinedTextField(
+            label = { Text("Confirm Password") },
             value = confirmPassword,
             onValueChange = { confirmPassword = it },
-            label = { Text("Confirm Password") },
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             visualTransformation = PasswordVisualTransformation(),
@@ -102,7 +111,7 @@ fun RegisterForm() {
             onClick = { println("Registering with $email") },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(50.dp)
+                .height(52.dp)
         ) {
             Text("Register")
         }
@@ -115,15 +124,3 @@ fun RegisterForm() {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun loginTextFieldColors() = OutlinedTextFieldDefaults.colors(
-    // Setting these to Transparent removes the "little background" box
-    focusedContainerColor = Color.Transparent, unfocusedContainerColor = Color.Transparent,
-    // Border colors (outline)
-    focusedBorderColor = Color.Gray, unfocusedBorderColor = Color.Gray,
-    // Text colors
-    focusedTextColor = Color.Gray, unfocusedTextColor = Color.Gray,
-    // Label colors
-    focusedLabelColor = Color.Gray, unfocusedLabelColor = Color.Gray, errorLabelColor = Color.Red
-)

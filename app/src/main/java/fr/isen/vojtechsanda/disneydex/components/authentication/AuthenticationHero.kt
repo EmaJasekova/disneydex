@@ -16,6 +16,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.isen.vojtechsanda.disneydex.R
+import fr.isen.vojtechsanda.disneydex.ui.theme.BackgroundColor
 
 @Composable
 fun AuthenticationHero(modifier: Modifier = Modifier) {
@@ -33,14 +34,14 @@ fun AuthenticationHero(modifier: Modifier = Modifier) {
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            Color.Transparent, Color(0xFF333332)
+                            Color.Transparent, BackgroundColor
                         )
                     )
                 )
         )
         Text(
             text = "DisneyDex",
-            fontSize = 50.sp,
+            fontSize = 52.sp,
             color = Color.White,
             modifier = Modifier
                 .padding(bottom = 72.dp)

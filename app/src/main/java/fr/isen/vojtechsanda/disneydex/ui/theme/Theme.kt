@@ -1,15 +1,18 @@
 package fr.isen.vojtechsanda.disneydex.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -31,6 +34,19 @@ private val LightColorScheme = lightColorScheme(
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
     */
+)
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun loginTextFieldColors() = OutlinedTextFieldDefaults.colors(
+    // Setting these to Transparent removes the "little background" box
+    focusedContainerColor = Color.Transparent, unfocusedContainerColor = Color.Transparent,
+    // Border colors (outline)
+    focusedBorderColor = Color.Gray, unfocusedBorderColor = Color.Gray,
+    // Text colors
+    focusedTextColor = Color.Gray, unfocusedTextColor = Color.Gray,
+    // Label colors
+    focusedLabelColor = Color.Gray, unfocusedLabelColor = Color.Gray, errorLabelColor = Color.Red
 )
 
 @Composable
