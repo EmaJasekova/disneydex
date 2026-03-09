@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney Universes Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            DEFAULT: '#000000',
+                            100: '#121212',
+                            200: '#1A1A1A',
+                            300: '#2A2A2A',
+                            400: '#3A3A3A',
+                        },
+                        accent: {
+                            red: '#E50914',
+                            blue: '#113CCF',
+                            green: '#22C55E'
+                        },
+                        text: {
+                            primary: '#FFFFFF',
+                            secondary: '#A3A3A3',
+                            tertiary: '#737373'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #FFFFFF; }
+        .material-shadow { shadow-md; }
+    </style>
+</head>
+<body class="bg-dark text-text-primary min-h-screen">
+
+    <!-- Responsive Container -->
+    <div id="app-container" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative min-h-screen flex flex-col">
+        
+        <!-- Material Design Top App Bar -->
+        <header id="top-bar" class="w-full py-4 md:py-6 flex justify-between items-center z-40 bg-dark border-b border-dark-300">
+            <div class="flex items-center gap-4">
+                <button class="md:hidden text-2xl text-text-primary">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">Universes</h1>
+            </div>
+            <div class="flex items-center gap-4 md:gap-6">
+                <button class="hidden md:block text-text-secondary hover:text-white transition-colors">
+                    <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                </button>
+                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-dark-200 overflow-hidden border border-dark-300 flex items-center justify-center cursor-pointer">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d1d2b1a384-2988bce2cf24dd80e4e4.png" alt="professional user profile avatar, 3d render style, friendly face" />
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="flex-1 py-6 md:py-8 pb-24 md:pb-8">
+            
+            <!-- Search & Filter (Mobile Visible) -->
+            <div id="search-filter" class="flex md:hidden justify-between items-center mb-6 gap-4">
+                <div class="flex-1 relative">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-text-tertiary"></i>
+                    <input type="text" placeholder="Search universes..." class="w-full bg-dark-200 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none border border-dark-300">
+                </div>
+                <button class="w-10 h-10 rounded-lg bg-dark-200 flex items-center justify-center text-text-primary">
+                    <i class="fa-solid fa-sliders"></i>
+                </button>
+            </div>
+
+            <!-- Universe Grid - Responsive -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- Marvel Card -->
+                <div id="card-marvel" class="rounded-2xl bg-dark-200 p-6 border border-dark-300/50 hover:border-accent-red/50 transition-all cursor-pointer flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold mb-1">Marvel Cinematic</h2>
+                            <p class="text-sm text-text-secondary">Phase 1 - Phase 5</p>
+                        </div>
+                        <span class="bg-accent-red/20 text-accent-red px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">New</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3 mb-6 flex-grow">
+                        <img class="aspect-[2/3] rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/361fe496aa-58ecea2a3cff4a29a33e.png" alt="dark cinematic poster for avengers movie, high quality, dark theme" />
+                        <img class="aspect-[2/3] rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/41a984d83a-d7bf4644c631b98573d9.png" alt="dark cinematic poster for spiderman movie, high quality, dark theme" />
+                        <img class="aspect-[2/3] rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5285c5f26d-2ac4ad09e06e3c41e648.png" alt="dark cinematic poster for iron man movie, high quality, dark theme" />
+                    </div>
+                    
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-dark-200" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9f316b46fc-150cfe73b572a5f2c2db.png" alt="user profile 1" />
+                            <img class="w-8 h-8 rounded-full border-2 border-dark-200" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bbb2791bc5-81c9110d58ea98f533c2.png" alt="user profile 2" />
+                            <div class="w-8 h-8 rounded-full border-2 border-dark-200 bg-dark-300 flex items-center justify-center text-[10px] font-bold">+42</div>
+                        </div>
+                        <button class="w-full sm:w-auto bg-white text-black px-6 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors">EXPLORE</button>
+                    </div>
+                </div>
+
+                <!-- Star Wars Card -->
+                <div id="card-starwars" class="rounded-2xl bg-dark-200 p-6 border border-dark-300/50 hover:border-accent-blue/50 transition-all cursor-pointer flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold mb-1">Star Wars</h2>
+                            <p class="text-sm text-text-secondary">Skywalker Saga</p>
+                        </div>
+                        <span class="bg-dark-300 text-text-primary px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">Trending</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3 mb-6 flex-grow">
+                        <img class="aspect-video rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4680f53777-dda0b06147f618c53bd3.png" alt="dark cinematic poster for star wars darth vader, high quality, dark theme" />
+                        <img class="aspect-video rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4680f53777-9e87e9ac6e3b3d6d418c.png" alt="dark cinematic poster for star wars mandalorian, high quality, dark theme" />
+                    </div>
+                    
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-dark-200" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2075248a64-a2763e57e024abb7869a.png" alt="user profile 3" />
+                            <div class="w-8 h-8 rounded-full border-2 border-dark-200 bg-dark-300 flex items-center justify-center text-[10px] font-bold">+18</div>
+                        </div>
+                        <button class="w-full sm:w-auto bg-white text-black px-6 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors">EXPLORE</button>
+                    </div>
+                </div>
+
+                <!-- Pixar Card -->
+                <div id="card-pixar" class="rounded-2xl bg-dark-200 p-6 border border-dark-300/50 hover:border-accent-green/50 transition-all cursor-pointer flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h2 class="text-xl md:text-2xl font-semibold mb-1">Pixar</h2>
+                            <p class="text-sm text-text-secondary">Animation Studios</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-3 mb-6 flex-grow">
+                        <img class="aspect-[2/3] rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/100cba3f69-6ca64de876916debe134.png" alt="dark cinematic poster for toy story, high quality, dark theme" />
+                        <img class="aspect-[2/3] rounded-lg object-cover w-full" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ecb5907466-d2f4cc254a09606277c9.png" alt="dark cinematic poster for finding nemo, high quality, dark theme" />
+                        <div class="aspect-[2/3] rounded-lg object-cover w-full flex items-center justify-center bg-dark-300/50 border border-dark-300">
+                            <span class="text-sm font-medium text-text-secondary">+24 More</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="flex -space-x-2">
+                            <img class="w-8 h-8 rounded-full border-2 border-dark-200" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/dbb94dc40f-e5250f334ee0e99b785a.png" alt="user profile 4" />
+                            <div class="w-8 h-8 rounded-full border-2 border-dark-200 bg-dark-300 flex items-center justify-center text-[10px] font-bold">+31</div>
+                        </div>
+                        <button class="w-full sm:w-auto bg-white text-black px-6 py-2 rounded-lg text-sm font-bold hover:bg-gray-200 transition-colors">EXPLORE</button>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <div id="bottom-nav" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[360px] h-[72px] bg-dark-200/80 bottom-nav-blur rounded-[36px] border border-dark-300/50 flex justify-between items-center px-6 z-50 shadow-2xl">
+            <button class="flex flex-col items-center justify-center w-12 h-12 text-white">
+                <i class="fa-solid fa-house text-xl mb-1"></i>
+                <div class="w-1 h-1 bg-white rounded-full"></div>
+            </button>
+            <button class="flex flex-col items-center justify-center w-12 h-12 text-text-secondary hover:text-white transition-colors">
+                <i class="fa-solid fa-compass text-xl"></i>
+            </button>
+            <button class="flex flex-col items-center justify-center w-12 h-12 text-text-secondary hover:text-white transition-colors">
+                <i class="fa-regular fa-bookmark text-xl"></i>
+            </button>
+            <button class="flex flex-col items-center justify-center w-12 h-12 text-text-secondary hover:text-white transition-colors">
+                <i class="fa-solid fa-download text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Home Indicator -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white rounded-full z-50"></div>
+
+    </div>
+
+</body>
+</html>

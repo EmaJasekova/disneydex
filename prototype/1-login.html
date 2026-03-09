@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#121212',
+                        surface: '#1E1E1E',
+                        primary: '#3B82F6',
+                        textPrimary: '#FFFFFF',
+                        textSecondary: '#A3A3A3',
+                        border: '#333333',
+                        inputBg: '#2A2A2A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #FFFFFF;
+        }
+        /* Custom Checkbox Styling */
+        input[type="checkbox"] {
+            accent-color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-background flex flex-col items-center justify-start sm:justify-center p-0 sm:p-4">
+
+    <!-- Mobile-First Container: Styled like a Native Mobile App -->
+    <div id="auth-container" class="w-full max-w-md sm:rounded-3xl overflow-hidden shadow-2xl flex flex-col bg-surface min-h-screen sm:min-h-0 sm:h-auto border-border">
+        
+        <!-- Header Image Section (Native Mobile Look) -->
+        <div id="auth-image-side" class="relative h-64 sm:h-48 shrink-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent z-10"></div>
+            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0bbf59bc30-e5a1c368be3dcc87efc1.png" alt="Welcome to the Universe, professional image" />
+            
+            <div class="absolute top-6 left-1/2 -translate-x-1/2 z-20">
+                <h1 class="text-3xl font-extrabold tracking-tighter text-white italic">DISNEY<span class="text-primary">+</span></h1>
+            </div>
+            
+            <div class="absolute bottom-4 left-6 right-6 z-20 text-center">
+                <h2 class="text-xl font-bold text-white">Welcome to the Universe</h2>
+            </div>
+        </div>
+
+        <!-- Auth Form Section -->
+        <div id="auth-form-side" class="flex-1 px-6 py-8 flex flex-col">
+            
+            <!-- Form Header -->
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-textPrimary mb-1">Sign In</h2>
+                <p class="text-textSecondary text-sm">Please enter your credentials to continue.</p>
+            </div>
+
+            <!-- Form -->
+            <form id="login-form" class="space-y-5 flex-1">
+                <!-- Email Input -->
+                <div class="space-y-1.5">
+                    <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-textSecondary ml-1">Email Address</label>
+                    <input type="email" id="email" placeholder="name@disney.com" class="w-full px-4 py-4 bg-inputBg border border-border rounded-xl text-textPrimary placeholder-textSecondary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="space-y-1.5">
+                    <label for="password" class="block text-xs font-semibold uppercase tracking-wider text-textSecondary ml-1">Password</label>
+                    <div class="relative">
+                        <input type="password" id="password" placeholder="••••••••" class="w-full px-4 py-4 bg-inputBg border border-border rounded-xl text-textPrimary placeholder-textSecondary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all" required>
+                        <button type="button" class="absolute inset-y-0 right-0 pr-4 flex items-center text-textSecondary hover:text-textPrimary transition-colors">
+                            <i class="fa-regular fa-eye-slash"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Remember & Forgot -->
+                <div class="flex items-center justify-between text-sm py-2">
+                    <label class="flex items-center space-x-3 cursor-pointer group">
+                        <input type="checkbox" class="w-5 h-5 rounded border-border bg-inputBg text-primary focus:ring-primary focus:ring-offset-surface transition-all">
+                        <span class="text-textSecondary group-hover:text-textPrimary">Stay logged in</span>
+                    </label>
+                    <a href="#" class="text-primary hover:underline font-semibold">Forgot?</a>
+                </div>
+
+                <!-- Actions -->
+                <div class="space-y-4 pt-4">
+                    <button type="submit" class="w-full py-4 px-6 bg-primary hover:bg-blue-600 text-white font-bold rounded-xl transition-all shadow-lg shadow-primary/20 flex justify-center items-center space-x-2 active:scale-[0.98]">
+                        <span>SIGN IN</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+                    
+                    <button type="button" class="w-full py-4 px-6 bg-transparent border border-border hover:bg-white/5 text-textPrimary font-semibold rounded-xl transition-all active:scale-[0.98]">
+                        CREATE ACCOUNT
+                    </button>
+                </div>
+            </form>
+
+            <!-- Footer Links (Mobile Optimized) -->
+            <div class="mt-auto pt-8 pb-4 text-center">
+                <div class="flex items-center justify-center space-x-6 text-[11px] uppercase tracking-widest text-textSecondary font-bold">
+                    <a href="#" class="hover:text-primary">Terms</a>
+                    <div class="w-1 h-1 bg-border rounded-full"></div>
+                    <a href="#" class="hover:text-primary">Privacy</a>
+                    <div class="w-1 h-1 bg-border rounded-full"></div>
+                    <a href="#" class="hover:text-primary">Help</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

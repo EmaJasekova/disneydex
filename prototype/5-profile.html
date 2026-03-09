@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Inventory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            bg: '#1a1d29',
+                            surface: '#262837',
+                            border: '#3a3d4f',
+                            text: '#f9f9f9',
+                            muted: '#9ca3af'
+                        },
+                        brand: {
+                            blue: '#1f80ff',
+                            red: '#e50914'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1a1d29;
+            color: #f9f9f9;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-dark-text min-h-screen flex flex-col sm:max-w-md sm:mx-auto sm:border-x sm:border-dark-border sm:shadow-2xl relative">
+
+    <!-- Top App Bar -->
+    <header id="top-app-bar" class="sticky top-0 z-50 bg-dark-bg/95 backdrop-blur-sm border-b border-dark-border px-4 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <button class="text-dark-text hover:text-brand-blue transition-colors p-2 -ml-2 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-blue">
+                <i class="fa-solid fa-arrow-left text-xl"></i>
+            </button>
+            <h1 class="text-xl font-semibold tracking-wide">Profile</h1>
+        </div>
+        <button class="text-sm font-medium text-brand-red hover:text-red-400 transition-colors px-3 py-1.5 rounded-md hover:bg-brand-red/10 focus:outline-none focus:ring-2 focus:ring-brand-red">
+            Sign Out
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto no-scrollbar pb-24">
+        
+        <!-- User Profile Info -->
+        <section id="user-info" class="p-6 border-b border-dark-border bg-dark-surface/30">
+            <div class="flex items-center gap-5">
+                <div class="relative">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="User Avatar" class="w-20 h-20 rounded-full object-cover border-2 border-brand-blue shadow-lg">
+                    <button class="absolute bottom-0 right-0 bg-brand-blue w-6 h-6 rounded-full flex items-center justify-center text-xs border-2 border-dark-bg hover:bg-blue-600 transition-colors">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold mb-1">Alex Mercer</h2>
+                    <p class="text-dark-muted text-sm flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-envelope text-xs"></i>
+                        alex.mercer@example.com
+                    </p>
+                    <div class="flex items-center gap-2 mt-2">
+                        <span class="bg-brand-blue/20 text-brand-blue text-xs font-semibold px-2 py-1 rounded">Disney Fanatic</span>
+                        <span class="text-xs text-dark-muted">Joined 2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inventory Header -->
+        <section id="inventory-header" class="px-6 pt-6 pb-2 flex items-center justify-between">
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-compact-disc text-brand-blue"></i>
+                Physical Collection
+            </h3>
+            <span class="text-xs font-medium bg-dark-surface px-2.5 py-1 rounded-full text-dark-muted">12 Items</span>
+        </section>
+
+        <p class="px-6 pb-4 text-sm text-dark-muted">Movies you own on DVD or Blu-Ray.</p>
+
+        <!-- Inventory List -->
+        <section id="inventory-list" class="px-4 pb-6 space-y-3">
+            
+            <!-- Movie Item 1 -->
+            <div class="bg-dark-surface rounded-xl p-3 flex gap-4 items-center shadow-sm border border-dark-border/50 hover:border-dark-border transition-colors group">
+                <img src="https://image.tmdb.org/t/p/w200/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Thor: Love and Thunder" class="w-16 h-24 object-cover rounded-md shadow-md">
+                <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-base truncate mb-1">Thor: Love and Thunder</h4>
+                    <p class="text-xs text-dark-muted mb-2">Marvel Studios • 2022</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-dark-muted/40 text-dark-muted px-1.5 py-0.5 rounded">Blu-Ray</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-brand-blue/40 text-brand-blue px-1.5 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-check text-[8px]"></i> Owned</span>
+                    </div>
+                </div>
+                <button class="p-2 text-dark-muted hover:text-brand-red hover:bg-brand-red/10 rounded-full transition-colors focus:outline-none" aria-label="Remove from collection">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+
+            <!-- Movie Item 2 -->
+            <div class="bg-dark-surface rounded-xl p-3 flex gap-4 items-center shadow-sm border border-dark-border/50 hover:border-dark-border transition-colors group">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d31e956b76-6244adaa46f6016c053f.png" alt="Guardians of the Galaxy Vol. 3" />
+                <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-base truncate mb-1">Guardians of the Galaxy Vol. 3</h4>
+                    <p class="text-xs text-dark-muted mb-2">Marvel Studios • 2023</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-dark-muted/40 text-dark-muted px-1.5 py-0.5 rounded">DVD</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-brand-blue/40 text-brand-blue px-1.5 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-check text-[8px]"></i> Owned</span>
+                    </div>
+                </div>
+                <button class="p-2 text-dark-muted hover:text-brand-red hover:bg-brand-red/10 rounded-full transition-colors focus:outline-none" aria-label="Remove from collection">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+
+            <!-- Movie Item 3 -->
+            <div class="bg-dark-surface rounded-xl p-3 flex gap-4 items-center shadow-sm border border-dark-border/50 hover:border-dark-border transition-colors group">
+                <img src="https://image.tmdb.org/t/p/w200/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg" alt="Star Wars: A New Hope" class="w-16 h-24 object-cover rounded-md shadow-md">
+                <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-base truncate mb-1">Star Wars: A New Hope</h4>
+                    <p class="text-xs text-dark-muted mb-2">Lucasfilm • 1977</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-dark-muted/40 text-dark-muted px-1.5 py-0.5 rounded">Blu-Ray 4K</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-brand-blue/40 text-brand-blue px-1.5 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-check text-[8px]"></i> Owned</span>
+                    </div>
+                </div>
+                <button class="p-2 text-dark-muted hover:text-brand-red hover:bg-brand-red/10 rounded-full transition-colors focus:outline-none" aria-label="Remove from collection">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+
+            <!-- Movie Item 4 -->
+            <div class="bg-dark-surface rounded-xl p-3 flex gap-4 items-center shadow-sm border border-dark-border/50 hover:border-dark-border transition-colors group">
+                <img src="https://image.tmdb.org/t/p/w200/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg" alt="Avatar: The Way of Water" class="w-16 h-24 object-cover rounded-md shadow-md">
+                <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-base truncate mb-1">Avatar: The Way of Water</h4>
+                    <p class="text-xs text-dark-muted mb-2">20th Century Studios • 2022</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-dark-muted/40 text-dark-muted px-1.5 py-0.5 rounded">Blu-Ray</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-brand-blue/40 text-brand-blue px-1.5 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-check text-[8px]"></i> Owned</span>
+                    </div>
+                </div>
+                <button class="p-2 text-dark-muted hover:text-brand-red hover:bg-brand-red/10 rounded-full transition-colors focus:outline-none" aria-label="Remove from collection">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+
+            <!-- Movie Item 5 -->
+            <div class="bg-dark-surface rounded-xl p-3 flex gap-4 items-center shadow-sm border border-dark-border/50 hover:border-dark-border transition-colors group">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/12c8af69aa-042dc1e3714322cd335d.png" alt="Avatar" />
+                <div class="flex-1 min-w-0">
+                    <h4 class="font-semibold text-base truncate mb-1">Avatar</h4>
+                    <p class="text-xs text-dark-muted mb-2">20th Century Studios • 2009</p>
+                    <div class="flex items-center gap-2">
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-dark-muted/40 text-dark-muted px-1.5 py-0.5 rounded">DVD</span>
+                        <span class="text-[10px] uppercase tracking-wider font-semibold border border-brand-blue/40 text-brand-blue px-1.5 py-0.5 rounded flex items-center gap-1"><i class="fa-solid fa-check text-[8px]"></i> Owned</span>
+                    </div>
+                </div>
+                <button class="p-2 text-dark-muted hover:text-brand-red hover:bg-brand-red/10 rounded-full transition-colors focus:outline-none" aria-label="Remove from collection">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+
+            <!-- Add More Button -->
+            <button class="w-full mt-4 py-4 border-2 border-dashed border-dark-border hover:border-brand-blue rounded-xl text-dark-muted hover:text-brand-blue flex flex-col items-center justify-center gap-2 transition-colors">
+                <i class="fa-solid fa-plus text-xl"></i>
+                <span class="text-sm font-medium">Add to Collection</span>
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar (Android Standard) -->
+    <nav id="bottom-nav" class="fixed bottom-0 w-full sm:max-w-md sm:mx-auto bg-dark-bg/95 backdrop-blur-md border-t border-dark-border flex justify-around items-center py-3 pb-safe z-50">
+        <a href="#" class="flex flex-col items-center gap-1 text-dark-muted hover:text-dark-text transition-colors w-16">
+            <i class="fa-solid fa-house text-xl"></i>
+            <span class="text-[10px] font-medium">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 text-dark-muted hover:text-dark-text transition-colors w-16">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+            <span class="text-[10px] font-medium">Search</span>
+        </a>
+        <a href="#" class="flex flex-col items-center gap-1 text-brand-blue w-16">
+            <i class="fa-solid fa-user text-xl"></i>
+            <span class="text-[10px] font-medium">Profile</span>
+        </a>
+    </nav>
+
+    <!-- CSS for safe area padding on mobile -->
+    <style>
+        .pb-safe {
+            padding-bottom: env(safe-area-inset-bottom, 12px);
+        }
+    </style>
+</body>
+</html>

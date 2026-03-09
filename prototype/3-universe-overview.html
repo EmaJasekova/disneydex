@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Universe - Movies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#121212',
+                            800: '#1e1e1e',
+                            700: '#2d2d2d',
+                        },
+                        brand: {
+                            500: '#e50914', // Netflix-ish red for accents if needed
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        /* Custom scrollbar for main content area */
+        #main-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        #main-content::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        #main-content::-webkit-scrollbar-thumb {
+            background: #2d2d2d;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 min-h-screen flex flex-col relative">
+
+    <!-- Top App Bar -->
+    <header id="top-app-bar" class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-700/50 px-4 md:px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <button class="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-dark-800" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl text-white"></i>
+            </button>
+            <div class="hidden md:flex items-center gap-4 mr-4">
+                <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-dark-800 transition-colors" aria-label="Go back">
+                    <i class="fa-solid fa-arrow-left text-xl text-white"></i>
+                </button>
+            </div>
+            <h1 class="text-xl md:text-2xl font-bold text-white tracking-wider uppercase">Star Wars</h1>
+        </div>
+        
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+            <a href="#" class="text-white hover:text-brand-500 transition-colors border-b-2 border-brand-500 pb-1">MOVIES</a>
+            <a href="#" class="hover:text-white transition-colors">SERIES</a>
+            <a href="#" class="hover:text-white transition-colors">CHARACTERS</a>
+        </nav>
+
+        <div class="flex items-center gap-1 md:gap-3">
+            <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-dark-800 transition-colors" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass text-white/80"></i>
+            </button>
+            <button class="hidden sm:flex w-10 h-10 items-center justify-center rounded-full hover:bg-dark-800 transition-colors" aria-label="Filter">
+                <i class="fa-solid fa-filter text-white/80"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="flex-1 overflow-y-auto w-full max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 pb-12">
+        
+        <!-- Hero Banner -->
+        <section id="universe-hero" class="relative w-full h-64 md:h-[400px] mb-8 overflow-hidden sm:rounded-xl mt-0 sm:mt-6">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/20 to-transparent z-10"></div>
+            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fc557c03f5-23570b520263267d5121.png" alt="cinematic wide shot of a star wars space battle with star destroyers and x-wings, epic lighting, high quality digital art" />
+            <div class="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-20">
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase italic tracking-tighter">The Skywalker Saga</h2>
+                <p class="text-base md:text-xl text-gray-300 mt-2 font-light">The complete journey from Tatooine to Exegol</p>
+                <button class="mt-6 bg-white text-black px-8 py-3 rounded-full font-bold text-sm md:text-base hover:bg-gray-200 transition-all w-full sm:w-auto">EXPLORE COLLECTION</button>
+            </div>
+        </section>
+
+        <!-- List Group: Prequel Trilogy -->
+        <section id="group-prequels" class="px-4 sm:px-0 mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-widest border-l-4 border-brand-500 pl-4">Prequel Trilogy</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Movie Item 1 -->
+                <div class="flex bg-dark-800 rounded-xl overflow-hidden hover:ring-2 hover:ring-brand-500/50 transition-all cursor-pointer group">
+                    <div class="w-24 h-36 md:w-32 md:h-48 flex-shrink-0 relative">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8557dc152f-5d78e0c0a3273a2e5284.png" alt="Star Wars Episode I The Phantom Menace movie poster style, cinematic art" />
+                    </div>
+                    <div class="p-4 flex flex-col justify-center flex-1">
+                        <h4 class="text-lg font-bold text-white leading-tight mb-1 group-hover:text-brand-500 transition-colors">Episode I: The Phantom Menace</h4>
+                        <p class="text-sm text-gray-400 mb-3 italic">1999</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Sci-Fi</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="flex bg-dark-800 rounded-xl overflow-hidden hover:ring-2 hover:ring-brand-500/50 transition-all cursor-pointer group">
+                    <div class="w-24 h-36 md:w-32 md:h-48 flex-shrink-0 relative">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5c3a3f5b8d-87124d6dbdd3746be4ec.png" alt="Star Wars Episode II Attack of the Clones movie poster style, cinematic art" />
+                    </div>
+                    <div class="p-4 flex flex-col justify-center flex-1">
+                        <h4 class="text-lg font-bold text-white leading-tight mb-1 group-hover:text-brand-500 transition-colors">Episode II: Attack of the Clones</h4>
+                        <p class="text-sm text-gray-400 mb-3 italic">2002</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Sci-Fi</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- List Group: Original Trilogy -->
+        <section id="group-originals" class="px-4 sm:px-0 mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-widest border-l-4 border-brand-500 pl-4">Original Trilogy</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                <!-- Movie Item 3 -->
+                <div class="flex bg-dark-800 rounded-xl overflow-hidden hover:ring-2 hover:ring-brand-500/50 transition-all cursor-pointer group">
+                    <div class="w-24 h-36 md:w-32 md:h-48 flex-shrink-0 relative">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e8adf74f33-74f96eb62b2fda7a90e4.png" alt="Star Wars Episode IV A New Hope movie poster style, cinematic art" />
+                    </div>
+                    <div class="p-4 flex flex-col justify-center flex-1">
+                        <h4 class="text-lg font-bold text-white leading-tight mb-1 group-hover:text-brand-500 transition-colors">Episode IV: A New Hope</h4>
+                        <p class="text-sm text-gray-400 mb-3 italic">1977</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Sci-Fi</span>
+                            <span class="text-[10px] font-bold px-2 py-1 bg-dark-700 rounded text-gray-300 uppercase">Adventure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
