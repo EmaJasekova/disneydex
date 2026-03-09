@@ -9,14 +9,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-    fun AppHeader (){
-
-
+fun AppHeader() {
     Text(
         text = "DisneyDex",
         fontSize = 36.sp,
         color = MaterialTheme.colorScheme.secondary,
         modifier = Modifier.padding(bottom = 32.dp)
     )
-
 }

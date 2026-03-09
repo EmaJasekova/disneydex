@@ -27,13 +27,12 @@ import androidx.compose.ui.unit.sp
 import fr.isen.vojtechsanda.disneydex.screens.registerScreen.components.loginTextFieldColors
 
 @Composable
-fun LoginForm (){
+fun LoginForm() {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Headers/////////////////
         Column(
@@ -85,7 +84,9 @@ fun LoginForm (){
         // Login Button
         Button(
             onClick = { println("Logging in with $email") },
-            modifier = Modifier.fillMaxWidth().height(50.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp)
         ) {
             Text("Login")
         }

@@ -16,7 +16,7 @@ import fr.isen.vojtechsanda.disneydex.screens.loginScreen.components.LoginForm
 import fr.isen.vojtechsanda.disneydex.screens.registerScreen.components.RegisterForm
 
 @Composable
-fun RegisterScreen(modifier: Modifier){
+fun RegisterScreen(modifier: Modifier) {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -28,13 +28,12 @@ fun RegisterScreen(modifier: Modifier){
         ) {
             AuthenticationHero()
         }
-
         // Bottom Half (Form Section)
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(2.8f)
-                .padding(top = 68.dp, start=24.dp, end = 24.dp, bottom = 10.dp),
+                .padding(top = 68.dp, start = 24.dp, end = 24.dp, bottom = 10.dp),
         ) {
             RegisterForm()
         }

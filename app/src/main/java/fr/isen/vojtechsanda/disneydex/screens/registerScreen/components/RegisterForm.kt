@@ -23,8 +23,7 @@ fun RegisterForm() {
     var confirmPassword by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Headers/////////////////
         Column(
@@ -45,7 +44,6 @@ fun RegisterForm() {
             )
         }
         //////////////////////////
-
         // Username Field
         OutlinedTextField(
             value = username,
@@ -54,14 +52,12 @@ fun RegisterForm() {
             modifier = Modifier.fillMaxWidth(),
             colors = loginTextFieldColors(),
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Text,
-                capitalization = KeyboardCapitalization.None
+                keyboardType = KeyboardType.Text, capitalization = KeyboardCapitalization.None
             ),
             singleLine = true
         )
 
         Spacer(modifier = Modifier.height(10.dp))
-
         // Email Field
         OutlinedTextField(
             value = email,
@@ -74,7 +70,6 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(10.dp))
-
         // Password Field
         OutlinedTextField(
             value = password,
@@ -88,7 +83,6 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(10.dp))
-
         // Confirm Password
         OutlinedTextField(
             value = confirmPassword,
@@ -103,11 +97,12 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(24.dp))
-
         // Register Button
         Button(
             onClick = { println("Registering with $email") },
-            modifier = Modifier.fillMaxWidth().height(50.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp)
         ) {
             Text("Register")
         }
@@ -124,19 +119,11 @@ fun RegisterForm() {
 @Composable
 fun loginTextFieldColors() = OutlinedTextFieldDefaults.colors(
     // Setting these to Transparent removes the "little background" box
-    focusedContainerColor = Color.Transparent,
-    unfocusedContainerColor = Color.Transparent,
-
+    focusedContainerColor = Color.Transparent, unfocusedContainerColor = Color.Transparent,
     // Border colors (outline)
-    focusedBorderColor = Color.Gray,
-    unfocusedBorderColor = Color.Gray,
-
+    focusedBorderColor = Color.Gray, unfocusedBorderColor = Color.Gray,
     // Text colors
-    focusedTextColor = Color.Gray,
-    unfocusedTextColor = Color.Gray,
-
+    focusedTextColor = Color.Gray, unfocusedTextColor = Color.Gray,
     // Label colors
-    focusedLabelColor = Color.Gray,
-    unfocusedLabelColor = Color.Gray,
-    errorLabelColor = Color.Red
+    focusedLabelColor = Color.Gray, unfocusedLabelColor = Color.Gray, errorLabelColor = Color.Red
 )
