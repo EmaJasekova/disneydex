@@ -35,7 +35,7 @@ fun LoginForm() {
         // Headers
         Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.Start // Aligns text to the left
+            horizontalAlignment = Alignment.Start
         ) {
             Text(
                 text = "Welcome back!",

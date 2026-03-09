@@ -67,7 +67,6 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(10.dp))
-        // Email Field
         OutlinedTextField(
             label = { Text("Email") },
             value = email,
