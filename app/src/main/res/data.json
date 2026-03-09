@@ -52,7 +52,8 @@
               "releaseDate": "2019-12-20",
               "id": "star-wars-episode-ix-the-rise-of-skywalker"
             }
-          ]
+          ],
+          "id": "skywalker-saga"
         },
         {
           "name": "Spin-offs",
@@ -68,9 +69,11 @@
               "releaseDate": "2018-05-25",
               "id": "solo-a-star-wars-story"
             }
-          ]
+          ],
+          "id": "star-wars-spin-offs"
         }
-      ]
+      ],
+      "id": "star-wars"
     },
     {
       "name": "Marvel Cinematic Universe",
@@ -109,7 +112,8 @@
               "releaseDate": "2012-05-04",
               "id": "the-avengers"
             }
-          ]
+          ],
+          "id": "the-infinity-saga-phase-1"
         },
         {
           "name": "The Infinity Saga - Phase 2",
@@ -145,7 +149,8 @@
               "releaseDate": "2015-07-17",
               "id": "ant-man"
             }
-          ]
+          ],
+          "id": "the-infinity-saga-phase-2"
         },
         {
           "name": "The Infinity Saga - Phase 3",
@@ -206,7 +211,8 @@
               "releaseDate": "2019-07-02",
               "id": "spider-man-far-from-home"
             }
-          ]
+          ],
+          "id": "the-infinity-saga-phase-3"
         },
         {
           "name": "The Multiverse Saga - Phase 4",
@@ -247,7 +253,8 @@
               "releaseDate": "2022-11-11",
               "id": "black-panther-wakanda-forever"
             }
-          ]
+          ],
+          "id": "the-multiverse-saga-phase-4"
         },
         {
           "name": "The Multiverse Saga - Phase 5",
@@ -283,7 +290,8 @@
               "releaseDate": "2025-05-02",
               "id": "thunderbolts"
             }
-          ]
+          ],
+          "id": "the-multiverse-saga-phase-5"
         },
         {
           "name": "The Multiverse Saga - Phase 6",
@@ -294,9 +302,11 @@
               "releaseDate": "2025-07-25",
               "id": "the-fantastic-four-first-steps"
             }
-          ]
+          ],
+          "id": "the-multiverse-saga-phase-6"
         }
-      ]
+      ],
+      "id": "marvel-cinematic-universe"
     },
     {
       "name": "X-Men Cinematic Universe",
@@ -375,9 +385,11 @@
               "releaseDate": "2020-08-28",
               "id": "the-new-mutants"
             }
-          ]
+          ],
+          "id": "x-men-cinematic-universe-main-saga"
         }
-      ]
+      ],
+      "id": "x-men-cinematic-universe"
     },
     {
       "name": "Indiana Jones",
@@ -411,9 +423,11 @@
               "releaseDate": "2023-06-30",
               "id": "indiana-jones-and-the-dial-of-destiny"
             }
-          ]
+          ],
+          "id": "indiana-jones-main-saga"
         }
-      ]
+      ],
+      "id": "indiana-jones"
     },
     {
       "name": "Pirates of the Caribbean",
@@ -447,9 +461,11 @@
               "releaseDate": "2017-05-26",
               "id": "pirates-of-the-caribbean-dead-men-tell-no-tales"
             }
-          ]
+          ],
+          "id": "pirates-of-the-caribbean-main-saga"
         }
-      ]
+      ],
+      "id": "pirates-of-the-caribbean"
     },
     {
       "name": "Herbie",
@@ -483,9 +499,11 @@
               "releaseDate": "2005-06-22",
               "id": "herbie-fully-loaded"
             }
-          ]
+          ],
+          "id": "herbie-main-saga"
         }
-      ]
+      ],
+      "id": "herbie"
     },
     {
       "name": "Spider-Man",
@@ -509,7 +527,8 @@
               "releaseDate": "2007-05-04",
               "id": "spider-man-3"
             }
-          ]
+          ],
+          "id": "spider-man-trilogy"
         },
         {
           "name": "The Amazing Spider-Man Duology",
@@ -525,7 +544,8 @@
               "releaseDate": "2014-05-02",
               "id": "the-amazing-spider-man-2"
             }
-          ]
+          ],
+          "id": "the-amazing-spider-man-duology"
         },
         {
           "name": "Sony's Spider-Man Universe",
@@ -561,9 +581,11 @@
               "releaseDate": "2024-12-13",
               "id": "kraven-the-hunter"
             }
-          ]
+          ],
+          "id": "sonys-spider-man-universe"
         }
-      ]
+      ],
+      "id": "spider-man"
     },
     {
       "name": "Planet of the Apes",
@@ -597,7 +619,8 @@
               "releaseDate": "1973-06-15",
               "id": "battle-for-the-planet-of-the-apes"
             }
-          ]
+          ],
+          "id": "planet-of-the-apes-original-saga"
         },
         {
           "name": "Remake",
@@ -608,7 +631,8 @@
               "releaseDate": "2001-07-27",
               "id": "planet-of-the-apes-2001"
             }
-          ]
+          ],
+          "id": "planet-of-the-apes-remake"
         },
         {
           "name": "Reboot",
@@ -634,9 +658,11 @@
               "releaseDate": "2024-05-10",
               "id": "kingdom-of-the-planet-of-the-apes"
             }
-          ]
+          ],
+          "id": "planet-of-the-apes-reboot"
         }
-      ]
+      ],
+      "id": "planet-of-the-apes"
     },
     {
       "name": "Alien & Predator",
@@ -680,7 +706,8 @@
               "releaseDate": "2024-08-16",
               "id": "alien-romulus"
             }
-          ]
+          ],
+          "id": "alien"
         },
         {
           "name": "Predator",
@@ -711,7 +738,8 @@
               "releaseDate": "2025-11-07",
               "id": "predator-badlands"
             }
-          ]
+          ],
+          "id": "predator"
         },
         {
           "name": "Alien vs. Predator",
@@ -727,9 +755,11 @@
               "releaseDate": "2007-12-25",
               "id": "aliens-vs-predator-requiem"
             }
-          ]
+          ],
+          "id": "alien-vs-predator"
         }
-      ]
+      ],
+      "id": "alien-predator"
     },
     {
       "name": "Die Hard",
@@ -763,9 +793,11 @@
               "releaseDate": "2013-02-14",
               "id": "a-good-day-to-die-hard"
             }
-          ]
+          ],
+          "id": "die-hard-main-saga"
         }
-      ]
+      ],
+      "id": "die-hard"
     },
     {
       "name": "Avatar",
@@ -784,9 +816,11 @@
               "releaseDate": "2022-12-16",
               "id": "avatar-the-way-of-water"
             }
-          ]
+          ],
+          "id": "avatar-main-saga"
         }
-      ]
+      ],
+      "id": "avatar"
     },
     {
       "name": "Tron",
@@ -810,9 +844,11 @@
               "releaseDate": "2025-10-10",
               "id": "tron-ares"
             }
-          ]
+          ],
+          "id": "tron-main-saga"
         }
-      ]
+      ],
+      "id": "tron"
     },
     {
       "name": "National Treasure",
@@ -831,9 +867,11 @@
               "releaseDate": "2007-12-21",
               "id": "national-treasure-book-of-secrets"
             }
-          ]
+          ],
+          "id": "national-treasure-main-saga"
         }
-      ]
+      ],
+      "id": "national-treasure"
     },
     {
       "name": "Dexter Riley",
@@ -857,9 +895,11 @@
               "releaseDate": "1975-02-06",
               "id": "the-strongest-man-in-the-world"
             }
-          ]
+          ],
+          "id": "dexter-riley-main-saga"
         }
-      ]
+      ],
+      "id": "dexter-riley"
     },
     {
       "name": "Flubber",
@@ -878,7 +918,8 @@
               "releaseDate": "1963-01-16",
               "id": "son-of-flubber"
             }
-          ]
+          ],
+          "id": "flubber-original-saga"
         },
         {
           "name": "Cinematic Remake",
@@ -889,9 +930,11 @@
               "releaseDate": "1997-11-26",
               "id": "flubber"
             }
-          ]
+          ],
+          "id": "flubber-cinematic-remake"
         }
-      ]
+      ],
+      "id": "flubber"
     },
     {
       "name": "Freaky Friday",
@@ -905,7 +948,8 @@
               "releaseDate": "1977-01-21",
               "id": "freaky-friday-1977"
             }
-          ]
+          ],
+          "id": "freaky-friday-original-film"
         },
         {
           "name": "Cinematic Remake",
@@ -921,9 +965,11 @@
               "releaseDate": "2025-08-08",
               "id": "freakier-friday"
             }
-          ]
+          ],
+          "id": "freaky-friday-cinematic-remake"
         }
-      ]
+      ],
+      "id": "freaky-friday"
     },
     {
       "name": "Homeward Bound",
@@ -937,7 +983,8 @@
               "releaseDate": "1963-11-20",
               "id": "the-incredible-journey"
             }
-          ]
+          ],
+          "id": "homeward-bound-original-film"
         },
         {
           "name": "Remake",
@@ -953,9 +1000,11 @@
               "releaseDate": "1996-03-08",
               "id": "homeward-bound-ii-lost-in-san-francisco"
             }
-          ]
+          ],
+          "id": "homeward-bound-remake"
         }
-      ]
+      ],
+      "id": "homeward-bound"
     },
     {
       "name": "Witch Mountain",
@@ -974,7 +1023,8 @@
               "releaseDate": "1978-03-10",
               "id": "return-from-witch-mountain"
             }
-          ]
+          ],
+          "id": "witch-mountain-original-saga"
         },
         {
           "name": "Cinematic Remake",
@@ -985,9 +1035,11 @@
               "releaseDate": "2009-03-13",
               "id": "race-to-witch-mountain"
             }
-          ]
+          ],
+          "id": "witch-mountain-cinematic-remake"
         }
-      ]
+      ],
+      "id": "witch-mountain"
     },
     {
       "name": "The Chronicles of Narnia",
@@ -1011,9 +1063,11 @@
               "releaseDate": "2010-12-10",
               "id": "the-chronicles-of-narnia-the-voyage-of-the-dawn-treader"
             }
-          ]
+          ],
+          "id": "the-chronicles-of-narnia-main-saga"
         }
-      ]
+      ],
+      "id": "the-chronicles-of-narnia"
     },
     {
       "name": "The Muppets",
@@ -1062,9 +1116,11 @@
               "releaseDate": "2014-03-21",
               "id": "muppets-most-wanted"
             }
-          ]
+          ],
+          "id": "the-muppets-main-saga"
         }
-      ]
+      ],
+      "id": "the-muppets"
     },
     {
       "name": "The Mighty Ducks",
@@ -1088,9 +1144,11 @@
               "releaseDate": "1996-10-04",
               "id": "d3-the-mighty-ducks"
             }
-          ]
+          ],
+          "id": "the-mighty-ducks-main-saga"
         }
-      ]
+      ],
+      "id": "the-mighty-ducks"
     },
     {
       "name": "The Shaggy Dog",
@@ -1109,7 +1167,8 @@
               "releaseDate": "1976-12-17",
               "id": "the-shaggy-d-a"
             }
-          ]
+          ],
+          "id": "the-shaggy-dog-original-saga"
         },
         {
           "name": "Cinematic Remake",
@@ -1120,9 +1179,11 @@
               "releaseDate": "2006-03-10",
               "id": "the-shaggy-dog-2006"
             }
-          ]
+          ],
+          "id": "the-shaggy-dog-cinematic-remake"
         }
-      ]
+      ],
+      "id": "the-shaggy-dog"
     },
     {
       "name": "The Santa Clause",
@@ -1146,9 +1207,11 @@
               "releaseDate": "2006-11-03",
               "id": "the-santa-clause-3-the-escape-clause"
             }
-          ]
+          ],
+          "id": "the-santa-clause-main-saga"
         }
-      ]
+      ],
+      "id": "the-santa-clause"
     },
     {
       "name": "Alvin and the Chipmunks",
@@ -1177,9 +1240,11 @@
               "releaseDate": "2015-12-18",
               "id": "alvin-and-the-chipmunks-the-road-chip"
             }
-          ]
+          ],
+          "id": "alvin-and-the-chipmunks-main-saga"
         }
-      ]
+      ],
+      "id": "alvin-and-the-chipmunks"
     },
     {
       "name": "Big Momma",
@@ -1203,9 +1268,11 @@
               "releaseDate": "2011-02-18",
               "id": "big-mommas-like-father-like-son"
             }
-          ]
+          ],
+          "id": "big-momma-main-saga"
         }
-      ]
+      ],
+      "id": "big-momma"
     },
     {
       "name": "Charlie Chan",
@@ -1224,7 +1291,8 @@
               "releaseDate": "1931-11-15",
               "id": "eran-trece"
             }
-          ]
+          ],
+          "id": "charlie-chan-spin-offs"
         },
         {
           "name": "Warner Oland Saga",
@@ -1310,7 +1378,8 @@
               "releaseDate": "1938-01-21",
               "id": "charlie-chan-at-monte-carlo"
             }
-          ]
+          ],
+          "id": "warner-oland-saga"
         },
         {
           "name": "Sidney Toler Saga",
@@ -1371,9 +1440,11 @@
               "releaseDate": "1942-02-27",
               "id": "castle-in-the-desert"
             }
-          ]
+          ],
+          "id": "sidney-toler-saga"
         }
-      ]
+      ],
+      "id": "charlie-chan"
     },
     {
       "name": "Cisco Kid",
@@ -1402,7 +1473,8 @@
               "releaseDate": "1939-04-28",
               "id": "return-of-the-cisco-kid"
             }
-          ]
+          ],
+          "id": "warner-baxter-saga"
         },
         {
           "name": "Cesar Romero Saga",
@@ -1438,9 +1510,11 @@
               "releaseDate": "1941-04-18",
               "id": "ride-on-vaquero"
             }
-          ]
+          ],
+          "id": "cesar-romero-saga"
         }
-      ]
+      ],
+      "id": "cisco-kid"
     },
     {
       "name": "Doctor Dolittle",
@@ -1454,7 +1528,8 @@
               "releaseDate": "1967-12-19",
               "id": "doctor-dolittle"
             }
-          ]
+          ],
+          "id": "doctor-dolittle-original-film"
         },
         {
           "name": "Remake",
@@ -1470,9 +1545,11 @@
               "releaseDate": "2001-06-22",
               "id": "dr-dolittle-2"
             }
-          ]
+          ],
+          "id": "doctor-dolittle-remake"
         }
-      ]
+      ],
+      "id": "doctor-dolittle"
     },
     {
       "name": "Flicka",
@@ -1496,7 +1573,8 @@
               "releaseDate": "1948-06-03",
               "id": "green-grass-of-wyoming"
             }
-          ]
+          ],
+          "id": "flicka-original-saga"
         },
         {
           "name": "Remake",
@@ -1507,9 +1585,11 @@
               "releaseDate": "2006-10-20",
               "id": "flicka"
             }
-          ]
+          ],
+          "id": "flicka-remake"
         }
-      ]
+      ],
+      "id": "flicka"
     },
     {
       "name": "Hercule Poirot",
@@ -1533,9 +1613,11 @@
               "releaseDate": "2023-09-15",
               "id": "a-haunting-in-venice"
             }
-          ]
+          ],
+          "id": "hercule-poirot-main-saga"
         }
-      ]
+      ],
+      "id": "hercule-poirot"
     },
     {
       "name": "Highlander",
@@ -1559,9 +1641,11 @@
               "releaseDate": "2000-09-01",
               "id": "highlander-endgame"
             }
-          ]
+          ],
+          "id": "highlander-main-saga"
         }
-      ]
+      ],
+      "id": "highlander"
     },
     {
       "name": "Independence Day",
@@ -1580,9 +1664,11 @@
               "releaseDate": "2016-06-24",
               "id": "independence-day-resurgence"
             }
-          ]
+          ],
+          "id": "independence-day-main-saga"
         }
-      ]
+      ],
+      "id": "independence-day"
     },
     {
       "name": "Jones Family",
@@ -1676,9 +1762,11 @@
               "releaseDate": "1940-05-17",
               "id": "on-their-own"
             }
-          ]
+          ],
+          "id": "jones-family-main-saga"
         }
-      ]
+      ],
+      "id": "jones-family"
     },
     {
       "name": "Diary of a Wimpy Kid",
@@ -1707,9 +1795,11 @@
               "releaseDate": "2017-05-19",
               "id": "diary-of-a-wimpy-kid-the-long-haul"
             }
-          ]
+          ],
+          "id": "diary-of-a-wimpy-kid-main-saga"
         }
-      ]
+      ],
+      "id": "diary-of-a-wimpy-kid"
     },
     {
       "name": "Kingsman",
@@ -1733,9 +1823,11 @@
               "releaseDate": "2021-12-22",
               "id": "the-kings-man"
             }
-          ]
+          ],
+          "id": "kingsman-main-saga"
         }
-      ]
+      ],
+      "id": "kingsman"
     },
     {
       "name": "Inspector Hornleigh",
@@ -1759,9 +1851,11 @@
               "releaseDate": "1941-05-01",
               "id": "night-train-to-munich"
             }
-          ]
+          ],
+          "id": "inspector-hornleigh-main-saga"
         }
-      ]
+      ],
+      "id": "inspector-hornleigh"
     },
     {
       "name": "The Omen",
@@ -1790,7 +1884,8 @@
               "releaseDate": "2024-04-05",
               "id": "the-first-omen"
             }
-          ]
+          ],
+          "id": "the-omen-original-saga"
         },
         {
           "name": "Reboot",
@@ -1801,9 +1896,11 @@
               "releaseDate": "2006-06-06",
               "id": "the-omen-2006"
             }
-          ]
+          ],
+          "id": "the-omen-reboot"
         }
-      ]
+      ],
+      "id": "the-omen"
     },
     {
       "name": "The Fly",
@@ -1827,7 +1924,8 @@
               "releaseDate": "1965-05-01",
               "id": "curse-of-the-fly"
             }
-          ]
+          ],
+          "id": "the-fly-original-saga"
         },
         {
           "name": "Reboot",
@@ -1843,9 +1941,11 @@
               "releaseDate": "1989-02-10",
               "id": "the-fly-ii"
             }
-          ]
+          ],
+          "id": "the-fly-reboot"
         }
-      ]
+      ],
+      "id": "the-fly"
     },
     {
       "name": "Night at the Museum",
@@ -1869,9 +1969,11 @@
               "releaseDate": "2014-12-19",
               "id": "night-at-the-museum-secret-of-the-tomb"
             }
-          ]
+          ],
+          "id": "night-at-the-museum-main-saga"
         }
-      ]
+      ],
+      "id": "night-at-the-museum"
     },
     {
       "name": "The Maze Runner",
@@ -1895,9 +1997,11 @@
               "releaseDate": "2018-01-26",
               "id": "maze-runner-the-death-cure"
             }
-          ]
+          ],
+          "id": "the-maze-runner-main-saga"
         }
-      ]
+      ],
+      "id": "the-maze-runner"
     },
     {
       "name": "Riders of the Purple Sage",
@@ -1916,7 +2020,8 @@
               "releaseDate": "1918-09-01",
               "id": "the-rainbow-trail-1918"
             }
-          ]
+          ],
+          "id": "william-farnum-saga"
         },
         {
           "name": "Tom Mix Saga",
@@ -1932,7 +2037,8 @@
               "releaseDate": "1925-05-24",
               "id": "the-rainbow-trail-1925"
             }
-          ]
+          ],
+          "id": "tom-mix-saga"
         },
         {
           "name": "George O'Brien Saga",
@@ -1948,7 +2054,8 @@
               "releaseDate": "1932-01-03",
               "id": "the-rainbow-trail-1932"
             }
-          ]
+          ],
+          "id": "george-obrien-saga"
         },
         {
           "name": "George Montgomery Remake",
@@ -1959,9 +2066,11 @@
               "releaseDate": "1941-10-10",
               "id": "riders-of-the-purple-sage-1941"
             }
-          ]
+          ],
+          "id": "george-montgomery-remake"
         }
-      ]
+      ],
+      "id": "riders-of-the-purple-sage"
     },
     {
       "name": "Home Alone",
@@ -1985,9 +2094,11 @@
               "releaseDate": "1997-12-12",
               "id": "home-alone-3"
             }
-          ]
+          ],
+          "id": "home-alone-main-saga"
         }
-      ]
+      ],
+      "id": "home-alone"
     },
     {
       "name": "Michael Shayne",
@@ -2031,9 +2142,11 @@
               "releaseDate": "1943-01-22",
               "id": "time-to-kill"
             }
-          ]
+          ],
+          "id": "michael-shayne-main-saga"
         }
-      ]
+      ],
+      "id": "michael-shayne"
     },
     {
       "name": "Mr. Belvedere",
@@ -2057,9 +2170,11 @@
               "releaseDate": "1951-08-01",
               "id": "mr-belvedere-rings-the-bell"
             }
-          ]
+          ],
+          "id": "mr-belvedere-main-saga"
         }
-      ]
+      ],
+      "id": "mr-belvedere"
     },
     {
       "name": "Mr. Moto",
@@ -2108,7 +2223,8 @@
               "releaseDate": "1939-07-07",
               "id": "mr-moto-takes-a-vacation"
             }
-          ]
+          ],
+          "id": "mr-moto-original-saga"
         },
         {
           "name": "Reboot",
@@ -2119,9 +2235,11 @@
               "releaseDate": "1965-12-01",
               "id": "the-return-of-mr-moto"
             }
-          ]
+          ],
+          "id": "mr-moto-reboot"
         }
-      ]
+      ],
+      "id": "mr-moto"
     },
     {
       "name": "Percy Jackson",
@@ -2140,9 +2258,11 @@
               "releaseDate": "2013-08-07",
               "id": "percy-jackson-sea-of-monsters"
             }
-          ]
+          ],
+          "id": "percy-jackson-main-saga"
         }
-      ]
+      ],
+      "id": "percy-jackson"
     },
     {
       "name": "Porky's",
@@ -2166,9 +2286,11 @@
               "releaseDate": "1985-03-22",
               "id": "porkys-revenge"
             }
-          ]
+          ],
+          "id": "porkys-main-saga"
         }
-      ]
+      ],
+      "id": "porkys"
     },
     {
       "name": "Quirt & Flagg",
@@ -2197,7 +2319,8 @@
               "releaseDate": "1933-01-22",
               "id": "hot-pepper"
             }
-          ]
+          ],
+          "id": "quirt-flagg-original-saga"
         },
         {
           "name": "Remake",
@@ -2208,9 +2331,11 @@
               "releaseDate": "1952-08-22",
               "id": "what-price-glory-1952"
             }
-          ]
+          ],
+          "id": "quirt-flagg-remake"
         }
-      ]
+      ],
+      "id": "quirt-flagg"
     },
     {
       "name": "Taken",
@@ -2234,9 +2359,11 @@
               "releaseDate": "2015-01-09",
               "id": "taken-3"
             }
-          ]
+          ],
+          "id": "taken-main-saga"
         }
-      ]
+      ],
+      "id": "taken"
     },
     {
       "name": "Cheaper by the Dozen",
@@ -2255,7 +2382,8 @@
               "releaseDate": "1952-05-02",
               "id": "belles-on-their-toes"
             }
-          ]
+          ],
+          "id": "cheaper-by-the-dozen-original-saga"
         },
         {
           "name": "Remake",
@@ -2271,9 +2399,11 @@
               "releaseDate": "2005-12-21",
               "id": "cheaper-by-the-dozen-2"
             }
-          ]
+          ],
+          "id": "cheaper-by-the-dozen-remake"
         }
-      ]
+      ],
+      "id": "cheaper-by-the-dozen"
     },
     {
       "name": "Blade",
@@ -2297,9 +2427,11 @@
               "releaseDate": "2004-12-08",
               "id": "blade-trinity"
             }
-          ]
+          ],
+          "id": "blade-main-saga"
         }
-      ]
+      ],
+      "id": "blade"
     },
     {
       "name": "Fantastic Four",
@@ -2318,7 +2450,8 @@
               "releaseDate": "2007-06-15",
               "id": "fantastic-four-rise-of-the-silver-surfer"
             }
-          ]
+          ],
+          "id": "fantastic-four-original-saga"
         },
         {
           "name": "Reboot",
@@ -2329,9 +2462,11 @@
               "releaseDate": "2015-08-07",
               "id": "fantastic-four-2015"
             }
-          ]
+          ],
+          "id": "fantastic-four-reboot"
         }
-      ]
+      ],
+      "id": "fantastic-four"
     },
     {
       "name": "Men in Black",
@@ -2360,9 +2495,11 @@
               "releaseDate": "2019-06-14",
               "id": "men-in-black-international"
             }
-          ]
+          ],
+          "id": "men-in-black-main-saga"
         }
-      ]
+      ],
+      "id": "men-in-black"
     },
     {
       "name": "Ernest",
@@ -2391,9 +2528,11 @@
               "releaseDate": "1991-10-11",
               "id": "ernest-scared-stupid"
             }
-          ]
+          ],
+          "id": "ernest-main-saga"
         }
-      ]
+      ],
+      "id": "ernest"
     },
     {
       "name": "Step Up",
@@ -2417,9 +2556,11 @@
               "releaseDate": "2010-08-06",
               "id": "step-up-3d"
             }
-          ]
+          ],
+          "id": "step-up-main-saga"
         }
-      ]
+      ],
+      "id": "step-up"
     },
     {
       "name": "Halloween",
@@ -2443,9 +2584,11 @@
               "releaseDate": "1995-09-29",
               "id": "halloween-the-curse-of-michael-myers"
             }
-          ]
+          ],
+          "id": "halloween-main-saga"
         }
-      ]
+      ],
+      "id": "halloween"
     },
     {
       "name": "Scary Movie",
@@ -2474,9 +2617,11 @@
               "releaseDate": "2006-04-14",
               "id": "scary-movie-4"
             }
-          ]
+          ],
+          "id": "scary-movie-main-saga"
         }
-      ]
+      ],
+      "id": "scary-movie"
     },
     {
       "name": "Scream",
@@ -2500,9 +2645,11 @@
               "releaseDate": "2000-02-04",
               "id": "scream-3"
             }
-          ]
+          ],
+          "id": "scream-main-saga"
         }
-      ]
+      ],
+      "id": "scream"
     },
     {
       "name": "Spy Kids",
@@ -2526,9 +2673,11 @@
               "releaseDate": "2003-07-25",
               "id": "spy-kids-3-d-game-over"
             }
-          ]
+          ],
+          "id": "spy-kids-main-saga"
         }
-      ]
+      ],
+      "id": "spy-kids"
     },
     {
       "name": "Anja & Viktor",
@@ -2552,9 +2701,11 @@
               "releaseDate": "2007-02-09",
               "id": "anja-viktor-3"
             }
-          ]
+          ],
+          "id": "anja-viktor-main-saga"
         }
-      ]
+      ],
+      "id": "anja-viktor"
     },
     {
       "name": "Baaghi",
@@ -2578,9 +2729,11 @@
               "releaseDate": "2020-03-06",
               "id": "baaghi-3"
             }
-          ]
+          ],
+          "id": "baaghi-main-saga"
         }
-      ]
+      ],
+      "id": "baaghi"
     },
     {
       "name": "Hamilton",
@@ -2604,9 +2757,11 @@
               "releaseDate": "2012-09-07",
               "id": "hamilton-3"
             }
-          ]
+          ],
+          "id": "hamilton-main-saga"
         }
-      ]
+      ],
+      "id": "hamilton"
     },
     {
       "name": "The Wild Soccer Bunch",
@@ -2645,9 +2800,11 @@
               "releaseDate": "2016-02-11",
               "id": "the-wild-soccer-bunch-6"
             }
-          ]
+          ],
+          "id": "the-wild-soccer-bunch-main-saga"
         }
-      ]
+      ],
+      "id": "the-wild-soccer-bunch"
     },
     {
       "name": "The Unstable",
@@ -2671,9 +2828,11 @@
               "releaseDate": "2014-01-01",
               "id": "the-unstable-3"
             }
-          ]
+          ],
+          "id": "the-unstable-main-saga"
         }
-      ]
+      ],
+      "id": "the-unstable"
     },
     {
       "name": "Lilly the Witch",
@@ -2697,9 +2856,11 @@
               "releaseDate": "2017-02-16",
               "id": "lilly-the-witch-3"
             }
-          ]
+          ],
+          "id": "lilly-the-witch-main-saga"
         }
-      ]
+      ],
+      "id": "lilly-the-witch"
     },
     {
       "name": "Ricky Rapper",
@@ -2723,9 +2884,11 @@
               "releaseDate": "2012-02-10",
               "id": "ricky-rapper-3"
             }
-          ]
+          ],
+          "id": "ricky-rapper-main-saga"
         }
-      ]
+      ],
+      "id": "ricky-rapper"
     },
     {
       "name": "The Last Warrior",
@@ -2749,9 +2912,11 @@
               "releaseDate": "2021-12-23",
               "id": "the-last-warrior-3"
             }
-          ]
+          ],
+          "id": "the-last-warrior-main-saga"
         }
-      ]
+      ],
+      "id": "the-last-warrior"
     },
     {
       "name": "Three Colors",
@@ -2775,9 +2940,11 @@
               "releaseDate": "1994-05-27",
               "id": "three-colors-red"
             }
-          ]
+          ],
+          "id": "three-colors-main-saga"
         }
-      ]
+      ],
+      "id": "three-colors"
     }
   ]
 }
