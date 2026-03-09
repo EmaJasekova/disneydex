@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import android.util.Log
 import com.google.firebase.database.getValue
+import fr.isen.vojtechsanda.disneydex.screens.loginScreen.LoginScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,12 +26,17 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DisneydexTheme {
+
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    LoginScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
+
+
+
+
+
             }
         }
 
