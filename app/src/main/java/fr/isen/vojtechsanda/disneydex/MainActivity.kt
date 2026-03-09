@@ -1,4 +1,5 @@
 package fr.isen.vojtechsanda.disneydex
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -28,13 +29,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DisneydexTheme {
-
-                Scaffold(modifier = Modifier.fillMaxSize(),
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
                     //we use 0xFF then add the color code in hex format
-                        containerColor = Color(0xFF333332)
-                )
-                {
-                    innerPadding ->
+                    containerColor = Color(0xFF333332)
+                ) { innerPadding ->
                     LoginScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
@@ -42,23 +41,15 @@ class MainActivity : ComponentActivity() {
 //                        modifier = Modifier.padding(innerPadding)
 //                    )
                 }
-
-
-
-
-
             }
         }
-
         // Write a message to the database
         val database = Firebase.database
         val myRef = database.getReference("message")
 
         myRef.setValue("Hello, World!")
-
         // Read from the database
-        myRef.addValueEventListener(object: ValueEventListener {
-
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
@@ -70,11 +61,9 @@ class MainActivity : ComponentActivity() {
                 Log.w(TAG, "Failed to read value.", error.toException())
             }
         })
-
-
     }
-//Use this to be able to read from database, use TAG to see the message in the logcat
 
+    //Use this to be able to read from database, use TAG to see the message in the logcat
     companion object {
         private const val TAG = "MainActivity"
     }
@@ -83,8 +72,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
-        modifier = modifier
+        text = "Hello $name!", modifier = modifier
     )
 }
 

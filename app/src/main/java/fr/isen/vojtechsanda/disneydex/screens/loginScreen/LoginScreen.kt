@@ -37,9 +37,9 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .weight(2.8f)
-                .padding(top = 40.dp, start=24.dp, end = 24.dp, bottom = 10.dp),
+                .padding(top = 40.dp, start = 24.dp, end = 24.dp, bottom = 10.dp),
         ) {
-           LoginForm()
+            LoginForm()
         }
     }
 }
