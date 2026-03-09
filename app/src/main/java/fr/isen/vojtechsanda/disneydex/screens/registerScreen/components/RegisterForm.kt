@@ -53,7 +53,7 @@ fun RegisterForm() {
                 modifier = Modifier.padding(bottom = 14.dp)
             )
         }
-        // Username Field
+
         OutlinedTextField(
             label = { Text("Username") },
             value = username,
@@ -79,7 +79,6 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(12.dp))
-        // Password Field
         OutlinedTextField(
             label = { Text("Password") },
             value = password,
@@ -92,7 +91,7 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(12.dp))
-        // Confirm Password
+
         OutlinedTextField(
             label = { Text("Confirm Password") },
             value = confirmPassword,
@@ -106,7 +105,7 @@ fun RegisterForm() {
         )
 
         Spacer(modifier = Modifier.height(24.dp))
-        // Register Button
+
         Button(
             onClick = { println("Registering with $email") },
             modifier = Modifier

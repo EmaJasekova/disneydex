@@ -32,7 +32,7 @@ fun LoginForm() {
     Column(
         modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Headers/////////////////
+        // Headers
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.Start // Aligns text to the left
@@ -51,7 +51,7 @@ fun LoginForm() {
             )
         }
 
-        // Email Field
+
         OutlinedTextField(
             label = { Text("Email") },
             value = email,
@@ -64,7 +64,6 @@ fun LoginForm() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Password Field
         OutlinedTextField(
             label = { Text("Password") },
             value = password,
@@ -78,7 +77,6 @@ fun LoginForm() {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // Login Button
         Button(
             onClick = { println("Logging in with $email") },
             modifier = Modifier
