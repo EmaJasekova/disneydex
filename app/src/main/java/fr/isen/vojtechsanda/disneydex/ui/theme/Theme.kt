@@ -40,13 +40,21 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun loginTextFieldColors() = OutlinedTextFieldDefaults.colors(
     // Setting these to Transparent removes the "little background" box
-    focusedContainerColor = Color.Transparent, unfocusedContainerColor = Color.Transparent,
+    focusedContainerColor = Color.Transparent,
+    unfocusedContainerColor = Color.Transparent,
+
     // Border colors (outline)
-    focusedBorderColor = Color.Gray, unfocusedBorderColor = Color.Gray,
+    focusedBorderColor = Color.Gray,
+    unfocusedBorderColor = Color.Gray,
+
     // Text colors
-    focusedTextColor = Color.Gray, unfocusedTextColor = Color.Gray,
+    focusedTextColor = Color.LightGray,
+    unfocusedTextColor = Color.LightGray,
+
     // Label colors
-    focusedLabelColor = Color.Gray, unfocusedLabelColor = Color.Gray, errorLabelColor = Color.Red
+    focusedLabelColor = Color.LightGray,
+    unfocusedLabelColor = Color.LightGray,
+    errorLabelColor = Color.Red
 )
 
 @Composable
