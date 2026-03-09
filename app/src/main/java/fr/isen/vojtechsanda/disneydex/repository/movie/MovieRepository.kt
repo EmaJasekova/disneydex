@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface MovieRepository {
 
-    fun getMoviesBySaga(sagaId: String): Flow<List<Movie>>
+    fun observeMoviesBySaga(sagaId: String): Flow<List<Movie>>
 
-    fun getMovie(movieId: String): Flow<Movie?>
+    fun observeMovie(movieId: String): Flow<Movie?>
 }

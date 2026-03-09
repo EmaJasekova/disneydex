@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface UniverseRepository {
 
-    fun getUniverses(): Flow<Universes>
+    fun observeUniverses(): Flow<Universes>
 
-    fun getUniverse(universeId: String): Flow<Universe?>
+    fun observeUniverse(universeId: String): Flow<Universe?>
 }
