@@ -11,11 +11,9 @@ data class MovieDto(
     val name: String = "",
     val releaseDate: String = ""
 ) {
-    fun toDomain(): Movie = Movie(
-        id = id,
-        name = name,
-        releaseDate = runCatching {
-            LocalDate.parse(releaseDate, DB_DATE_FORMAT)
-        }.getOrNull()
+    fun toMovie(): Movie = Movie(
+        id,
+        name,
+        runCatching { LocalDate.parse(releaseDate, DB_DATE_FORMAT) }.getOrNull()
     )
 }

@@ -8,10 +8,10 @@ data class SagaDto(
     val genre: String = "",
     val movies: List<MovieDto> = emptyList()
 ) {
-    fun toDomain(): Saga = Saga(
-        id = id,
-        name = name,
-        genre = genre,
-        movies = movies.map { movieDto -> movieDto.toDomain() }
+    fun toSaga(): Saga = Saga(
+        id,
+        name,
+        genre,
+        movies.map { movieDto -> movieDto.toMovie() }
     )
 }
