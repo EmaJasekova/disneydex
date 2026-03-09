@@ -9,39 +9,48 @@
           "movies": [
             {
               "name": "Star Wars: Episode I - The Phantom Menace",
-              "release_date": "1999-05-19"
+              "release_date": "1999-05-19",
+              "id": "star-wars-episode-i-the-phantom-menace"
             },
             {
               "name": "Star Wars: Episode II - Attack of the Clones",
-              "release_date": "2002-05-16"
+              "release_date": "2002-05-16",
+              "id": "star-wars-episode-ii-attack-of-the-clones"
             },
             {
               "name": "Star Wars: Episode III - Revenge of the Sith",
-              "release_date": "2005-05-19"
+              "release_date": "2005-05-19",
+              "id": "star-wars-episode-iii-revenge-of-the-sith"
             },
             {
               "name": "Star Wars: Episode IV - A New Hope",
-              "release_date": "1977-05-25"
+              "release_date": "1977-05-25",
+              "id": "star-wars-episode-iv-a-new-hope"
             },
             {
               "name": "Star Wars: Episode V - The Empire Strikes Back",
-              "release_date": "1980-05-21"
+              "release_date": "1980-05-21",
+              "id": "star-wars-episode-v-the-empire-strikes-back"
             },
             {
               "name": "Star Wars: Episode VI - Return of the Jedi",
-              "release_date": "1983-05-25"
+              "release_date": "1983-05-25",
+              "id": "star-wars-episode-vi-return-of-the-jedi"
             },
             {
               "name": "Star Wars: Episode VII - The Force Awakens",
-              "release_date": "2015-12-18"
+              "release_date": "2015-12-18",
+              "id": "star-wars-episode-vii-the-force-awakens"
             },
             {
               "name": "Star Wars: Episode VIII - The Last Jedi",
-              "release_date": "2017-12-15"
+              "release_date": "2017-12-15",
+              "id": "star-wars-episode-viii-the-last-jedi"
             },
             {
               "name": "Star Wars: Episode IX - The Rise of Skywalker",
-              "release_date": "2019-12-20"
+              "release_date": "2019-12-20",
+              "id": "star-wars-episode-ix-the-rise-of-skywalker"
             }
           ]
         },
@@ -51,11 +60,13 @@
           "movies": [
             {
               "name": "Rogue One: A Star Wars Story",
-              "release_date": "2016-12-16"
+              "release_date": "2016-12-16",
+              "id": "rogue-one-a-star-wars-story"
             },
             {
               "name": "Solo: A Star Wars Story",
-              "release_date": "2018-05-25"
+              "release_date": "2018-05-25",
+              "id": "solo-a-star-wars-story"
             }
           ]
         }
@@ -70,27 +81,33 @@
           "movies": [
             {
               "name": "Iron Man",
-              "release_date": "2008-05-02"
+              "release_date": "2008-05-02",
+              "id": "iron-man"
             },
             {
               "name": "The Incredible Hulk",
-              "release_date": "2008-06-13"
+              "release_date": "2008-06-13",
+              "id": "the-incredible-hulk"
             },
             {
               "name": "Iron Man 2",
-              "release_date": "2010-05-07"
+              "release_date": "2010-05-07",
+              "id": "iron-man-2"
             },
             {
               "name": "Thor",
-              "release_date": "2011-05-06"
+              "release_date": "2011-05-06",
+              "id": "thor"
             },
             {
               "name": "Captain America: The First Avenger",
-              "release_date": "2011-07-22"
+              "release_date": "2011-07-22",
+              "id": "captain-america-the-first-avenger"
             },
             {
               "name": "The Avengers",
-              "release_date": "2012-05-04"
+              "release_date": "2012-05-04",
+              "id": "the-avengers"
             }
           ]
         },
@@ -100,27 +117,33 @@
           "movies": [
             {
               "name": "Iron Man 3",
-              "release_date": "2013-05-03"
+              "release_date": "2013-05-03",
+              "id": "iron-man-3"
             },
             {
               "name": "Thor: The Dark World",
-              "release_date": "2013-11-08"
+              "release_date": "2013-11-08",
+              "id": "thor-the-dark-world"
             },
             {
               "name": "Captain America: The Winter Soldier",
-              "release_date": "2014-04-04"
+              "release_date": "2014-04-04",
+              "id": "captain-america-the-winter-soldier"
             },
             {
               "name": "Guardians of the Galaxy",
-              "release_date": "2014-08-01"
+              "release_date": "2014-08-01",
+              "id": "guardians-of-the-galaxy"
             },
             {
               "name": "Avengers: Age of Ultron",
-              "release_date": "2015-05-01"
+              "release_date": "2015-05-01",
+              "id": "avengers-age-of-ultron"
             },
             {
               "name": "Ant-Man",
-              "release_date": "2015-07-17"
+              "release_date": "2015-07-17",
+              "id": "ant-man"
             }
           ]
         },
@@ -130,47 +153,58 @@
           "movies": [
             {
               "name": "Captain America: Civil War",
-              "release_date": "2016-05-06"
+              "release_date": "2016-05-06",
+              "id": "captain-america-civil-war"
             },
             {
               "name": "Doctor Strange",
-              "release_date": "2016-11-04"
+              "release_date": "2016-11-04",
+              "id": "doctor-strange"
             },
             {
               "name": "Guardians of the Galaxy Vol. 2",
-              "release_date": "2017-05-05"
+              "release_date": "2017-05-05",
+              "id": "guardians-of-the-galaxy-vol-2"
             },
             {
               "name": "Spider-Man: Homecoming",
-              "release_date": "2017-07-07"
+              "release_date": "2017-07-07",
+              "id": "spider-man-homecoming"
             },
             {
               "name": "Thor: Ragnarok",
-              "release_date": "2017-11-03"
+              "release_date": "2017-11-03",
+              "id": "thor-ragnarok"
             },
             {
               "name": "Black Panther",
-              "release_date": "2018-02-16"
+              "release_date": "2018-02-16",
+              "id": "black-panther"
             },
             {
               "name": "Avengers: Infinity War",
-              "release_date": "2018-04-27"
+              "release_date": "2018-04-27",
+              "id": "avengers-infinity-war"
             },
             {
               "name": "Ant-Man and the Wasp",
-              "release_date": "2018-07-06"
+              "release_date": "2018-07-06",
+              "id": "ant-man-and-the-wasp"
             },
             {
               "name": "Captain Marvel",
-              "release_date": "2019-03-08"
+              "release_date": "2019-03-08",
+              "id": "captain-marvel"
             },
             {
               "name": "Avengers: Endgame",
-              "release_date": "2019-04-26"
+              "release_date": "2019-04-26",
+              "id": "avengers-endgame"
             },
             {
               "name": "Spider-Man: Far From Home",
-              "release_date": "2019-07-02"
+              "release_date": "2019-07-02",
+              "id": "spider-man-far-from-home"
             }
           ]
         },
@@ -180,31 +214,38 @@
           "movies": [
             {
               "name": "Black Widow",
-              "release_date": "2021-07-09"
+              "release_date": "2021-07-09",
+              "id": "black-widow"
             },
             {
               "name": "Shang-Chi and the Legend of the Ten Rings",
-              "release_date": "2021-09-03"
+              "release_date": "2021-09-03",
+              "id": "shang-chi-and-the-legend-of-the-ten-rings"
             },
             {
               "name": "Eternals",
-              "release_date": "2021-11-05"
+              "release_date": "2021-11-05",
+              "id": "eternals"
             },
             {
               "name": "Spider-Man: No Way Home",
-              "release_date": "2021-12-17"
+              "release_date": "2021-12-17",
+              "id": "spider-man-no-way-home"
             },
             {
               "name": "Doctor Strange in the Multiverse of Madness",
-              "release_date": "2022-05-06"
+              "release_date": "2022-05-06",
+              "id": "doctor-strange-in-the-multiverse-of-madness"
             },
             {
               "name": "Thor: Love and Thunder",
-              "release_date": "2022-07-08"
+              "release_date": "2022-07-08",
+              "id": "thor-love-and-thunder"
             },
             {
               "name": "Black Panther: Wakanda Forever",
-              "release_date": "2022-11-11"
+              "release_date": "2022-11-11",
+              "id": "black-panther-wakanda-forever"
             }
           ]
         },
@@ -214,27 +255,33 @@
           "movies": [
             {
               "name": "Ant-Man and the Wasp: Quantumania",
-              "release_date": "2023-02-17"
+              "release_date": "2023-02-17",
+              "id": "ant-man-and-the-wasp-quantumania"
             },
             {
               "name": "Guardians of the Galaxy Vol. 3",
-              "release_date": "2023-05-05"
+              "release_date": "2023-05-05",
+              "id": "guardians-of-the-galaxy-vol-3"
             },
             {
               "name": "The Marvels",
-              "release_date": "2023-11-10"
+              "release_date": "2023-11-10",
+              "id": "the-marvels"
             },
             {
               "name": "Deadpool & Wolverine",
-              "release_date": "2024-07-26"
+              "release_date": "2024-07-26",
+              "id": "deadpool-wolverine"
             },
             {
               "name": "Captain America: Brave New World",
-              "release_date": "2025-02-14"
+              "release_date": "2025-02-14",
+              "id": "captain-america-brave-new-world"
             },
             {
               "name": "Thunderbolts*",
-              "release_date": "2025-05-02"
+              "release_date": "2025-05-02",
+              "id": "thunderbolts"
             }
           ]
         },
@@ -244,7 +291,8 @@
           "movies": [
             {
               "name": "The Fantastic Four: First Steps",
-              "release_date": "2025-07-25"
+              "release_date": "2025-07-25",
+              "id": "the-fantastic-four-first-steps"
             }
           ]
         }
@@ -259,59 +307,73 @@
           "movies": [
             {
               "name": "X-Men",
-              "release_date": "2000-07-14"
+              "release_date": "2000-07-14",
+              "id": "x-men"
             },
             {
               "name": "X2: X-Men United",
-              "release_date": "2003-05-02"
+              "release_date": "2003-05-02",
+              "id": "x2-x-men-united"
             },
             {
               "name": "X-Men: The Last Stand",
-              "release_date": "2006-05-26"
+              "release_date": "2006-05-26",
+              "id": "x-men-the-last-stand"
             },
             {
               "name": "X-Men Origins: Wolverine",
-              "release_date": "2009-05-01"
+              "release_date": "2009-05-01",
+              "id": "x-men-origins-wolverine"
             },
             {
               "name": "X-Men: First Class",
-              "release_date": "2011-06-03"
+              "release_date": "2011-06-03",
+              "id": "x-men-first-class"
             },
             {
               "name": "The Wolverine",
-              "release_date": "2013-07-26"
+              "release_date": "2013-07-26",
+              "id": "the-wolverine"
             },
             {
               "name": "X-Men: Days of Future Past",
-              "release_date": "2014-05-23"
+              "release_date": "2014-05-23",
+              "id": "x-men-days-of-future-past"
             },
             {
               "name": "Deadpool",
-              "release_date": "2016-02-12"
+              "release_date": "2016-02-12",
+              "id": "deadpool"
             },
             {
               "name": "X-Men: Apocalypse",
-              "release_date": "2016-05-27"
+              "release_date": "2016-05-27",
+              "id": "x-men-apocalypse"
             },
             {
               "name": "Logan",
-              "release_date": "2017-03-03"
+              "release_date": "2017-03-03",
+              "id": "logan"
             },
             {
               "name": "Deadpool 2",
-              "release_date": "2018-05-18"
+              "release_date": "2018-05-18",
+              "id": "deadpool-2"
             },
             {
               "name": "Once Upon a Deadpool",
-              "release_date": "2018-12-12"
+              "release_date": "2018-12-12",
+              "id": "once-upon-a-deadpool"
             },
             {
               "name": "Dark Phoenix",
-              "release_date": "2019-06-07"
+              "release_date": "2019-06-07",
+              "id": "dark-phoenix"
             },
             {
               "name": "The New Mutants",
-              "release_date": "2020-08-28"
+              "release_date": "2020-08-28",
+              "id": "the-new-mutants"
             }
           ]
         }
@@ -326,23 +388,28 @@
           "movies": [
             {
               "name": "Raiders of the Lost Ark",
-              "release_date": "1981-06-12"
+              "release_date": "1981-06-12",
+              "id": "raiders-of-the-lost-ark"
             },
             {
               "name": "Indiana Jones and the Temple of Doom",
-              "release_date": "1984-05-23"
+              "release_date": "1984-05-23",
+              "id": "indiana-jones-and-the-temple-of-doom"
             },
             {
               "name": "Indiana Jones and the Last Crusade",
-              "release_date": "1989-05-24"
+              "release_date": "1989-05-24",
+              "id": "indiana-jones-and-the-last-crusade"
             },
             {
               "name": "Indiana Jones and the Kingdom of the Crystal Skull",
-              "release_date": "2008-05-22"
+              "release_date": "2008-05-22",
+              "id": "indiana-jones-and-the-kingdom-of-the-crystal-skull"
             },
             {
               "name": "Indiana Jones and the Dial of Destiny",
-              "release_date": "2023-06-30"
+              "release_date": "2023-06-30",
+              "id": "indiana-jones-and-the-dial-of-destiny"
             }
           ]
         }
@@ -357,23 +424,28 @@
           "movies": [
             {
               "name": "Pirates of the Caribbean: The Curse of the Black Pearl",
-              "release_date": "2003-07-09"
+              "release_date": "2003-07-09",
+              "id": "pirates-of-the-caribbean-the-curse-of-the-black-pearl"
             },
             {
               "name": "Pirates of the Caribbean: Dead Man's Chest",
-              "release_date": "2006-07-07"
+              "release_date": "2006-07-07",
+              "id": "pirates-of-the-caribbean-dead-mans-chest"
             },
             {
               "name": "Pirates of the Caribbean: At World's End",
-              "release_date": "2007-05-25"
+              "release_date": "2007-05-25",
+              "id": "pirates-of-the-caribbean-at-worlds-end"
             },
             {
               "name": "Pirates of the Caribbean: On Stranger Tides",
-              "release_date": "2011-05-20"
+              "release_date": "2011-05-20",
+              "id": "pirates-of-the-caribbean-on-stranger-tides"
             },
             {
               "name": "Pirates of the Caribbean: Dead Men Tell No Tales",
-              "release_date": "2017-05-26"
+              "release_date": "2017-05-26",
+              "id": "pirates-of-the-caribbean-dead-men-tell-no-tales"
             }
           ]
         }
@@ -388,23 +460,28 @@
           "movies": [
             {
               "name": "The Love Bug",
-              "release_date": "1969-03-13"
+              "release_date": "1969-03-13",
+              "id": "the-love-bug"
             },
             {
               "name": "Herbie Rides Again",
-              "release_date": "1974-06-06"
+              "release_date": "1974-06-06",
+              "id": "herbie-rides-again"
             },
             {
               "name": "Herbie Goes to Monte Carlo",
-              "release_date": "1977-06-24"
+              "release_date": "1977-06-24",
+              "id": "herbie-goes-to-monte-carlo"
             },
             {
               "name": "Herbie Goes Bananas",
-              "release_date": "1980-06-25"
+              "release_date": "1980-06-25",
+              "id": "herbie-goes-bananas"
             },
             {
               "name": "Herbie: Fully Loaded",
-              "release_date": "2005-06-22"
+              "release_date": "2005-06-22",
+              "id": "herbie-fully-loaded"
             }
           ]
         }
@@ -419,15 +496,18 @@
           "movies": [
             {
               "name": "Spider-Man",
-              "release_date": "2002-05-03"
+              "release_date": "2002-05-03",
+              "id": "spider-man"
             },
             {
               "name": "Spider-Man 2",
-              "release_date": "2004-06-30"
+              "release_date": "2004-06-30",
+              "id": "spider-man-2"
             },
             {
               "name": "Spider-Man 3",
-              "release_date": "2007-05-04"
+              "release_date": "2007-05-04",
+              "id": "spider-man-3"
             }
           ]
         },
@@ -437,11 +517,13 @@
           "movies": [
             {
               "name": "The Amazing Spider-Man",
-              "release_date": "2012-07-03"
+              "release_date": "2012-07-03",
+              "id": "the-amazing-spider-man"
             },
             {
               "name": "The Amazing Spider-Man 2",
-              "release_date": "2014-05-02"
+              "release_date": "2014-05-02",
+              "id": "the-amazing-spider-man-2"
             }
           ]
         },
@@ -451,27 +533,33 @@
           "movies": [
             {
               "name": "Venom",
-              "release_date": "2018-10-05"
+              "release_date": "2018-10-05",
+              "id": "venom"
             },
             {
               "name": "Venom: Let There Be Carnage",
-              "release_date": "2021-10-01"
+              "release_date": "2021-10-01",
+              "id": "venom-let-there-be-carnage"
             },
             {
               "name": "Morbius",
-              "release_date": "2022-04-01"
+              "release_date": "2022-04-01",
+              "id": "morbius"
             },
             {
               "name": "Madame Web",
-              "release_date": "2024-02-14"
+              "release_date": "2024-02-14",
+              "id": "madame-web"
             },
             {
               "name": "Venom: The Last Dance",
-              "release_date": "2024-10-25"
+              "release_date": "2024-10-25",
+              "id": "venom-the-last-dance"
             },
             {
               "name": "Kraven the Hunter",
-              "release_date": "2024-12-13"
+              "release_date": "2024-12-13",
+              "id": "kraven-the-hunter"
             }
           ]
         }
@@ -486,23 +574,28 @@
           "movies": [
             {
               "name": "Planet of the Apes",
-              "release_date": "1968-02-08"
+              "release_date": "1968-02-08",
+              "id": "planet-of-the-apes-1968"
             },
             {
               "name": "Beneath the Planet of the Apes",
-              "release_date": "1970-05-26"
+              "release_date": "1970-05-26",
+              "id": "beneath-the-planet-of-the-apes"
             },
             {
               "name": "Escape from the Planet of the Apes",
-              "release_date": "1971-05-21"
+              "release_date": "1971-05-21",
+              "id": "escape-from-the-planet-of-the-apes"
             },
             {
               "name": "Conquest of the Planet of the Apes",
-              "release_date": "1972-06-14"
+              "release_date": "1972-06-14",
+              "id": "conquest-of-the-planet-of-the-apes"
             },
             {
               "name": "Battle for the Planet of the Apes",
-              "release_date": "1973-06-15"
+              "release_date": "1973-06-15",
+              "id": "battle-for-the-planet-of-the-apes"
             }
           ]
         },
@@ -512,7 +605,8 @@
           "movies": [
             {
               "name": "Planet of the Apes",
-              "release_date": "2001-07-27"
+              "release_date": "2001-07-27",
+              "id": "planet-of-the-apes-2001"
             }
           ]
         },
@@ -522,19 +616,23 @@
           "movies": [
             {
               "name": "Rise of the Planet of the Apes",
-              "release_date": "2011-08-05"
+              "release_date": "2011-08-05",
+              "id": "rise-of-the-planet-of-the-apes"
             },
             {
               "name": "Dawn of the Planet of the Apes",
-              "release_date": "2014-07-11"
+              "release_date": "2014-07-11",
+              "id": "dawn-of-the-planet-of-the-apes"
             },
             {
               "name": "War for the Planet of the Apes",
-              "release_date": "2017-07-14"
+              "release_date": "2017-07-14",
+              "id": "war-for-the-planet-of-the-apes"
             },
             {
               "name": "Kingdom of the Planet of the Apes",
-              "release_date": "2024-05-10"
+              "release_date": "2024-05-10",
+              "id": "kingdom-of-the-planet-of-the-apes"
             }
           ]
         }
@@ -549,31 +647,38 @@
           "movies": [
             {
               "name": "Alien",
-              "release_date": "1979-05-25"
+              "release_date": "1979-05-25",
+              "id": "alien"
             },
             {
               "name": "Aliens",
-              "release_date": "1986-07-18"
+              "release_date": "1986-07-18",
+              "id": "aliens"
             },
             {
               "name": "Alien 3",
-              "release_date": "1992-05-22"
+              "release_date": "1992-05-22",
+              "id": "alien-3"
             },
             {
               "name": "Alien Resurrection",
-              "release_date": "1997-11-26"
+              "release_date": "1997-11-26",
+              "id": "alien-resurrection"
             },
             {
               "name": "Prometheus",
-              "release_date": "2012-06-08"
+              "release_date": "2012-06-08",
+              "id": "prometheus"
             },
             {
               "name": "Alien: Covenant",
-              "release_date": "2017-05-19"
+              "release_date": "2017-05-19",
+              "id": "alien-covenant"
             },
             {
               "name": "Alien: Romulus",
-              "release_date": "2024-08-16"
+              "release_date": "2024-08-16",
+              "id": "alien-romulus"
             }
           ]
         },
@@ -583,23 +688,28 @@
           "movies": [
             {
               "name": "Predator",
-              "release_date": "1987-06-12"
+              "release_date": "1987-06-12",
+              "id": "predator"
             },
             {
               "name": "Predator 2",
-              "release_date": "1990-11-21"
+              "release_date": "1990-11-21",
+              "id": "predator-2"
             },
             {
               "name": "Predators",
-              "release_date": "2010-07-09"
+              "release_date": "2010-07-09",
+              "id": "predators"
             },
             {
               "name": "The Predator",
-              "release_date": "2018-09-14"
+              "release_date": "2018-09-14",
+              "id": "the-predator"
             },
             {
               "name": "Predator: Badlands",
-              "release_date": "2025-11-07"
+              "release_date": "2025-11-07",
+              "id": "predator-badlands"
             }
           ]
         },
@@ -609,11 +719,13 @@
           "movies": [
             {
               "name": "Alien vs. Predator",
-              "release_date": "2004-08-13"
+              "release_date": "2004-08-13",
+              "id": "alien-vs-predator"
             },
             {
               "name": "Aliens vs. Predator: Requiem",
-              "release_date": "2007-12-25"
+              "release_date": "2007-12-25",
+              "id": "aliens-vs-predator-requiem"
             }
           ]
         }
@@ -628,23 +740,28 @@
           "movies": [
             {
               "name": "Die Hard",
-              "release_date": "1988-07-15"
+              "release_date": "1988-07-15",
+              "id": "die-hard"
             },
             {
               "name": "Die Hard 2",
-              "release_date": "1990-07-04"
+              "release_date": "1990-07-04",
+              "id": "die-hard-2"
             },
             {
               "name": "Die Hard with a Vengeance",
-              "release_date": "1995-05-19"
+              "release_date": "1995-05-19",
+              "id": "die-hard-with-a-vengeance"
             },
             {
               "name": "Live Free or Die Hard",
-              "release_date": "2007-06-27"
+              "release_date": "2007-06-27",
+              "id": "live-free-or-die-hard"
             },
             {
               "name": "A Good Day to Die Hard",
-              "release_date": "2013-02-14"
+              "release_date": "2013-02-14",
+              "id": "a-good-day-to-die-hard"
             }
           ]
         }
@@ -659,11 +776,13 @@
           "movies": [
             {
               "name": "Avatar",
-              "release_date": "2009-12-18"
+              "release_date": "2009-12-18",
+              "id": "avatar"
             },
             {
               "name": "Avatar: The Way of Water",
-              "release_date": "2022-12-16"
+              "release_date": "2022-12-16",
+              "id": "avatar-the-way-of-water"
             }
           ]
         }
@@ -678,15 +797,18 @@
           "movies": [
             {
               "name": "Tron",
-              "release_date": "1982-07-09"
+              "release_date": "1982-07-09",
+              "id": "tron"
             },
             {
               "name": "Tron: Legacy",
-              "release_date": "2010-12-17"
+              "release_date": "2010-12-17",
+              "id": "tron-legacy"
             },
             {
               "name": "Tron: Ares",
-              "release_date": "2025-10-10"
+              "release_date": "2025-10-10",
+              "id": "tron-ares"
             }
           ]
         }
@@ -701,11 +823,13 @@
           "movies": [
             {
               "name": "National Treasure",
-              "release_date": "2004-11-19"
+              "release_date": "2004-11-19",
+              "id": "national-treasure"
             },
             {
               "name": "National Treasure: Book of Secrets",
-              "release_date": "2007-12-21"
+              "release_date": "2007-12-21",
+              "id": "national-treasure-book-of-secrets"
             }
           ]
         }
@@ -720,15 +844,18 @@
           "movies": [
             {
               "name": "The Computer Wore Tennis Shoes",
-              "release_date": "1969-12-31"
+              "release_date": "1969-12-31",
+              "id": "the-computer-wore-tennis-shoes"
             },
             {
               "name": "Now You See Him, Now You Don't",
-              "release_date": "1972-07-12"
+              "release_date": "1972-07-12",
+              "id": "now-you-see-him-now-you-dont"
             },
             {
               "name": "The Strongest Man in the World",
-              "release_date": "1975-02-06"
+              "release_date": "1975-02-06",
+              "id": "the-strongest-man-in-the-world"
             }
           ]
         }
@@ -743,11 +870,13 @@
           "movies": [
             {
               "name": "The Absent-Minded Professor",
-              "release_date": "1961-03-16"
+              "release_date": "1961-03-16",
+              "id": "the-absent-minded-professor"
             },
             {
               "name": "Son of Flubber",
-              "release_date": "1963-01-16"
+              "release_date": "1963-01-16",
+              "id": "son-of-flubber"
             }
           ]
         },
@@ -757,7 +886,8 @@
           "movies": [
             {
               "name": "Flubber",
-              "release_date": "1997-11-26"
+              "release_date": "1997-11-26",
+              "id": "flubber"
             }
           ]
         }
@@ -772,7 +902,8 @@
           "movies": [
             {
               "name": "Freaky Friday",
-              "release_date": "1977-01-21"
+              "release_date": "1977-01-21",
+              "id": "freaky-friday-1977"
             }
           ]
         },
@@ -782,11 +913,13 @@
           "movies": [
             {
               "name": "Freaky Friday",
-              "release_date": "2003-08-06"
+              "release_date": "2003-08-06",
+              "id": "freaky-friday-2003"
             },
             {
               "name": "Freakier Friday",
-              "release_date": "2025-08-08"
+              "release_date": "2025-08-08",
+              "id": "freakier-friday"
             }
           ]
         }
@@ -801,7 +934,8 @@
           "movies": [
             {
               "name": "The Incredible Journey",
-              "release_date": "1963-11-20"
+              "release_date": "1963-11-20",
+              "id": "the-incredible-journey"
             }
           ]
         },
@@ -811,11 +945,13 @@
           "movies": [
             {
               "name": "Homeward Bound: The Incredible Journey",
-              "release_date": "1993-02-03"
+              "release_date": "1993-02-03",
+              "id": "homeward-bound-the-incredible-journey"
             },
             {
               "name": "Homeward Bound II: Lost in San Francisco",
-              "release_date": "1996-03-08"
+              "release_date": "1996-03-08",
+              "id": "homeward-bound-ii-lost-in-san-francisco"
             }
           ]
         }
@@ -830,11 +966,13 @@
           "movies": [
             {
               "name": "Escape to Witch Mountain",
-              "release_date": "1975-03-21"
+              "release_date": "1975-03-21",
+              "id": "escape-to-witch-mountain"
             },
             {
               "name": "Return from Witch Mountain",
-              "release_date": "1978-03-10"
+              "release_date": "1978-03-10",
+              "id": "return-from-witch-mountain"
             }
           ]
         },
@@ -844,7 +982,8 @@
           "movies": [
             {
               "name": "Race to Witch Mountain",
-              "release_date": "2009-03-13"
+              "release_date": "2009-03-13",
+              "id": "race-to-witch-mountain"
             }
           ]
         }
@@ -859,15 +998,18 @@
           "movies": [
             {
               "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
-              "release_date": "2005-12-09"
+              "release_date": "2005-12-09",
+              "id": "the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe"
             },
             {
               "name": "The Chronicles of Narnia: Prince Caspian",
-              "release_date": "2008-05-16"
+              "release_date": "2008-05-16",
+              "id": "the-chronicles-of-narnia-prince-caspian"
             },
             {
               "name": "The Chronicles of Narnia: The Voyage of the Dawn Treader",
-              "release_date": "2010-12-10"
+              "release_date": "2010-12-10",
+              "id": "the-chronicles-of-narnia-the-voyage-of-the-dawn-treader"
             }
           ]
         }
@@ -882,35 +1024,43 @@
           "movies": [
             {
               "name": "The Muppet Movie",
-              "release_date": "1979-06-22"
+              "release_date": "1979-06-22",
+              "id": "the-muppet-movie"
             },
             {
               "name": "The Great Muppet Caper",
-              "release_date": "1981-06-26"
+              "release_date": "1981-06-26",
+              "id": "the-great-muppet-caper"
             },
             {
               "name": "The Muppets Take Manhattan",
-              "release_date": "1984-07-13"
+              "release_date": "1984-07-13",
+              "id": "the-muppets-take-manhattan"
             },
             {
               "name": "The Muppet Christmas Carol",
-              "release_date": "1992-12-11"
+              "release_date": "1992-12-11",
+              "id": "the-muppet-christmas-carol"
             },
             {
               "name": "Muppet Treasure Island",
-              "release_date": "1996-02-16"
+              "release_date": "1996-02-16",
+              "id": "muppet-treasure-island"
             },
             {
               "name": "Muppets from Space",
-              "release_date": "1999-07-14"
+              "release_date": "1999-07-14",
+              "id": "muppets-from-space"
             },
             {
               "name": "The Muppets",
-              "release_date": "2011-11-23"
+              "release_date": "2011-11-23",
+              "id": "the-muppets"
             },
             {
               "name": "Muppets Most Wanted",
-              "release_date": "2014-03-21"
+              "release_date": "2014-03-21",
+              "id": "muppets-most-wanted"
             }
           ]
         }
@@ -925,15 +1075,18 @@
           "movies": [
             {
               "name": "The Mighty Ducks",
-              "release_date": "1992-10-02"
+              "release_date": "1992-10-02",
+              "id": "the-mighty-ducks"
             },
             {
               "name": "D2: The Mighty Ducks",
-              "release_date": "1994-03-25"
+              "release_date": "1994-03-25",
+              "id": "d2-the-mighty-ducks"
             },
             {
               "name": "D3: The Mighty Ducks",
-              "release_date": "1996-10-04"
+              "release_date": "1996-10-04",
+              "id": "d3-the-mighty-ducks"
             }
           ]
         }
@@ -948,11 +1101,13 @@
           "movies": [
             {
               "name": "The Shaggy Dog",
-              "release_date": "1959-03-19"
+              "release_date": "1959-03-19",
+              "id": "the-shaggy-dog-1959"
             },
             {
               "name": "The Shaggy D.A.",
-              "release_date": "1976-12-17"
+              "release_date": "1976-12-17",
+              "id": "the-shaggy-d-a"
             }
           ]
         },
@@ -962,7 +1117,8 @@
           "movies": [
             {
               "name": "The Shaggy Dog",
-              "release_date": "2006-03-10"
+              "release_date": "2006-03-10",
+              "id": "the-shaggy-dog-2006"
             }
           ]
         }
@@ -977,15 +1133,18 @@
           "movies": [
             {
               "name": "The Santa Clause",
-              "release_date": "1994-11-11"
+              "release_date": "1994-11-11",
+              "id": "the-santa-clause"
             },
             {
               "name": "The Santa Clause 2",
-              "release_date": "2002-11-01"
+              "release_date": "2002-11-01",
+              "id": "the-santa-clause-2"
             },
             {
               "name": "The Santa Clause 3: The Escape Clause",
-              "release_date": "2006-11-03"
+              "release_date": "2006-11-03",
+              "id": "the-santa-clause-3-the-escape-clause"
             }
           ]
         }
@@ -1000,19 +1159,23 @@
           "movies": [
             {
               "name": "Alvin and the Chipmunks",
-              "release_date": "2007-12-14"
+              "release_date": "2007-12-14",
+              "id": "alvin-and-the-chipmunks"
             },
             {
               "name": "Alvin and the Chipmunks: The Squeakquel",
-              "release_date": "2009-12-23"
+              "release_date": "2009-12-23",
+              "id": "alvin-and-the-chipmunks-the-squeakquel"
             },
             {
               "name": "Alvin and the Chipmunks: Chipwrecked",
-              "release_date": "2011-12-16"
+              "release_date": "2011-12-16",
+              "id": "alvin-and-the-chipmunks-chipwrecked"
             },
             {
               "name": "Alvin and the Chipmunks: The Road Chip",
-              "release_date": "2015-12-18"
+              "release_date": "2015-12-18",
+              "id": "alvin-and-the-chipmunks-the-road-chip"
             }
           ]
         }
@@ -1027,15 +1190,18 @@
           "movies": [
             {
               "name": "Big Momma's House",
-              "release_date": "2000-06-02"
+              "release_date": "2000-06-02",
+              "id": "big-mommas-house"
             },
             {
               "name": "Big Momma's House 2",
-              "release_date": "2006-01-27"
+              "release_date": "2006-01-27",
+              "id": "big-mommas-house-2"
             },
             {
               "name": "Big Mommas: Like Father, Like Son",
-              "release_date": "2011-02-18"
+              "release_date": "2011-02-18",
+              "id": "big-mommas-like-father-like-son"
             }
           ]
         }
@@ -1050,11 +1216,13 @@
           "movies": [
             {
               "name": "Behind That Curtain",
-              "release_date": "1929-06-28"
+              "release_date": "1929-06-28",
+              "id": "behind-that-curtain"
             },
             {
               "name": "Eran Trece",
-              "release_date": "1931-11-15"
+              "release_date": "1931-11-15",
+              "id": "eran-trece"
             }
           ]
         },
@@ -1064,67 +1232,83 @@
           "movies": [
             {
               "name": "Charlie Chan Carries On",
-              "release_date": "1931-04-12"
+              "release_date": "1931-04-12",
+              "id": "charlie-chan-carries-on"
             },
             {
               "name": "The Black Camel",
-              "release_date": "1931-06-21"
+              "release_date": "1931-06-21",
+              "id": "the-black-camel"
             },
             {
               "name": "Charlie Chan's Chance",
-              "release_date": "1932-01-24"
+              "release_date": "1932-01-24",
+              "id": "charlie-chans-chance"
             },
             {
               "name": "Charlie Chan's Greatest Case",
-              "release_date": "1933-09-15"
+              "release_date": "1933-09-15",
+              "id": "charlie-chans-greatest-case"
             },
             {
               "name": "The Chinese Parrot",
-              "release_date": "1934-01-01"
+              "release_date": "1934-01-01",
+              "id": "the-chinese-parrot"
             },
             {
               "name": "Charlie Chan in London",
-              "release_date": "1934-09-12"
+              "release_date": "1934-09-12",
+              "id": "charlie-chan-in-london"
             },
             {
               "name": "Charlie Chan in Paris",
-              "release_date": "1935-01-21"
+              "release_date": "1935-01-21",
+              "id": "charlie-chan-in-paris"
             },
             {
               "name": "Charlie Chan in Egypt",
-              "release_date": "1935-06-21"
+              "release_date": "1935-06-21",
+              "id": "charlie-chan-in-egypt"
             },
             {
               "name": "Charlie Chan in Shanghai",
-              "release_date": "1935-10-14"
+              "release_date": "1935-10-14",
+              "id": "charlie-chan-in-shanghai"
             },
             {
               "name": "Charlie Chan's Secret",
-              "release_date": "1936-01-10"
+              "release_date": "1936-01-10",
+              "id": "charlie-chans-secret"
             },
             {
               "name": "Charlie Chan at the Circus",
-              "release_date": "1936-03-27"
+              "release_date": "1936-03-27",
+              "id": "charlie-chan-at-the-circus"
             },
             {
               "name": "Charlie Chan at the Race Track",
-              "release_date": "1936-08-07"
+              "release_date": "1936-08-07",
+              "id": "charlie-chan-at-the-race-track"
             },
             {
               "name": "Charlie Chan at the Opera",
-              "release_date": "1937-01-08"
+              "release_date": "1937-01-08",
+              "id": "charlie-chan-at-the-opera"
             },
             {
               "name": "Charlie Chan at the Olympics",
-              "release_date": "1937-05-21"
+              "release_date": "1937-05-21",
+              "id": "charlie-chan-at-the-olympics"
             },
             {
               "name": "Charlie Chan on Broadway",
-              "release_date": "1937-10-22"
+              "release_date": "1937-10-22",
+              "id": "charlie-chan-on-broadway"
             },
             {
               "name": "Charlie Chan at Monte Carlo",
-              "release_date": "1938-01-21"
+              "release_date": "1938-01-21",
+              "id": "charlie-chan-at-monte-carlo"
             }
           ]
         },
@@ -1134,47 +1318,58 @@
           "movies": [
             {
               "name": "Charlie Chan in Honolulu",
-              "release_date": "1939-01-13"
+              "release_date": "1939-01-13",
+              "id": "charlie-chan-in-honolulu"
             },
             {
               "name": "Charlie Chan in Reno",
-              "release_date": "1939-06-16"
+              "release_date": "1939-06-16",
+              "id": "charlie-chan-in-reno"
             },
             {
               "name": "Charlie Chan at Treasure Island",
-              "release_date": "1939-09-08"
+              "release_date": "1939-09-08",
+              "id": "charlie-chan-at-treasure-island"
             },
             {
               "name": "City in Darkness",
-              "release_date": "1939-12-01"
+              "release_date": "1939-12-01",
+              "id": "city-in-darkness"
             },
             {
               "name": "Charlie Chan in Panama",
-              "release_date": "1940-03-01"
+              "release_date": "1940-03-01",
+              "id": "charlie-chan-in-panama"
             },
             {
               "name": "Murder Over New York",
-              "release_date": "1940-12-13"
+              "release_date": "1940-12-13",
+              "id": "murder-over-new-york-1940"
             },
             {
               "name": "Charlie Chan at the Wax Museum",
-              "release_date": "1940-09-06"
+              "release_date": "1940-09-06",
+              "id": "charlie-chan-at-the-wax-museum"
             },
             {
               "name": "Murder Over New York",
-              "release_date": "1940-12-13"
+              "release_date": "1940-12-13",
+              "id": "murder-over-new-york-1940-sidney-toler-saga"
             },
             {
               "name": "Dead Men Tell",
-              "release_date": "1941-03-28"
+              "release_date": "1941-03-28",
+              "id": "dead-men-tell"
             },
             {
               "name": "Charlie Chan in Rio",
-              "release_date": "1941-09-05"
+              "release_date": "1941-09-05",
+              "id": "charlie-chan-in-rio"
             },
             {
               "name": "Castle in the Desert",
-              "release_date": "1942-02-27"
+              "release_date": "1942-02-27",
+              "id": "castle-in-the-desert"
             }
           ]
         }
@@ -1189,19 +1384,23 @@
           "movies": [
             {
               "name": "In Old Arizona",
-              "release_date": "1929-01-20"
+              "release_date": "1929-01-20",
+              "id": "in-old-arizona"
             },
             {
               "name": "The Arizona Kid",
-              "release_date": "1930-05-25"
+              "release_date": "1930-05-25",
+              "id": "the-arizona-kid"
             },
             {
               "name": "The Cisco Kid",
-              "release_date": "1931-11-01"
+              "release_date": "1931-11-01",
+              "id": "the-cisco-kid"
             },
             {
               "name": "Return of the Cisco Kid",
-              "release_date": "1939-04-28"
+              "release_date": "1939-04-28",
+              "id": "return-of-the-cisco-kid"
             }
           ]
         },
@@ -1211,27 +1410,33 @@
           "movies": [
             {
               "name": "The Cisco Kid and the Lady",
-              "release_date": "1939-12-29"
+              "release_date": "1939-12-29",
+              "id": "the-cisco-kid-and-the-lady"
             },
             {
               "name": "Viva Cisco Kid",
-              "release_date": "1940-04-12"
+              "release_date": "1940-04-12",
+              "id": "viva-cisco-kid"
             },
             {
               "name": "Lucky Cisco Kid",
-              "release_date": "1940-06-28"
+              "release_date": "1940-06-28",
+              "id": "lucky-cisco-kid"
             },
             {
               "name": "The Gay Caballero",
-              "release_date": "1940-10-04"
+              "release_date": "1940-10-04",
+              "id": "the-gay-caballero"
             },
             {
               "name": "Romance of the Rio Grande",
-              "release_date": "1941-01-17"
+              "release_date": "1941-01-17",
+              "id": "romance-of-the-rio-grande"
             },
             {
               "name": "Ride on Vaquero",
-              "release_date": "1941-04-18"
+              "release_date": "1941-04-18",
+              "id": "ride-on-vaquero"
             }
           ]
         }
@@ -1246,7 +1451,8 @@
           "movies": [
             {
               "name": "Doctor Dolittle",
-              "release_date": "1967-12-19"
+              "release_date": "1967-12-19",
+              "id": "doctor-dolittle"
             }
           ]
         },
@@ -1256,11 +1462,13 @@
           "movies": [
             {
               "name": "Dr. Dolittle",
-              "release_date": "1998-06-26"
+              "release_date": "1998-06-26",
+              "id": "dr-dolittle"
             },
             {
               "name": "Dr. Dolittle 2",
-              "release_date": "2001-06-22"
+              "release_date": "2001-06-22",
+              "id": "dr-dolittle-2"
             }
           ]
         }
@@ -1275,15 +1483,18 @@
           "movies": [
             {
               "name": "My Friend Flicka",
-              "release_date": "1943-05-26"
+              "release_date": "1943-05-26",
+              "id": "my-friend-flicka"
             },
             {
               "name": "Thunderhead, Son of Flicka",
-              "release_date": "1945-03-15"
+              "release_date": "1945-03-15",
+              "id": "thunderhead-son-of-flicka"
             },
             {
               "name": "Green Grass of Wyoming",
-              "release_date": "1948-06-03"
+              "release_date": "1948-06-03",
+              "id": "green-grass-of-wyoming"
             }
           ]
         },
@@ -1293,7 +1504,8 @@
           "movies": [
             {
               "name": "Flicka",
-              "release_date": "2006-10-20"
+              "release_date": "2006-10-20",
+              "id": "flicka"
             }
           ]
         }
@@ -1308,15 +1520,18 @@
           "movies": [
             {
               "name": "Murder on the Orient Express",
-              "release_date": "2017-11-10"
+              "release_date": "2017-11-10",
+              "id": "murder-on-the-orient-express"
             },
             {
               "name": "Death on the Nile",
-              "release_date": "2022-02-11"
+              "release_date": "2022-02-11",
+              "id": "death-on-the-nile"
             },
             {
               "name": "A Haunting in Venice",
-              "release_date": "2023-09-15"
+              "release_date": "2023-09-15",
+              "id": "a-haunting-in-venice"
             }
           ]
         }
@@ -1331,15 +1546,18 @@
           "movies": [
             {
               "name": "Highlander",
-              "release_date": "1986-03-07"
+              "release_date": "1986-03-07",
+              "id": "highlander"
             },
             {
               "name": "Highlander: The Final Dimension",
-              "release_date": "1995-01-27"
+              "release_date": "1995-01-27",
+              "id": "highlander-the-final-dimension"
             },
             {
               "name": "Highlander: Endgame",
-              "release_date": "2000-09-01"
+              "release_date": "2000-09-01",
+              "id": "highlander-endgame"
             }
           ]
         }
@@ -1354,11 +1572,13 @@
           "movies": [
             {
               "name": "Independence Day",
-              "release_date": "1996-07-03"
+              "release_date": "1996-07-03",
+              "id": "independence-day"
             },
             {
               "name": "Independence Day: Resurgence",
-              "release_date": "2016-06-24"
+              "release_date": "2016-06-24",
+              "id": "independence-day-resurgence"
             }
           ]
         }
@@ -1373,71 +1593,88 @@
           "movies": [
             {
               "name": "Every Saturday Night",
-              "release_date": "1936-02-07"
+              "release_date": "1936-02-07",
+              "id": "every-saturday-night"
             },
             {
               "name": "Educating Father",
-              "release_date": "1936-07-10"
+              "release_date": "1936-07-10",
+              "id": "educating-father"
             },
             {
               "name": "Back to Nature",
-              "release_date": "1936-09-18"
+              "release_date": "1936-09-18",
+              "id": "back-to-nature"
             },
             {
               "name": "Off to the Races",
-              "release_date": "1937-02-19"
+              "release_date": "1937-02-19",
+              "id": "off-to-the-races"
             },
             {
               "name": "Big Business",
-              "release_date": "1937-06-18"
+              "release_date": "1937-06-18",
+              "id": "big-business"
             },
             {
               "name": "Hot Water",
-              "release_date": "1937-09-24"
+              "release_date": "1937-09-24",
+              "id": "hot-water"
             },
             {
               "name": "Borrowing Trouble",
-              "release_date": "1937-12-10"
+              "release_date": "1937-12-10",
+              "id": "borrowing-trouble"
             },
             {
               "name": "Love on a Budget",
-              "release_date": "1938-02-25"
+              "release_date": "1938-02-25",
+              "id": "love-on-a-budget"
             },
             {
               "name": "A Trip to Paris",
-              "release_date": "1938-05-06"
+              "release_date": "1938-05-06",
+              "id": "a-trip-to-paris"
             },
             {
               "name": "Safety in Numbers",
-              "release_date": "1938-09-09"
+              "release_date": "1938-09-09",
+              "id": "safety-in-numbers"
             },
             {
               "name": "Down on the Farm",
-              "release_date": "1938-12-16"
+              "release_date": "1938-12-16",
+              "id": "down-on-the-farm"
             },
             {
               "name": "Everybody's Baby",
-              "release_date": "1939-03-24"
+              "release_date": "1939-03-24",
+              "id": "everybodys-baby"
             },
             {
               "name": "The Jones Family in Hollywood",
-              "release_date": "1939-06-02"
+              "release_date": "1939-06-02",
+              "id": "the-jones-family-in-hollywood"
             },
             {
               "name": "Quick Millions",
-              "release_date": "1939-08-25"
+              "release_date": "1939-08-25",
+              "id": "quick-millions"
             },
             {
               "name": "Too Busy to Work",
-              "release_date": "1939-12-01"
+              "release_date": "1939-12-01",
+              "id": "too-busy-to-work"
             },
             {
               "name": "Young as You Feel",
-              "release_date": "1940-02-16"
+              "release_date": "1940-02-16",
+              "id": "young-as-you-feel"
             },
             {
               "name": "On Their Own",
-              "release_date": "1940-05-17"
+              "release_date": "1940-05-17",
+              "id": "on-their-own"
             }
           ]
         }
@@ -1452,19 +1689,23 @@
           "movies": [
             {
               "name": "Diary of a Wimpy Kid",
-              "release_date": "2010-03-19"
+              "release_date": "2010-03-19",
+              "id": "diary-of-a-wimpy-kid"
             },
             {
               "name": "Diary of a Wimpy Kid: Rodrick Rules",
-              "release_date": "2011-03-25"
+              "release_date": "2011-03-25",
+              "id": "diary-of-a-wimpy-kid-rodrick-rules"
             },
             {
               "name": "Diary of a Wimpy Kid: Dog Days",
-              "release_date": "2012-08-03"
+              "release_date": "2012-08-03",
+              "id": "diary-of-a-wimpy-kid-dog-days"
             },
             {
               "name": "Diary of a Wimpy Kid: The Long Haul",
-              "release_date": "2017-05-19"
+              "release_date": "2017-05-19",
+              "id": "diary-of-a-wimpy-kid-the-long-haul"
             }
           ]
         }
@@ -1479,15 +1720,18 @@
           "movies": [
             {
               "name": "Kingsman: The Secret Service",
-              "release_date": "2015-02-13"
+              "release_date": "2015-02-13",
+              "id": "kingsman-the-secret-service"
             },
             {
               "name": "Kingsman: The Golden Circle",
-              "release_date": "2017-09-22"
+              "release_date": "2017-09-22",
+              "id": "kingsman-the-golden-circle"
             },
             {
               "name": "The King's Man",
-              "release_date": "2021-12-22"
+              "release_date": "2021-12-22",
+              "id": "the-kings-man"
             }
           ]
         }
@@ -1502,15 +1746,18 @@
           "movies": [
             {
               "name": "Inspector Hornleigh",
-              "release_date": "1939-03-10"
+              "release_date": "1939-03-10",
+              "id": "inspector-hornleigh"
             },
             {
               "name": "Inspector Hornleigh on Holiday",
-              "release_date": "1939-12-01"
+              "release_date": "1939-12-01",
+              "id": "inspector-hornleigh-on-holiday"
             },
             {
               "name": "Night Train to Munich",
-              "release_date": "1941-05-01"
+              "release_date": "1941-05-01",
+              "id": "night-train-to-munich"
             }
           ]
         }
@@ -1525,19 +1772,23 @@
           "movies": [
             {
               "name": "The Omen",
-              "release_date": "1976-06-25"
+              "release_date": "1976-06-25",
+              "id": "the-omen-1976"
             },
             {
               "name": "Damien: Omen II",
-              "release_date": "1978-06-09"
+              "release_date": "1978-06-09",
+              "id": "damien-omen-ii"
             },
             {
               "name": "Omen III: The Final Conflict",
-              "release_date": "1981-03-20"
+              "release_date": "1981-03-20",
+              "id": "omen-iii-the-final-conflict"
             },
             {
               "name": "The First Omen",
-              "release_date": "2024-04-05"
+              "release_date": "2024-04-05",
+              "id": "the-first-omen"
             }
           ]
         },
@@ -1547,7 +1798,8 @@
           "movies": [
             {
               "name": "The Omen",
-              "release_date": "2006-06-06"
+              "release_date": "2006-06-06",
+              "id": "the-omen-2006"
             }
           ]
         }
@@ -1562,15 +1814,18 @@
           "movies": [
             {
               "name": "The Fly",
-              "release_date": "1958-08-29"
+              "release_date": "1958-08-29",
+              "id": "the-fly-1958"
             },
             {
               "name": "Return of the Fly",
-              "release_date": "1959-07-01"
+              "release_date": "1959-07-01",
+              "id": "return-of-the-fly"
             },
             {
               "name": "Curse of the Fly",
-              "release_date": "1965-05-01"
+              "release_date": "1965-05-01",
+              "id": "curse-of-the-fly"
             }
           ]
         },
@@ -1580,11 +1835,13 @@
           "movies": [
             {
               "name": "The Fly",
-              "release_date": "1986-08-15"
+              "release_date": "1986-08-15",
+              "id": "the-fly-1986"
             },
             {
               "name": "The Fly II",
-              "release_date": "1989-02-10"
+              "release_date": "1989-02-10",
+              "id": "the-fly-ii"
             }
           ]
         }
@@ -1599,15 +1856,18 @@
           "movies": [
             {
               "name": "Night at the Museum",
-              "release_date": "2006-12-22"
+              "release_date": "2006-12-22",
+              "id": "night-at-the-museum"
             },
             {
               "name": "Night at the Museum: Battle of the Smithsonian",
-              "release_date": "2009-05-22"
+              "release_date": "2009-05-22",
+              "id": "night-at-the-museum-battle-of-the-smithsonian"
             },
             {
               "name": "Night at the Museum: Secret of the Tomb",
-              "release_date": "2014-12-19"
+              "release_date": "2014-12-19",
+              "id": "night-at-the-museum-secret-of-the-tomb"
             }
           ]
         }
@@ -1622,15 +1882,18 @@
           "movies": [
             {
               "name": "The Maze Runner",
-              "release_date": "2014-09-19"
+              "release_date": "2014-09-19",
+              "id": "the-maze-runner"
             },
             {
               "name": "Maze Runner: The Scorch Trials",
-              "release_date": "2015-09-18"
+              "release_date": "2015-09-18",
+              "id": "maze-runner-the-scorch-trials"
             },
             {
               "name": "Maze Runner: The Death Cure",
-              "release_date": "2018-01-26"
+              "release_date": "2018-01-26",
+              "id": "maze-runner-the-death-cure"
             }
           ]
         }
@@ -1645,11 +1908,13 @@
           "movies": [
             {
               "name": "Riders of the Purple Sage",
-              "release_date": "1918-09-01"
+              "release_date": "1918-09-01",
+              "id": "riders-of-the-purple-sage-1918"
             },
             {
               "name": "The Rainbow Trail",
-              "release_date": "1918-09-01"
+              "release_date": "1918-09-01",
+              "id": "the-rainbow-trail-1918"
             }
           ]
         },
@@ -1659,11 +1924,13 @@
           "movies": [
             {
               "name": "Riders of the Purple Sage",
-              "release_date": "1925-03-15"
+              "release_date": "1925-03-15",
+              "id": "riders-of-the-purple-sage-1925"
             },
             {
               "name": "The Rainbow Trail",
-              "release_date": "1925-05-24"
+              "release_date": "1925-05-24",
+              "id": "the-rainbow-trail-1925"
             }
           ]
         },
@@ -1673,11 +1940,13 @@
           "movies": [
             {
               "name": "Riders of the Purple Sage",
-              "release_date": "1931-10-18"
+              "release_date": "1931-10-18",
+              "id": "riders-of-the-purple-sage-1931"
             },
             {
               "name": "The Rainbow Trail",
-              "release_date": "1932-01-03"
+              "release_date": "1932-01-03",
+              "id": "the-rainbow-trail-1932"
             }
           ]
         },
@@ -1687,7 +1956,8 @@
           "movies": [
             {
               "name": "Riders of the Purple Sage",
-              "release_date": "1941-10-10"
+              "release_date": "1941-10-10",
+              "id": "riders-of-the-purple-sage-1941"
             }
           ]
         }
@@ -1702,15 +1972,18 @@
           "movies": [
             {
               "name": "Home Alone",
-              "release_date": "1990-11-16"
+              "release_date": "1990-11-16",
+              "id": "home-alone"
             },
             {
               "name": "Home Alone 2: Lost in New York",
-              "release_date": "1992-11-20"
+              "release_date": "1992-11-20",
+              "id": "home-alone-2-lost-in-new-york"
             },
             {
               "name": "Home Alone 3",
-              "release_date": "1997-12-12"
+              "release_date": "1997-12-12",
+              "id": "home-alone-3"
             }
           ]
         }
@@ -1725,31 +1998,38 @@
           "movies": [
             {
               "name": "Michael Shayne, Private Detective",
-              "release_date": "1941-01-10"
+              "release_date": "1941-01-10",
+              "id": "michael-shayne-private-detective"
             },
             {
               "name": "Sleepers West",
-              "release_date": "1941-03-14"
+              "release_date": "1941-03-14",
+              "id": "sleepers-west"
             },
             {
               "name": "Dressed to Kill",
-              "release_date": "1941-08-08"
+              "release_date": "1941-08-08",
+              "id": "dressed-to-kill"
             },
             {
               "name": "Blue, White and Perfect",
-              "release_date": "1942-01-09"
+              "release_date": "1942-01-09",
+              "id": "blue-white-and-perfect"
             },
             {
               "name": "The Man Who Wouldn't Die",
-              "release_date": "1942-05-01"
+              "release_date": "1942-05-01",
+              "id": "the-man-who-wouldnt-die"
             },
             {
               "name": "Just Off Broadway",
-              "release_date": "1942-09-25"
+              "release_date": "1942-09-25",
+              "id": "just-off-broadway"
             },
             {
               "name": "Time to Kill",
-              "release_date": "1943-01-22"
+              "release_date": "1943-01-22",
+              "id": "time-to-kill"
             }
           ]
         }
@@ -1764,15 +2044,18 @@
           "movies": [
             {
               "name": "Sitting Pretty",
-              "release_date": "1948-03-10"
+              "release_date": "1948-03-10",
+              "id": "sitting-pretty"
             },
             {
               "name": "Mr. Belvedere Goes to College",
-              "release_date": "1949-04-15"
+              "release_date": "1949-04-15",
+              "id": "mr-belvedere-goes-to-college"
             },
             {
               "name": "Mr. Belvedere Rings the Bell",
-              "release_date": "1951-08-01"
+              "release_date": "1951-08-01",
+              "id": "mr-belvedere-rings-the-bell"
             }
           ]
         }
@@ -1787,35 +2070,43 @@
           "movies": [
             {
               "name": "Think Fast, Mr. Moto",
-              "release_date": "1937-08-27"
+              "release_date": "1937-08-27",
+              "id": "think-fast-mr-moto"
             },
             {
               "name": "Thank You, Mr. Moto",
-              "release_date": "1937-12-24"
+              "release_date": "1937-12-24",
+              "id": "thank-you-mr-moto"
             },
             {
               "name": "Mr. Moto's Gamble",
-              "release_date": "1938-03-25"
+              "release_date": "1938-03-25",
+              "id": "mr-motos-gamble"
             },
             {
               "name": "Mr. Moto Takes a Chance",
-              "release_date": "1938-06-24"
+              "release_date": "1938-06-24",
+              "id": "mr-moto-takes-a-chance"
             },
             {
               "name": "Mysterious Mr. Moto",
-              "release_date": "1938-10-21"
+              "release_date": "1938-10-21",
+              "id": "mysterious-mr-moto"
             },
             {
               "name": "Mr. Moto's Last Warning",
-              "release_date": "1939-01-20"
+              "release_date": "1939-01-20",
+              "id": "mr-motos-last-warning"
             },
             {
               "name": "Mr. Moto in Danger Island",
-              "release_date": "1939-04-07"
+              "release_date": "1939-04-07",
+              "id": "mr-moto-in-danger-island"
             },
             {
               "name": "Mr. Moto Takes a Vacation",
-              "release_date": "1939-07-07"
+              "release_date": "1939-07-07",
+              "id": "mr-moto-takes-a-vacation"
             }
           ]
         },
@@ -1825,7 +2116,8 @@
           "movies": [
             {
               "name": "The Return of Mr. Moto",
-              "release_date": "1965-12-01"
+              "release_date": "1965-12-01",
+              "id": "the-return-of-mr-moto"
             }
           ]
         }
@@ -1840,11 +2132,13 @@
           "movies": [
             {
               "name": "Percy Jackson & the Olympians: The Lightning Thief",
-              "release_date": "2010-02-12"
+              "release_date": "2010-02-12",
+              "id": "percy-jackson-the-olympians-the-lightning-thief"
             },
             {
               "name": "Percy Jackson: Sea of Monsters",
-              "release_date": "2013-08-07"
+              "release_date": "2013-08-07",
+              "id": "percy-jackson-sea-of-monsters"
             }
           ]
         }
@@ -1859,15 +2153,18 @@
           "movies": [
             {
               "name": "Porky's",
-              "release_date": "1982-03-19"
+              "release_date": "1982-03-19",
+              "id": "porkys"
             },
             {
               "name": "Porky's II: The Next Day",
-              "release_date": "1983-06-24"
+              "release_date": "1983-06-24",
+              "id": "porkys-ii-the-next-day"
             },
             {
               "name": "Porky's Revenge!",
-              "release_date": "1985-03-22"
+              "release_date": "1985-03-22",
+              "id": "porkys-revenge"
             }
           ]
         }
@@ -1882,19 +2179,23 @@
           "movies": [
             {
               "name": "What Price Glory",
-              "release_date": "1927-08-28"
+              "release_date": "1927-08-28",
+              "id": "what-price-glory-1927"
             },
             {
               "name": "The Cock-Eyed World",
-              "release_date": "1929-10-20"
+              "release_date": "1929-10-20",
+              "id": "the-cock-eyed-world"
             },
             {
               "name": "Women of All Nations",
-              "release_date": "1931-05-31"
+              "release_date": "1931-05-31",
+              "id": "women-of-all-nations"
             },
             {
               "name": "Hot Pepper",
-              "release_date": "1933-01-22"
+              "release_date": "1933-01-22",
+              "id": "hot-pepper"
             }
           ]
         },
@@ -1904,7 +2205,8 @@
           "movies": [
             {
               "name": "What Price Glory",
-              "release_date": "1952-08-22"
+              "release_date": "1952-08-22",
+              "id": "what-price-glory-1952"
             }
           ]
         }
@@ -1919,15 +2221,18 @@
           "movies": [
             {
               "name": "Taken",
-              "release_date": "2009-01-30"
+              "release_date": "2009-01-30",
+              "id": "taken"
             },
             {
               "name": "Taken 2",
-              "release_date": "2012-10-05"
+              "release_date": "2012-10-05",
+              "id": "taken-2"
             },
             {
               "name": "Taken 3",
-              "release_date": "2015-01-09"
+              "release_date": "2015-01-09",
+              "id": "taken-3"
             }
           ]
         }
@@ -1942,11 +2247,13 @@
           "movies": [
             {
               "name": "Cheaper by the Dozen",
-              "release_date": "1950-03-31"
+              "release_date": "1950-03-31",
+              "id": "cheaper-by-the-dozen-1950"
             },
             {
               "name": "Belles on Their Toes",
-              "release_date": "1952-05-02"
+              "release_date": "1952-05-02",
+              "id": "belles-on-their-toes"
             }
           ]
         },
@@ -1956,11 +2263,13 @@
           "movies": [
             {
               "name": "Cheaper by the Dozen",
-              "release_date": "2003-12-25"
+              "release_date": "2003-12-25",
+              "id": "cheaper-by-the-dozen-2003"
             },
             {
               "name": "Cheaper by the Dozen 2",
-              "release_date": "2005-12-21"
+              "release_date": "2005-12-21",
+              "id": "cheaper-by-the-dozen-2"
             }
           ]
         }
@@ -1975,15 +2284,18 @@
           "movies": [
             {
               "name": "Blade",
-              "release_date": "1998-08-21"
+              "release_date": "1998-08-21",
+              "id": "blade"
             },
             {
               "name": "Blade II",
-              "release_date": "2002-03-22"
+              "release_date": "2002-03-22",
+              "id": "blade-ii"
             },
             {
               "name": "Blade: Trinity",
-              "release_date": "2004-12-08"
+              "release_date": "2004-12-08",
+              "id": "blade-trinity"
             }
           ]
         }
@@ -1998,11 +2310,13 @@
           "movies": [
             {
               "name": "Fantastic Four",
-              "release_date": "2005-07-08"
+              "release_date": "2005-07-08",
+              "id": "fantastic-four-2005"
             },
             {
               "name": "Fantastic Four: Rise of the Silver Surfer",
-              "release_date": "2007-06-15"
+              "release_date": "2007-06-15",
+              "id": "fantastic-four-rise-of-the-silver-surfer"
             }
           ]
         },
@@ -2012,7 +2326,8 @@
           "movies": [
             {
               "name": "Fantastic Four",
-              "release_date": "2015-08-07"
+              "release_date": "2015-08-07",
+              "id": "fantastic-four-2015"
             }
           ]
         }
@@ -2027,19 +2342,23 @@
           "movies": [
             {
               "name": "Men in Black",
-              "release_date": "1997-07-02"
+              "release_date": "1997-07-02",
+              "id": "men-in-black"
             },
             {
               "name": "Men in Black II",
-              "release_date": "2002-07-03"
+              "release_date": "2002-07-03",
+              "id": "men-in-black-ii"
             },
             {
               "name": "Men in Black 3",
-              "release_date": "2012-05-25"
+              "release_date": "2012-05-25",
+              "id": "men-in-black-3"
             },
             {
               "name": "Men in Black: International",
-              "release_date": "2019-06-14"
+              "release_date": "2019-06-14",
+              "id": "men-in-black-international"
             }
           ]
         }
@@ -2054,19 +2373,23 @@
           "movies": [
             {
               "name": "Ernest Goes to Camp",
-              "release_date": "1987-05-22"
+              "release_date": "1987-05-22",
+              "id": "ernest-goes-to-camp"
             },
             {
               "name": "Ernest Saves Christmas",
-              "release_date": "1988-11-11"
+              "release_date": "1988-11-11",
+              "id": "ernest-saves-christmas"
             },
             {
               "name": "Ernest Goes to Jail",
-              "release_date": "1990-04-06"
+              "release_date": "1990-04-06",
+              "id": "ernest-goes-to-jail"
             },
             {
               "name": "Ernest Scared Stupid",
-              "release_date": "1991-10-11"
+              "release_date": "1991-10-11",
+              "id": "ernest-scared-stupid"
             }
           ]
         }
@@ -2081,15 +2404,18 @@
           "movies": [
             {
               "name": "Step Up",
-              "release_date": "2006-08-11"
+              "release_date": "2006-08-11",
+              "id": "step-up"
             },
             {
               "name": "Step Up 2: The Streets",
-              "release_date": "2008-02-14"
+              "release_date": "2008-02-14",
+              "id": "step-up-2-the-streets"
             },
             {
               "name": "Step Up 3D",
-              "release_date": "2010-08-06"
+              "release_date": "2010-08-06",
+              "id": "step-up-3d"
             }
           ]
         }
@@ -2104,15 +2430,18 @@
           "movies": [
             {
               "name": "Halloween",
-              "release_date": "1978-10-25"
+              "release_date": "1978-10-25",
+              "id": "halloween"
             },
             {
               "name": "Halloween II",
-              "release_date": "1981-10-30"
+              "release_date": "1981-10-30",
+              "id": "halloween-ii"
             },
             {
               "name": "Halloween: The Curse of Michael Myers",
-              "release_date": "1995-09-29"
+              "release_date": "1995-09-29",
+              "id": "halloween-the-curse-of-michael-myers"
             }
           ]
         }
@@ -2127,19 +2456,23 @@
           "movies": [
             {
               "name": "Scary Movie",
-              "release_date": "2000-07-07"
+              "release_date": "2000-07-07",
+              "id": "scary-movie"
             },
             {
               "name": "Scary Movie 2",
-              "release_date": "2001-07-04"
+              "release_date": "2001-07-04",
+              "id": "scary-movie-2"
             },
             {
               "name": "Scary Movie 3",
-              "release_date": "2003-10-24"
+              "release_date": "2003-10-24",
+              "id": "scary-movie-3"
             },
             {
               "name": "Scary Movie 4",
-              "release_date": "2006-04-14"
+              "release_date": "2006-04-14",
+              "id": "scary-movie-4"
             }
           ]
         }
@@ -2154,15 +2487,18 @@
           "movies": [
             {
               "name": "Scream",
-              "release_date": "1996-12-20"
+              "release_date": "1996-12-20",
+              "id": "scream"
             },
             {
               "name": "Scream 2",
-              "release_date": "1997-12-12"
+              "release_date": "1997-12-12",
+              "id": "scream-2"
             },
             {
               "name": "Scream 3",
-              "release_date": "2000-02-04"
+              "release_date": "2000-02-04",
+              "id": "scream-3"
             }
           ]
         }
@@ -2177,15 +2513,18 @@
           "movies": [
             {
               "name": "Spy Kids",
-              "release_date": "2001-03-30"
+              "release_date": "2001-03-30",
+              "id": "spy-kids"
             },
             {
               "name": "Spy Kids 2: The Island of Lost Dreams",
-              "release_date": "2002-08-07"
+              "release_date": "2002-08-07",
+              "id": "spy-kids-2-the-island-of-lost-dreams"
             },
             {
               "name": "Spy Kids 3-D: Game Over",
-              "release_date": "2003-07-25"
+              "release_date": "2003-07-25",
+              "id": "spy-kids-3-d-game-over"
             }
           ]
         }
@@ -2200,15 +2539,18 @@
           "movies": [
             {
               "name": "Anja & Viktor 1",
-              "release_date": "2001-08-03"
+              "release_date": "2001-08-03",
+              "id": "anja-viktor-1"
             },
             {
               "name": "Anja & Viktor 2",
-              "release_date": "2003-04-04"
+              "release_date": "2003-04-04",
+              "id": "anja-viktor-2"
             },
             {
               "name": "Anja & Viktor 3",
-              "release_date": "2007-02-09"
+              "release_date": "2007-02-09",
+              "id": "anja-viktor-3"
             }
           ]
         }
@@ -2223,15 +2565,18 @@
           "movies": [
             {
               "name": "Baaghi",
-              "release_date": "2016-04-29"
+              "release_date": "2016-04-29",
+              "id": "baaghi"
             },
             {
               "name": "Baaghi 2",
-              "release_date": "2018-03-30"
+              "release_date": "2018-03-30",
+              "id": "baaghi-2"
             },
             {
               "name": "Baaghi 3",
-              "release_date": "2020-03-06"
+              "release_date": "2020-03-06",
+              "id": "baaghi-3"
             }
           ]
         }
@@ -2246,15 +2591,18 @@
           "movies": [
             {
               "name": "Hamilton 1",
-              "release_date": "1998-01-30"
+              "release_date": "1998-01-30",
+              "id": "hamilton-1"
             },
             {
               "name": "Hamilton 2",
-              "release_date": "2012-01-13"
+              "release_date": "2012-01-13",
+              "id": "hamilton-2"
             },
             {
               "name": "Hamilton 3",
-              "release_date": "2012-09-07"
+              "release_date": "2012-09-07",
+              "id": "hamilton-3"
             }
           ]
         }
@@ -2269,27 +2617,33 @@
           "movies": [
             {
               "name": "The Wild Soccer Bunch 1",
-              "release_date": "2003-10-02"
+              "release_date": "2003-10-02",
+              "id": "the-wild-soccer-bunch-1"
             },
             {
               "name": "The Wild Soccer Bunch 2",
-              "release_date": "2005-02-17"
+              "release_date": "2005-02-17",
+              "id": "the-wild-soccer-bunch-2"
             },
             {
               "name": "The Wild Soccer Bunch 3",
-              "release_date": "2006-03-02"
+              "release_date": "2006-03-02",
+              "id": "the-wild-soccer-bunch-3"
             },
             {
               "name": "The Wild Soccer Bunch 4",
-              "release_date": "2007-02-01"
+              "release_date": "2007-02-01",
+              "id": "the-wild-soccer-bunch-4"
             },
             {
               "name": "The Wild Soccer Bunch 5",
-              "release_date": "2008-02-21"
+              "release_date": "2008-02-21",
+              "id": "the-wild-soccer-bunch-5"
             },
             {
               "name": "The Wild Soccer Bunch 6",
-              "release_date": "2016-02-11"
+              "release_date": "2016-02-11",
+              "id": "the-wild-soccer-bunch-6"
             }
           ]
         }
@@ -2304,15 +2658,18 @@
           "movies": [
             {
               "name": "The Unstable 1",
-              "release_date": "2010-01-01"
+              "release_date": "2010-01-01",
+              "id": "the-unstable-1"
             },
             {
               "name": "The Unstable 2",
-              "release_date": "2012-01-01"
+              "release_date": "2012-01-01",
+              "id": "the-unstable-2"
             },
             {
               "name": "The Unstable 3",
-              "release_date": "2014-01-01"
+              "release_date": "2014-01-01",
+              "id": "the-unstable-3"
             }
           ]
         }
@@ -2327,15 +2684,18 @@
           "movies": [
             {
               "name": "Lilly the Witch 1",
-              "release_date": "2009-02-19"
+              "release_date": "2009-02-19",
+              "id": "lilly-the-witch-1"
             },
             {
               "name": "Lilly the Witch 2",
-              "release_date": "2011-02-17"
+              "release_date": "2011-02-17",
+              "id": "lilly-the-witch-2"
             },
             {
               "name": "Lilly the Witch 3",
-              "release_date": "2017-02-16"
+              "release_date": "2017-02-16",
+              "id": "lilly-the-witch-3"
             }
           ]
         }
@@ -2350,15 +2710,18 @@
           "movies": [
             {
               "name": "Ricky Rapper 1",
-              "release_date": "2008-02-15"
+              "release_date": "2008-02-15",
+              "id": "ricky-rapper-1"
             },
             {
               "name": "Ricky Rapper 2",
-              "release_date": "2010-02-12"
+              "release_date": "2010-02-12",
+              "id": "ricky-rapper-2"
             },
             {
               "name": "Ricky Rapper 3",
-              "release_date": "2012-02-10"
+              "release_date": "2012-02-10",
+              "id": "ricky-rapper-3"
             }
           ]
         }
@@ -2373,15 +2736,18 @@
           "movies": [
             {
               "name": "The Last Warrior 1",
-              "release_date": "2017-10-26"
+              "release_date": "2017-10-26",
+              "id": "the-last-warrior-1"
             },
             {
               "name": "The Last Warrior 2",
-              "release_date": "2021-01-01"
+              "release_date": "2021-01-01",
+              "id": "the-last-warrior-2"
             },
             {
               "name": "The Last Warrior 3",
-              "release_date": "2021-12-23"
+              "release_date": "2021-12-23",
+              "id": "the-last-warrior-3"
             }
           ]
         }
@@ -2396,15 +2762,18 @@
           "movies": [
             {
               "name": "Three Colors: Blue",
-              "release_date": "1993-09-08"
+              "release_date": "1993-09-08",
+              "id": "three-colors-blue"
             },
             {
               "name": "Three Colors: White",
-              "release_date": "1994-01-26"
+              "release_date": "1994-01-26",
+              "id": "three-colors-white"
             },
             {
               "name": "Three Colors: Red",
-              "release_date": "1994-05-27"
+              "release_date": "1994-05-27",
+              "id": "three-colors-red"
             }
           ]
         }

@@ -16,9 +16,10 @@ private val DB_DATE_FORMAT: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE
 object Mappers {
 
     fun toMovie(dto: MovieDto): Movie = Movie(
+        id = dto.id,
         name = dto.name,
         releaseDate = runCatching {
-            LocalDate.parse(dto.release_date, DB_DATE_FORMAT)
+            LocalDate.parse(dto.releaseDate, DB_DATE_FORMAT)
         }.getOrNull()
     )
 
