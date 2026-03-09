@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.google.firebase.Firebase
+import com.google.firebase.database.database
 import fr.isen.vojtechsanda.disneydex.ui.theme.DisneydexTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,6 +29,13 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        // Write a message to the database
+        val database = Firebase.database
+        val myRef = database.getReference("message")
+
+        myRef.setValue("Hello, World!")
+
     }
 }
 
