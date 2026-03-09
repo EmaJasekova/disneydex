@@ -18,33 +18,33 @@ fun AppRouter() {
 
     NavHost(
         navController = navController,
-        startDestination = LoginRoute
+        startDestination = Route.Login
     ) {
-        composable<LoginRoute> {
+        composable<Route.Login> {
             LoginScreen(navController)
         }
 
-        composable<RegisterRoute> {
+        composable<Route.Register> {
             RegisterScreen(navController)
         }
 
-        composable<UniversesRoute> {
-            UniversesScreen()
+        composable<Route.Universes> {
+            UniversesScreen(navController)
         }
 
-        composable<UniverseOverviewRoute> { backStackEntry ->
-            val args = backStackEntry.toRoute<UniverseOverviewRoute>()
-            UniverseOverviewScreen(universeId = args.universeId)
+        composable<Route.UniverseOverview> { backStackEntry ->
+            val args = backStackEntry.toRoute<Route.UniverseOverview>()
+            UniverseOverviewScreen(navController, universeId = args.universeId)
         }
 
-        composable<MovieDetailRoute> { backStackEntry ->
-            val args = backStackEntry.toRoute<MovieDetailRoute>()
-            MovieDetailScreen(movieId = args.movieId)
+        composable<Route.MovieDetail> { backStackEntry ->
+            val args = backStackEntry.toRoute<Route.MovieDetail>()
+            MovieDetailScreen(navController, movieId = args.movieId)
         }
 
-        composable<ProfileRoute> { backStackEntry ->
-            val args = backStackEntry.toRoute<ProfileRoute>()
-            ProfileScreen(userId = args.userId)
+        composable<Route.Profile> { backStackEntry ->
+            val args = backStackEntry.toRoute<Route.Profile>()
+            ProfileScreen(navController, userId = args.userId)
         }
     }
 }

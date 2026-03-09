@@ -11,12 +11,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.routing.Route
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationBody
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHero
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationTitle
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.PublicScaffold
-import fr.isen.vojtechsanda.disneydex.routing.RegisterRoute
-import fr.isen.vojtechsanda.disneydex.routing.UniversesRoute
 import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.components.LoginForm
 
 @Composable
@@ -33,7 +32,7 @@ fun LoginScreen(navController: NavHostController) {
 
                 LoginForm(
                     onLogin = {
-                        navController.navigate(UniversesRoute) {
+                        navController.navigate(Route.Universes) {
                             popUpTo(navController.graph.findStartDestination().id) {
                                 inclusive = true
                             }
@@ -43,7 +42,7 @@ fun LoginScreen(navController: NavHostController) {
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                TextButton(onClick = { navController.navigate(RegisterRoute) }) {
+                TextButton(onClick = { navController.navigate(Route.Register) }) {
                     Text("I don't have any account. Register.", color = Color.LightGray)
                 }
             }
