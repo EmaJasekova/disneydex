@@ -1,0 +1,17 @@
+package fr.isen.vojtechsanda.disneydex.infrastructure.mappers
+
+import fr.isen.vojtechsanda.disneydex.domain.Universe
+import fr.isen.vojtechsanda.disneydex.dto.UniverseDto
+
+object UniverseMapper {
+
+    fun fromDto(dto: UniverseDto): Universe = Universe(
+        name = dto.name,
+        sagas = dto.sagas.map { sagaDto -> SagaMapper.fromDto(sagaDto) }
+    )
+
+    fun toDto(universe: Universe): UniverseDto = UniverseDto(
+        name = universe.name,
+        sagas = universe.sagas.map { saga -> SagaMapper.toDto(saga) }
+    )
+}
