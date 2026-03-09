@@ -14,22 +14,32 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
 import fr.isen.vojtechsanda.disneydex.components.AppHeader
+import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationHero
 import fr.isen.vojtechsanda.disneydex.screens.loginScreen.components.LoginForm
+import fr.isen.vojtechsanda.disneydex.screens.registerScreen.components.RegisterForm
 
 @Composable
-fun LoginScreen(modifier: Modifier) {
-
-
+fun LoginScreen(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        modifier = Modifier.fillMaxSize()
     ) {
-        AppHeader()
-        LoginForm()
+        // Top Half (Hero Section)
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f),
+        ) {
+            AuthenticationHero()
+        }
 
-
+        // Bottom Half (Form Section)
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(2.8f)
+                .padding(top = 40.dp, start=24.dp, end = 24.dp, bottom = 10.dp),
+        ) {
+           LoginForm()
+        }
     }
 }

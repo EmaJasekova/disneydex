@@ -17,8 +17,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import android.util.Log
+import androidx.compose.ui.graphics.Color
 import com.google.firebase.database.getValue
 import fr.isen.vojtechsanda.disneydex.screens.loginScreen.LoginScreen
+import fr.isen.vojtechsanda.disneydex.screens.registerScreen.RegisterScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,10 +29,18 @@ class MainActivity : ComponentActivity() {
         setContent {
             DisneydexTheme {
 
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(),
+                    //we use 0xFF then add the color code in hex format
+                        containerColor = Color(0xFF333332)
+                )
+                {
+                    innerPadding ->
                     LoginScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
+//                    RegisterScreen(
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
                 }
 
 
