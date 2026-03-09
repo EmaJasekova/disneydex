@@ -5,19 +5,13 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import com.google.firebase.Firebase
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
 import com.google.firebase.database.getValue
-import fr.isen.vojtechsanda.disneydex.screens.registerScreen.RegisterScreen
-import fr.isen.vojtechsanda.disneydex.ui.theme.BackgroundColor
+import fr.isen.vojtechsanda.disneydex.routing.AppRouter
 import fr.isen.vojtechsanda.disneydex.ui.theme.DisneydexTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,20 +20,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DisneydexTheme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    //we use 0xFF then add the color code in hex format
-                    containerColor = BackgroundColor
-                ) { innerPadding ->
-//                    LoginScreen(modifier = Modifier.padding(innerPadding))
-                    RegisterScreen(modifier = Modifier.padding(
-                        top = 0.dp,
-                        bottom = innerPadding.calculateBottomPadding()
-                        )
-                    )
-                }
+                AppRouter()
             }
         }
+        
         // Write a message to the database
         val database = Firebase.database
         val myRef = database.getReference("message")
