@@ -9,9 +9,4 @@ object UniverseMapper {
         name = dto.name,
         sagas = dto.sagas.map { sagaDto -> SagaMapper.fromDto(sagaDto) }
     )
-
-    fun toDto(universe: Universe): UniverseDto = UniverseDto(
-        name = universe.name,
-        sagas = universe.sagas.map { saga -> SagaMapper.toDto(saga) }
-    )
 }

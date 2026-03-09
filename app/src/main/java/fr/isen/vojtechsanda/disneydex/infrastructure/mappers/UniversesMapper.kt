@@ -8,8 +8,4 @@ object UniversesMapper {
     fun fromDto(dto: UniversesDto): Universes = Universes(
         universes = dto.universes.map { universeDto -> UniverseMapper.fromDto(universeDto) }
     )
-
-    fun toDto(universes: Universes): UniversesDto = UniversesDto(
-        universes = universes.universes.map { universe -> UniverseMapper.toDto(universe) }
-    )
 }
