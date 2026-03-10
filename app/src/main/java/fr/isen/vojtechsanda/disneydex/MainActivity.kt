@@ -19,9 +19,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            DisneydexTheme {
-                AppRouter()
-            }
+            DisneydexTheme { AppRouter() }
         }
         
         // Write a message to the database
