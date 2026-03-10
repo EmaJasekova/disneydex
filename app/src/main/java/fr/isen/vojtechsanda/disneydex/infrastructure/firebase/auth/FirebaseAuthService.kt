@@ -44,6 +44,13 @@ class FirebaseAuthService : AuthService {
         )
     }
 
+    override suspend fun logout(): Result<Unit> = runCatching {
+        auth.signOut()
+    }.fold(
+        onSuccess = { Result.success(Unit) },
+        onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGOUT), error)) }
+    )
+
     override suspend fun getCurrentUser(): AuthUser? {
         val firebaseUser = auth.currentUser ?: return null
         return firebaseUser.toAuthUser(fetchUsername(firebaseUser.uid))

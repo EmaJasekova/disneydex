@@ -8,5 +8,7 @@ interface AuthService {
 
     suspend fun login(email: String, password: String): Result<AuthUser>
 
+    suspend fun logout(): Result<Unit>
+
     suspend fun getCurrentUser(): AuthUser?
 }
