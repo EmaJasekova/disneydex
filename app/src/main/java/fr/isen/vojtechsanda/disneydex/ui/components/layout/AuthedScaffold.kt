@@ -15,6 +15,10 @@ fun AuthedScaffold(
         containerColor = AppBackgroundColor,
         modifier = Modifier.fillMaxSize()
     ) { innerPadding ->
-        content(Modifier.padding(innerPadding))
+        content(
+            Modifier.padding(
+                innerPadding
+            )
+        )
     }
 }

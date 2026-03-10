@@ -13,3 +13,5 @@ val Pink40 = Color(0xFF7D5260)
 val AppBackgroundColor = Color(0xFF0A0A0A)
 
 val PaperColor = Color(0xFF1A1A1A)
+
+val BorderColorRed = Color(0xFF800000)

@@ -18,7 +18,7 @@ fun AppRouter() {
 
     NavHost(
         navController = navController,
-        startDestination = LoginRoute
+        startDestination = UniversesRoute
     ) {
         composable<LoginRoute> {
             LoginScreen(navController)
