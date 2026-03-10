@@ -1,11 +1,15 @@
 package fr.isen.vojtechsanda.disneydex.ui.components.layout
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.R
 import fr.isen.vojtechsanda.disneydex.routing.Route
@@ -28,7 +32,8 @@ val bottomNavigationItems = listOf(
 @Composable
 fun AuthedScaffold(
     navController: NavHostController,
-    content: @Composable (modifier: Modifier) -> Unit,
+    content: @Composable () -> Unit,
+    hero: @Composable () -> Unit = {},
 ) {
     Scaffold(
         topBar = { DexTopAppBar() },
@@ -36,10 +41,27 @@ fun AuthedScaffold(
         modifier = Modifier.fillMaxSize(),
         containerColor = AppBackgroundColor,
     ) { innerPadding ->
-        content(
-            Modifier.padding(
-                innerPadding
-            )
-        )
+        val scrollState = rememberScrollState()
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(scrollState)
+        ) {
+            hero()
+
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .padding(
+                        top = innerPadding.calculateTopPadding(),
+                        bottom = innerPadding.calculateBottomPadding(),
+                        start = 16.dp,
+                        end = 16.dp,
+                    )
+            ) {
+                content()
+            }
+        }
     }
 }
