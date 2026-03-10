@@ -1,16 +1,22 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import fr.isen.vojtechsanda.disneydex.R
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.R
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen.components.UniverseCard
 
 @Composable
 fun UniversesScreen(navController: NavHostController) {
-    AuthedScaffold ( navController = navController){ modifier ->
-        Column(modifier) {
+    AuthedScaffold(
+        navController = navController,
+        {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(20.dp)
+            ) {
 
             UniverseCard(
                 title = "Marvel Cinematic",
@@ -33,8 +39,8 @@ fun UniversesScreen(navController: NavHostController) {
                 count = 12
             )
         }
-
-    }
+        }
+    )
 }
 
 // Usage Example
