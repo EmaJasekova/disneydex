@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.screens.registerScreen
+package fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -10,12 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationBody
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationHero
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationTitle
-import fr.isen.vojtechsanda.disneydex.components.layout.PublicScaffold
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationBody
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHero
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationTitle
+import fr.isen.vojtechsanda.disneydex.ui.components.layout.PublicScaffold
 import fr.isen.vojtechsanda.disneydex.routing.LoginRoute
-import fr.isen.vojtechsanda.disneydex.screens.registerScreen.components.RegisterForm
+import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.components.RegisterForm
 
 @Composable
 fun RegisterScreen(navController: NavHostController) {

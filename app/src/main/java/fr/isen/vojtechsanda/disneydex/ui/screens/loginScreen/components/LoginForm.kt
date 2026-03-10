@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.screens.registerScreen.components
+package fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.components
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -16,41 +16,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.components.common.DexButton
+import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.theme.loginTextFieldColors
 
 @Composable
-fun RegisterForm(
-    onRegister: () -> Unit
-) {
-    var username by remember { mutableStateOf("") }
+fun LoginForm(onLogin: () -> Unit) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-    var confirmPassword by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        OutlinedTextField(
-            label = { Text("Username") },
-            value = username,
-            onValueChange = { username = it },
-            modifier = Modifier.fillMaxWidth(),
-            colors = loginTextFieldColors(),
-            keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Text, capitalization = KeyboardCapitalization.None
-            ),
-            singleLine = true,
-            shape = RoundedCornerShape(8.dp)
-        )
-
-        Spacer(modifier = Modifier.height(8.dp))
-
         OutlinedTextField(
             label = { Text("Email") },
             value = email,
@@ -76,41 +56,24 @@ fun RegisterForm(
             shape = RoundedCornerShape(8.dp)
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
-
-        OutlinedTextField(
-            label = { Text("Confirm Password") },
-            value = confirmPassword,
-            onValueChange = { confirmPassword = it },
-            modifier = Modifier.fillMaxWidth(),
-            colors = loginTextFieldColors(),
-            visualTransformation = PasswordVisualTransformation(),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            singleLine = true,
-            isError = password.isNotEmpty() && confirmPassword.isNotEmpty() && password != confirmPassword,
-            shape = RoundedCornerShape(8.dp)
-        )
-
         Spacer(modifier = Modifier.height(24.dp))
 
         DexButton(
             onClick = {
-                // TODO: Add validation check
+                // TODO: Add validation checks
 
-                // TODO: Handle registration logic here
+                // TODO: Handle login logic here
 
-                username = ""
                 email = ""
                 password = ""
-                confirmPassword = ""
 
-                onRegister()
+                onLogin()
             },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp)
         ) {
-            Text("Register", color = Color.White)
+            Text("Login", color = Color.White)
         }
     }
 }

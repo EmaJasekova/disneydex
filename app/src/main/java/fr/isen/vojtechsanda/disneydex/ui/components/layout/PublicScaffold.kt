@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.components.layout
+package fr.isen.vojtechsanda.disneydex.ui.components.layout
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -8,13 +8,17 @@ import androidx.compose.ui.Modifier
 import fr.isen.vojtechsanda.disneydex.ui.theme.AppBackgroundColor
 
 @Composable
-fun AuthedScaffold(
+fun PublicScaffold(
     content: @Composable (modifier: Modifier) -> Unit,
 ) {
     Scaffold(
         containerColor = AppBackgroundColor,
         modifier = Modifier.fillMaxSize()
     ) { innerPadding ->
-        content(Modifier.padding(innerPadding))
+        content(
+            Modifier.padding(
+                bottom = innerPadding.calculateBottomPadding()
+            )
+        )
     }
 }

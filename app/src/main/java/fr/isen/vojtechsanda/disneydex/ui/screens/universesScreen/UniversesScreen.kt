@@ -1,8 +1,8 @@
-package fr.isen.vojtechsanda.disneydex.screens.universesScreen
+package fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import fr.isen.vojtechsanda.disneydex.components.layout.AuthedScaffold
+import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 
 @Composable
 fun UniversesScreen() {

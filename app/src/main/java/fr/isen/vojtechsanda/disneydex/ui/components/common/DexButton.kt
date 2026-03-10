@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.components.common
+package fr.isen.vojtechsanda.disneydex.ui.components.common
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource

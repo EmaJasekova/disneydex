@@ -5,12 +5,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import fr.isen.vojtechsanda.disneydex.screens.loginScreen.LoginScreen
-import fr.isen.vojtechsanda.disneydex.screens.movieDetailScreen.MovieDetailScreen
-import fr.isen.vojtechsanda.disneydex.screens.profileScreen.ProfileScreen
-import fr.isen.vojtechsanda.disneydex.screens.registerScreen.RegisterScreen
-import fr.isen.vojtechsanda.disneydex.screens.universeOverviewScreen.UniverseOverviewScreen
-import fr.isen.vojtechsanda.disneydex.screens.universesScreen.UniversesScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.LoginScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.MovieDetailScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.ProfileScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.RegisterScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen.UniverseOverviewScreen
+import fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen.UniversesScreen
 
 @Composable
 fun AppRouter() {

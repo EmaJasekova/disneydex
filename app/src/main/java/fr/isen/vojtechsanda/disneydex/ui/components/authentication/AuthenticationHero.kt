@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.components.authentication
+package fr.isen.vojtechsanda.disneydex.ui.components.authentication
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
