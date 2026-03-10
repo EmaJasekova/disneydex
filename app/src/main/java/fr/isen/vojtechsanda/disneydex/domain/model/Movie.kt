@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.domain
+package fr.isen.vojtechsanda.disneydex.domain.model
 
 import java.time.LocalDate
 

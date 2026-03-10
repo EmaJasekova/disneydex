@@ -1,7 +1,7 @@
-package fr.isen.vojtechsanda.disneydex.repository.universe
+package fr.isen.vojtechsanda.disneydex.domain.repository
 
-import fr.isen.vojtechsanda.disneydex.domain.Universe
-import fr.isen.vojtechsanda.disneydex.domain.Universes
+import fr.isen.vojtechsanda.disneydex.domain.model.Universe
+import fr.isen.vojtechsanda.disneydex.domain.model.Universes
 import kotlinx.coroutines.flow.Flow
 
 interface UniverseRepository {
