@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.infrastructure.firebase
+package fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository
 
 import android.util.Log
 import com.google.firebase.database.DataSnapshot
