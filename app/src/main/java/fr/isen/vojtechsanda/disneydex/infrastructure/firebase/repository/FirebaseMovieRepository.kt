@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.infrastructure.firebase
+package fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository
 
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.domain.repository.MovieRepository

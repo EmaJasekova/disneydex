@@ -3,9 +3,9 @@ package fr.isen.vojtechsanda.disneydex
 import fr.isen.vojtechsanda.disneydex.domain.repository.MovieRepository
 import fr.isen.vojtechsanda.disneydex.domain.repository.SagaRepository
 import fr.isen.vojtechsanda.disneydex.domain.repository.UniverseRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseMovieRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseSagaRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseUniverseRepository
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseMovieRepository
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseSagaRepository
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseUniverseRepository
 
 object AppContainer {
     val universeRepository: UniverseRepository by lazy {
