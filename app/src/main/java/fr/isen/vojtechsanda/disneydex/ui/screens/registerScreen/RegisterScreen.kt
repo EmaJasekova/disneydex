@@ -10,11 +10,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.routing.Route
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationBody
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHero
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationTitle
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.PublicScaffold
-import fr.isen.vojtechsanda.disneydex.routing.LoginRoute
 import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.components.RegisterForm
 
 @Composable
@@ -30,12 +30,12 @@ fun RegisterScreen(navController: NavHostController) {
                 )
 
                 RegisterForm(
-                    onRegister = { navController.navigate(LoginRoute) }
+                    onRegister = { navController.navigate(Route.Login) }
                 )
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                TextButton(onClick = { navController.navigate(LoginRoute) }) {
+                TextButton(onClick = { navController.navigate(Route.Login) }) {
                     Text("I already have an account. Log In.", color = Color.LightGray)
                 }
             }

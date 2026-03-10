@@ -3,12 +3,13 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import fr.isen.vojtechsanda.disneydex.R
+import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen.components.UniverseCard
 
 @Composable
-fun UniversesScreen() {
-    AuthedScaffold { modifier ->
+fun UniversesScreen(navController: NavHostController) {
+    AuthedScaffold ( navController = navController){ modifier ->
         Column(modifier) {
 
             UniverseCard(
