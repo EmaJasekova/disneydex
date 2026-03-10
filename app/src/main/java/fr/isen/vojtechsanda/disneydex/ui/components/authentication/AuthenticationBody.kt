@@ -16,7 +16,7 @@ fun AuthenticationBody(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(top = 28.dp, start = 24.dp, end = 24.dp, bottom = 12.dp),
+            .padding(top = 28.dp, bottom = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         content()

@@ -20,32 +20,33 @@ import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.components.LoginFor
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
-    PublicScaffold { modifier ->
-        Column(modifier) {
-            AuthenticationHero(Modifier.weight(1.4f))
+    PublicScaffold(
+        hero = { AuthenticationHero(Modifier.height(300.dp)) },
+        content = {
+            Column {
+                AuthenticationBody {
+                    AuthenticationTitle(
+                        title = "Welcome back!",
+                        subtitle = "Continue your journey in the Multiverse!"
+                    )
 
-            AuthenticationBody(Modifier.weight(2.6f)) {
-                AuthenticationTitle(
-                    title = "Welcome back!",
-                    subtitle = "Continue your journey in the Multiverse!"
-                )
-
-                LoginForm(
-                    onLogin = {
-                        navController.navigate(Route.Universes) {
-                            popUpTo(navController.graph.findStartDestination().id) {
-                                inclusive = true
+                    LoginForm(
+                        onLogin = {
+                            navController.navigate(Route.Universes) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    inclusive = true
+                                }
                             }
                         }
+                    )
+
+                    Spacer(modifier = Modifier.height(8.dp))
+
+                    TextButton(onClick = { navController.navigate(Route.Register) }) {
+                        Text("I don't have any account. Register.", color = Color.LightGray)
                     }
-                )
-
-                Spacer(modifier = Modifier.height(8.dp))
-
-                TextButton(onClick = { navController.navigate(Route.Register) }) {
-                    Text("I don't have any account. Register.", color = Color.LightGray)
                 }
             }
         }
-    }
+    )
 }

@@ -2,6 +2,7 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -19,26 +20,26 @@ import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.components.Regis
 
 @Composable
 fun RegisterScreen(navController: NavHostController) {
-    PublicScaffold { modifier ->
-        Column(modifier) {
-            AuthenticationHero(Modifier.weight(1.4f))
+    PublicScaffold(
+        hero = { AuthenticationHero(Modifier.height(300.dp)) },
+        content = {
+            Column(Modifier.fillMaxSize()) {
+                AuthenticationBody {
+                    AuthenticationTitle(
+                        title = "Create an account",
+                        subtitle = "Register and join the Multiverse!"
+                    )
 
-            AuthenticationBody(Modifier.weight(2.6f)) {
-                AuthenticationTitle(
-                    title = "Create an account",
-                    subtitle = "Register and join the Multiverse!"
-                )
+                    RegisterForm(
+                        onRegister = { navController.navigate(Route.Login) }
+                    )
 
-                RegisterForm(
-                    onRegister = { navController.navigate(Route.Login) }
-                )
+                    Spacer(modifier = Modifier.height(8.dp))
 
-                Spacer(modifier = Modifier.height(8.dp))
-
-                TextButton(onClick = { navController.navigate(Route.Login) }) {
-                    Text("I already have an account. Log In.", color = Color.LightGray)
+                    TextButton(onClick = { navController.navigate(Route.Login) }) {
+                        Text("I already have an account. Log In.", color = Color.LightGray)
+                    }
                 }
             }
-        }
-    }
+        })
 }
