@@ -9,7 +9,8 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.4"
 composeBom = "2024.09.00"
 googleGmsGoogleServices = "4.4.4"
-firebaseDatabase = "22.0.1"
+firebaseBom = "34.10.0"
+kotlinxCoroutinesPlayServices = "1.10.1"
 navigationCompose = "2.9.7"
 kotlinxSerializationJson = "1.6.3"
 materialIconsExtended = "1.7.8"
@@ -31,7 +32,10 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutinesPlayServices" }
 androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "materialIconsExtended" }
 
 [plugins]
