@@ -5,6 +5,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface SagaRepository {
 
+    fun observeAllSagas(): Flow<List<Saga>>
+
     fun observeSagasByUniverse(universeId: String): Flow<List<Saga>>
 
     fun observeSaga(sagaId: String): Flow<Saga?>
