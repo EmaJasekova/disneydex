@@ -2,18 +2,21 @@ package fr.isen.vojtechsanda.disneydex.infrastructure.firebase
 
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.domain.repository.MovieRepository
+import fr.isen.vojtechsanda.disneydex.domain.repository.SagaRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-object FirebaseMovieRepository : MovieRepository {
+class FirebaseMovieRepository(
+    private val sagaRepository: SagaRepository
+) : MovieRepository {
 
     override fun observeMoviesBySaga(sagaId: String): Flow<List<Movie>> =
-        FirebaseSagaRepository.observeSaga(sagaId).map { saga ->
+        sagaRepository.observeSaga(sagaId).map { saga ->
             saga?.movies ?: emptyList()
         }
 
     override fun observeMovie(movieId: String): Flow<Movie?> =
-        FirebaseSagaRepository.observeAllSagas().map { sagas ->
+        sagaRepository.observeAllSagas().map { sagas ->
             sagas.firstNotNullOfOrNull { saga ->
                 saga.movies.find { movie -> movie.id == movieId }
             }
