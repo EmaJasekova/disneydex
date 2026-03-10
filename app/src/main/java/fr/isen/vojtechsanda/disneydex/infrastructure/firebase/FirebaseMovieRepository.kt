@@ -14,8 +14,8 @@ object FirebaseMovieRepository : MovieRepository {
 
     override fun observeMovie(movieId: String): Flow<Movie?> =
         FirebaseSagaRepository.observeAllSagas().map { sagas ->
-            sagas
-                .flatMap { saga -> saga.movies }
-                .find { movie -> movie.id == movieId }
+            sagas.firstNotNullOfOrNull { saga ->
+                saga.movies.find { movie -> movie.id == movieId }
+            }
         }
 }
