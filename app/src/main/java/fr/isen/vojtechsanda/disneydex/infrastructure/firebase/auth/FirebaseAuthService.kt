@@ -25,7 +25,7 @@ class FirebaseAuthService : AuthService {
             val firebaseUser = auth.createUserWithEmailAndPassword(email, password).await().user
                 ?: throw Exception("Registration failed. Please try again.")
             usersRef.child(firebaseUser.uid).child("username").setValue(username).await()
-            firebaseUser.toAuthUser(username)
+            AuthUser(id = firebaseUser.uid, email = firebaseUser.email, username = username)
         }.fold(
             onSuccess = { user -> Result.success(user) },
             onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.REGISTER), error)) }
@@ -37,7 +37,7 @@ class FirebaseAuthService : AuthService {
             val firebaseUser = auth.signInWithEmailAndPassword(email, password).await().user
                 ?: throw Exception("Login failed. Please try again.")
             val username = fetchUsername(firebaseUser.uid) ?: "Unknown User"
-            firebaseUser.toAuthUser(username)
+            AuthUser(id = firebaseUser.uid, email = firebaseUser.email, username = username)
         }.fold(
             onSuccess = { user -> Result.success(user) },
             onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGIN), error)) }
@@ -53,17 +53,14 @@ class FirebaseAuthService : AuthService {
 
     override suspend fun getCurrentUser(): AuthUser? {
         val firebaseUser = auth.currentUser ?: return null
-        return firebaseUser.toAuthUser(fetchUsername(firebaseUser.uid))
+        val username = fetchUsername(firebaseUser.uid)
+        return AuthUser(id = firebaseUser.uid, email = firebaseUser.email, username = username)
     }
 
     private suspend fun fetchUsername(uid: String): String? {
-        // username is retrieved from the custom user data in the database under /users/$uid/username
         val usernameSnapshot = usersRef.child(uid).child("username").get().await()
         return usernameSnapshot.getValue(String::class.java) ?: "Unknown User"
     }
-
-    private fun FirebaseUser.toAuthUser(username: String?): AuthUser =
-        AuthUser(id = uid, email = email, username = username)
 
     private fun toUserFriendlyMessage(throwable: Throwable, context: AuthContext): String =
         when (throwable) {
