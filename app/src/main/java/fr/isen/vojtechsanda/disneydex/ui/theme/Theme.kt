@@ -13,18 +13,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
     secondary = PurpleGrey80,
     tertiary = Pink80
 )
-
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
     tertiary = Pink40
-
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
@@ -38,23 +35,22 @@ private val LightColorScheme = lightColorScheme(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun loginTextFieldColors() = OutlinedTextFieldDefaults.colors(
+fun outlinedTextFieldColors() = OutlinedTextFieldDefaults.colors(
     // Setting these to Transparent removes the "little background" box
     focusedContainerColor = PaperColor,
     unfocusedContainerColor = PaperColor,
-
     // Border colors (outline)
     focusedBorderColor = Color.Transparent,
     unfocusedBorderColor = Color.Transparent,
-
     // Text colors
     focusedTextColor = Color.LightGray,
     unfocusedTextColor = Color.LightGray,
-
     // Label colors
     focusedLabelColor = Color.LightGray,
     unfocusedLabelColor = Color.LightGray,
     errorLabelColor = Color.Red,
+    errorBorderColor = Color.Red,
+    errorTextColor = Color.LightGray,
 )
 
 @Composable
