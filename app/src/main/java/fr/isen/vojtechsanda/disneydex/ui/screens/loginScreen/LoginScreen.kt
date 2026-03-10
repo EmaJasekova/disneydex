@@ -1,4 +1,4 @@
-package fr.isen.vojtechsanda.disneydex.screens.loginScreen
+package fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -11,13 +11,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationBody
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationHero
-import fr.isen.vojtechsanda.disneydex.components.authentication.AuthenticationTitle
-import fr.isen.vojtechsanda.disneydex.components.layout.PublicScaffold
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationBody
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHero
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationTitle
+import fr.isen.vojtechsanda.disneydex.ui.components.layout.PublicScaffold
 import fr.isen.vojtechsanda.disneydex.routing.RegisterRoute
 import fr.isen.vojtechsanda.disneydex.routing.UniversesRoute
-import fr.isen.vojtechsanda.disneydex.screens.loginScreen.components.LoginForm
+import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.components.LoginForm
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
