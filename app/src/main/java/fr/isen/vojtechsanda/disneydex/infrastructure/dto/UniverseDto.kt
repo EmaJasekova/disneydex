@@ -1,6 +1,6 @@
-package fr.isen.vojtechsanda.disneydex.dto
+package fr.isen.vojtechsanda.disneydex.infrastructure.dto
 
-import fr.isen.vojtechsanda.disneydex.domain.Universe
+import fr.isen.vojtechsanda.disneydex.domain.model.Universe
 
 data class UniverseDto(
     val id: String = "",

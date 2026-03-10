@@ -1,6 +1,6 @@
-package fr.isen.vojtechsanda.disneydex.dto
+package fr.isen.vojtechsanda.disneydex.infrastructure.dto
 
-import fr.isen.vojtechsanda.disneydex.domain.Movie
+import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 

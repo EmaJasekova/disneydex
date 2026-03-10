@@ -1,6 +1,6 @@
-package fr.isen.vojtechsanda.disneydex.repository.saga
+package fr.isen.vojtechsanda.disneydex.domain.repository
 
-import fr.isen.vojtechsanda.disneydex.domain.Saga
+import fr.isen.vojtechsanda.disneydex.domain.model.Saga
 import kotlinx.coroutines.flow.Flow
 
 interface SagaRepository {

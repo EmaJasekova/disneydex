@@ -1,6 +1,6 @@
-package fr.isen.vojtechsanda.disneydex.repository.movie
+package fr.isen.vojtechsanda.disneydex.domain.repository
 
-import fr.isen.vojtechsanda.disneydex.domain.Movie
+import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 
 interface MovieRepository {
