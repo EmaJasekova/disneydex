@@ -25,4 +25,7 @@ Beyond simply browsing release dates and sagas, the app serves as a personal col
 * **Backend:** Firebase Realtime Database
 * **Authentication:** Firebase Authentication (Email/Password)
 
+---
+
+📌 _This app was created as a team project during an Erasmus+ exchange program for the Native Mobile Development course at ISEN Méditerranée, France._
 
