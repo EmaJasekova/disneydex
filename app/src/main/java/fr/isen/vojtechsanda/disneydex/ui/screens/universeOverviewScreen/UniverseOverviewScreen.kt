@@ -75,7 +75,7 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
         },
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(40.dp)) {
-                universe.sagas.map { saga -> SagaContainer(saga) }
+                universe.sagas.map { saga -> SagaContainer(navController, saga) }
             }
         }
     )

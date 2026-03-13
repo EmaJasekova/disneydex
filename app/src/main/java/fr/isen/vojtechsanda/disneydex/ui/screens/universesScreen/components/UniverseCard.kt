@@ -13,25 +13,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.ui.theme.MaroonRed
 import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.ui.theme.DarkGray
 
 @Composable
 fun UniverseCard(
     title: String,
     subtitle: String,
     posterImages: List<String>,
-    users: List<AuthUser>
+    users: List<AuthUser>,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
-            .clickable {
-                // TODO: Handle dynamic routing to the universe overview screen
-            },
+            .clickable { onClick() },
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E)),
-        border = BorderStroke(1.dp, MaroonRed)
+        border = BorderStroke(1.dp, DarkGray)
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
