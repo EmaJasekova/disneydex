@@ -1,5 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen.components
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -20,16 +21,27 @@ fun UniverseCardFooter(count: Int) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 14.dp),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
     ) {
 
-        UniverseCardStackedAvatars(count = count)
+        UniverseCardStackedAvatars(
+            avatars = listOf(
+                "https://api.dicebear.com/9.x/lorelei/png?seed=1",
+                "https://api.dicebear.com/9.x/lorelei/png?seed=2",
+                "https://api.dicebear.com/9.x/lorelei/png?seed=3",
+                "https://api.dicebear.com/9.x/lorelei/png?seed=4",
+            )
+
+        )
         DexButton(
-            onClick = {},
+            onClick = {
+                // TODO: Handle dynamic routing to the universe overview screen
+            },
             colors = ButtonDefaults.buttonColors(containerColor = Color.White),
             modifier = Modifier
-                .fillMaxWidth()
-                .height(52.dp)
+                .fillMaxWidth(0.8f)
+                .height(35.dp)
         ) { Text("Explore", color = Color.Black) }
     }
 }

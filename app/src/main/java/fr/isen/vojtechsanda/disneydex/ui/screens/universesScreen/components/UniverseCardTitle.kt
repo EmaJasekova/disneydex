@@ -16,8 +16,7 @@ import androidx.compose.ui.unit.sp
 fun UniverseCardTitle(title: String, subtitle: String) {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 14.dp),
+            .fillMaxWidth(),
         horizontalAlignment = Alignment.Start
     ) {
         Text(
