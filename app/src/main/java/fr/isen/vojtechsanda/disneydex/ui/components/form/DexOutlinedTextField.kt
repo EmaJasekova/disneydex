@@ -23,8 +23,8 @@ fun DexOutlinedTextField(
     keyboardType: KeyboardType = KeyboardType.Text,
     isPassword: Boolean = keyboardType == KeyboardType.Password,
     isError: Boolean = false,
-    shape: Shape = RoundedCornerShape(10.dp),
     leadingIcon: @Composable (() -> Unit)? = null,
+    shape: Shape = RoundedCornerShape(10.dp)
 ) {
     OutlinedTextField(
         label = label?.let { { Text(it) } },
