@@ -1,16 +1,82 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.domain.model.Saga
+import fr.isen.vojtechsanda.disneydex.domain.model.Universe
+import fr.isen.vojtechsanda.disneydex.ui.components.common.hero.Hero
+import fr.isen.vojtechsanda.disneydex.ui.components.common.hero.HeroTitle
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
+import fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen.components.SagaContainer
+import java.time.LocalDate
 
 @Composable
 fun UniverseOverviewScreen(navController: NavHostController, universeId: String) {
+    val universe = Universe(
+        id = universeId,
+        name = "Pelíšky Dos Universe",
+        sagas = listOf(
+            Saga(
+                id = "test-saga-1",
+                name = "Test saga 1",
+                genre = "Action",
+                movies = listOf(
+                    Movie(
+                        id = "test-movie-1",
+                        name = "Test movie 1",
+                        releaseDate = LocalDate.of(2023, 1, 1)
+                    ),
+                    Movie(
+                        id = "test-movie-3",
+                        name = "Test movie 3",
+                        releaseDate = LocalDate.of(2024, 1, 1)
+                    )
+                )
+            ),
+            Saga(
+                id = "test-saga-2",
+                name = "Test saga 2",
+                genre = "Sci-Fi",
+                movies = listOf(
+                    Movie(
+                        id = "test-movie-2",
+                        name = "Test movie 2",
+                        releaseDate = LocalDate.of(2025, 2, 8)
+                    )
+                )
+            )
+        )
+    );
+
     AuthedScaffold(
         navController = navController,
+        hero = {
+            // TODO: Connect to universe image
+            Hero(imageUrl = "https://image.pmgstatic.com/cache/resized/w663/files/images/film/posters/165/059/165059101_56d52a.jpg") {
+                Column(
+                    verticalArrangement = Arrangement.Bottom,
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp, vertical = 32.dp)
+                        .fillMaxWidth()
+                        .fillMaxHeight()
+                ) {
+                    HeroTitle(universe.name)
+                    Text("Todo some universe description", color = Color.White)
+                }
+            }
+        },
         content = {
-            Text("This is universe with id $universeId")
+            universe.sagas.map { saga -> SagaContainer(saga) }
         }
     )
 }

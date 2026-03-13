@@ -52,6 +52,7 @@ fun AuthedScaffold(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(innerPadding)
                 .verticalScroll(scrollState)
         ) {
             hero()
@@ -59,12 +60,7 @@ fun AuthedScaffold(
             Column(
                 Modifier
                     .fillMaxSize()
-                    .padding(
-                        top = innerPadding.calculateTopPadding(),
-                        bottom = innerPadding.calculateBottomPadding(),
-                        start = 16.dp,
-                        end = 16.dp,
-                    )
+                    .padding(16.dp)
             ) {
                 content()
             }
