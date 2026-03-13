@@ -1,15 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.domain.model.Saga
@@ -77,7 +68,7 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
                         .fillMaxWidth()
                         .fillMaxHeight()
                 ) {
-                    HeroTitle(universe.name)
+                    HeroTitle(title = universe.name, subtitle = universe.description)
                     Text(universe.description, color = Color.White)
                 }
             }
