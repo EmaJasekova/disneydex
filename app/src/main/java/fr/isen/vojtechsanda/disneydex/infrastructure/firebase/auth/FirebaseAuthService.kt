@@ -23,7 +23,7 @@ class FirebaseAuthService : AuthService {
     override suspend fun register(email: String, password: String, username: String): Result<AuthUser> {
         return runCatching {
             val firebaseUser = auth.createUserWithEmailAndPassword(email, password).await().user
-                ?: throw Exception("Registration failed. Please try again later.")
+                ?: throw Exception("Registration failed. Please try again.")
             usersRef.child(firebaseUser.uid).child("username").setValue(username).await()
             AuthUser(id = firebaseUser.uid, email = firebaseUser.email, username = username)
         }.fold(
@@ -35,7 +35,7 @@ class FirebaseAuthService : AuthService {
     override suspend fun login(email: String, password: String): Result<AuthUser> {
         return runCatching {
             val firebaseUser = auth.signInWithEmailAndPassword(email, password).await().user
-                ?: throw Exception("Login failed. Please try again later.")
+                ?: throw Exception("Login failed. Please try again.")
             val username = fetchUsername(firebaseUser.uid) ?: "Unknown User"
             AuthUser(id = firebaseUser.uid, email = firebaseUser.email, username = username)
         }.fold(
@@ -69,7 +69,7 @@ class FirebaseAuthService : AuthService {
             is FirebaseAuthUserCollisionException -> "This email is already registered"
             is FirebaseAuthWeakPasswordException -> "Password is too weak"
             is FirebaseNetworkException -> "Network error. Please check your connection."
-            is DatabaseException -> "Could not load profile. Please try again later."
+            is DatabaseException -> "Could not load profile. Please try again."
             else -> context.fallbackMessage
         }
 }
