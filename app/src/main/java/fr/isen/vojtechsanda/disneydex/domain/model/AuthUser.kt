@@ -1,7 +1,9 @@
 package fr.isen.vojtechsanda.disneydex.domain.model
 
 data class AuthUser(
-    val id: String,
-    val email: String?,
-    val username: String?
-)
+    val credential: AuthCredential,
+    val username: String
+    ) {
+        val id: String get() = credential.uid
+        val email: String get() = credential.email
+    }
