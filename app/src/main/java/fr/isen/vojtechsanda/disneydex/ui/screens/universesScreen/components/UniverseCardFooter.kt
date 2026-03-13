@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,22 +15,17 @@ import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 
 @Composable
 
-fun UniverseCardFooter(count: Int) {
+fun UniverseCardFooter(avatars: List<String>) {
+
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 14.dp),
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
 
         UniverseCardStackedAvatars(
-            avatars = listOf(
-                "https://api.dicebear.com/9.x/lorelei/png?seed=1",
-                "https://api.dicebear.com/9.x/lorelei/png?seed=2",
-                "https://api.dicebear.com/9.x/lorelei/png?seed=3",
-                "https://api.dicebear.com/9.x/lorelei/png?seed=4",
-            )
+            avatars = avatars
 
         )
         DexButton(
