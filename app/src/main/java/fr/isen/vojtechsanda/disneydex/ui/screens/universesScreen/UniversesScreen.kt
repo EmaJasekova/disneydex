@@ -42,14 +42,3 @@ fun UniversesScreen(navController: NavHostController) {
         }
     )
 }
-
-// Usage Example
-
-//        UniverseCard(
-//            title = "Marvel Cinematic",
-//            subtitle = "Phase 1 - Phase 5",
-//            badge = "New",
-//            posterImages = listOf(R.drawable.poster1, R.drawable.poster2, R.drawable.poster3),
-//            memberCount = 42,
-//            onClick = { /* navigate */ }
-//        )
