@@ -9,11 +9,13 @@ private val DB_DATE_FORMAT: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE
 data class MovieDto(
     val id: String = "",
     val name: String = "",
-    val releaseDate: String = ""
+    val genre: String = "",
+    val releaseDate: String = "",
 ) {
     fun toMovie(): Movie = Movie(
         id,
         name,
+        genre,
         runCatching { LocalDate.parse(releaseDate, DB_DATE_FORMAT) }.getOrNull()
     )
 }
