@@ -30,7 +30,7 @@ fun UniverseCardStackedAvatars(
     modifier: Modifier = Modifier
 ) {
     val visible = avatars.take(maxVisible)
-    val overflow = avatars.size - visible.size
+    val overflow = (avatars.size - visible.size).coerceAtMost(99)
 
     Row(modifier = modifier) {
         visible.forEachIndexed { index, url ->

@@ -17,7 +17,7 @@ import fr.isen.vojtechsanda.disneydex.ui.theme.ColorMaroonRed
 
 @Composable
 fun UniverseCard(
-    title: String, subtitle: String, posterImages: List<Int>, count: Int
+    title: String, subtitle: String, posterImages: List<String>, avatars: List<String>
 
 ) {
     Card(
@@ -32,11 +32,11 @@ fun UniverseCard(
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+            verticalArrangement = Arrangement.spacedBy(24.dp)
         ) {
             UniverseCardTitle(title = title, subtitle = subtitle)
             UniverseCardImageGrid(posterImages = posterImages)
-            UniverseCardFooter(count = count)
+            UniverseCardFooter(avatars = avatars)
         }
 
     }
