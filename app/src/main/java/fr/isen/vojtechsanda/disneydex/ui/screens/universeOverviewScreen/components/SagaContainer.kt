@@ -18,12 +18,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Saga
 import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
+import fr.isen.vojtechsanda.disneydex.routing.Route
 
 @Composable
-fun SagaContainer(saga: Saga) {
-    Column() {
+fun SagaContainer(navController: NavHostController, saga: Saga) {
+    Column {
         Row(
             modifier = Modifier
                 .height(IntrinsicSize.Min)
@@ -47,7 +49,7 @@ fun SagaContainer(saga: Saga) {
         }
 
         Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            saga.movies.map { movie -> MovieCard(movie) }
+            saga.movies.map { movie -> MovieCard(movie, onClick = { navController.navigate(Route.MovieDetail(movie.id)) }) }
         }
     }
 }
