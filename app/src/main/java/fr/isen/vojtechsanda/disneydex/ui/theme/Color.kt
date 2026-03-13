@@ -14,3 +14,5 @@ val PaperColor = Color(0xFF1A1A1A)
 val InPaperColor = Color(0xFF141414)
 val MaroonRed = Color(0xFF330000)
 val DarkGray = Color(0xFF2A2A2A)
+
+val HighlightRed = Color(0xFFe50914)

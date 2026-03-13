@@ -11,11 +11,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 
 @Composable
-
-fun UniverseCardFooter(avatars: List<String>) {
+fun UniverseCardFooter(users: List<AuthUser>) {
 
     Row(
         modifier = Modifier
@@ -23,11 +23,8 @@ fun UniverseCardFooter(avatars: List<String>) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
+        UniverseCardStackedAvatars(users)
 
-        UniverseCardStackedAvatars(
-            avatars = avatars
-
-        )
         DexButton(
             onClick = {
                 // TODO: Handle dynamic routing to the universe overview screen

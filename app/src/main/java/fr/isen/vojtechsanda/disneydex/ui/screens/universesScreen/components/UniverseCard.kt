@@ -14,14 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import fr.isen.vojtechsanda.disneydex.ui.theme.MaroonRed
+import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 
 @Composable
 fun UniverseCard(
     title: String,
     subtitle: String,
     posterImages: List<String>,
-    avatars: List<String>
-
+    users: List<AuthUser>
 ) {
     Card(
         modifier = Modifier
@@ -39,7 +39,7 @@ fun UniverseCard(
         ) {
             UniverseCardTitle(title = title, subtitle = subtitle)
             UniverseCardImageGrid(posterImages = posterImages)
-            UniverseCardFooter(avatars = avatars)
+            UniverseCardFooter(users)
         }
 
     }

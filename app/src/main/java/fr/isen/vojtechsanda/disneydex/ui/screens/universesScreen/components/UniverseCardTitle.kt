@@ -22,14 +22,14 @@ fun UniverseCardTitle(title: String, subtitle: String) {
         Text(
             text = title,
             fontSize = 28.sp,
-            color = Color.LightGray,
+            color = Color.White,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.padding(bottom = 6.dp),
         )
         Text(
             text = subtitle,
             fontSize = 20.sp,
-            color = Color.Gray,
+            color = Color.LightGray,
         )
     }
 }
