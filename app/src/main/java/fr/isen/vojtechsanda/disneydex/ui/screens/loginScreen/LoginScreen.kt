@@ -11,17 +11,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.R
 import fr.isen.vojtechsanda.disneydex.routing.Route
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationBody
-import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHero
+import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationHeroContent
 import fr.isen.vojtechsanda.disneydex.ui.components.authentication.AuthenticationTitle
+import fr.isen.vojtechsanda.disneydex.ui.components.common.hero.Hero
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.PublicScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.components.LoginForm
 
 @Composable
 fun LoginScreen(navController: NavHostController) {
     PublicScaffold(
-        hero = { AuthenticationHero(Modifier.height(300.dp)) },
+        hero = {
+            Hero(imageRes = R.drawable.heroimagebackground) {
+                AuthenticationHeroContent()
+            }
+        },
         content = {
             Column {
                 AuthenticationBody {
