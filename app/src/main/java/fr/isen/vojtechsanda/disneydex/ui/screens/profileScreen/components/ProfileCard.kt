@@ -41,7 +41,7 @@ fun ProfileCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 10.dp)
+            .padding(bottom = 20.dp)
             .drawBehind {
                 drawLine(
                     start = Offset(0f, size.height),
@@ -56,7 +56,7 @@ fun ProfileCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(184.dp)
+                .height(164.dp)
                 .padding(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -82,7 +82,7 @@ fun ProfileCard(
                     modifier = Modifier.padding(bottom = 4.dp),
                     text = username
                 )
-                Row {
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Icon(
                         imageVector = Icons.Default.Email,
                         contentDescription = null,
@@ -98,7 +98,7 @@ fun ProfileCard(
                 Text(
                     fontSize = 12.sp,
                     color = Gray,
-                    text = "Joined at: $dateJoined"
+                    text = "Joined in ${dateJoined?.year}"
                 )
             }
 

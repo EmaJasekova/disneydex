@@ -1,5 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
@@ -18,7 +19,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun CollectionTitle() {
     Column {
-        Row {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Icon(
                 imageVector = Icons.Default.Camera,
                 contentDescription = null,

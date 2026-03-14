@@ -36,8 +36,14 @@ fun AuthedScaffold(
     hero: @Composable () -> Unit = {},
 ) {
     Scaffold(
-        topBar = { DexTopAppBar() },
-        bottomBar = { DexBottomNavigationBar(navController, bottomNavigationItems) },
+        topBar = { DexTopAppBar(modifier = Modifier.padding(bottom = 8.dp)) },
+        bottomBar = {
+            DexBottomNavigationBar(
+                modifier = Modifier.padding(top = 8.dp),
+                navController,
+                bottomNavigationItems
+            )
+        },
         modifier = Modifier.fillMaxSize(),
         containerColor = AppBackgroundColor,
     ) { innerPadding ->
