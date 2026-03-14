@@ -8,6 +8,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -24,7 +25,8 @@ fun DexOutlinedTextField(
     keyboardType: KeyboardType = KeyboardType.Text,
     isPassword: Boolean = keyboardType == KeyboardType.Password,
     isError: Boolean = false,
-    leadingIcon: ImageVector? = null
+    leadingIcon: ImageVector? = null,
+    shape: Shape = RoundedCornerShape(20.dp)
 ) {
     OutlinedTextField(
         label = { Text(label) },
@@ -35,7 +37,7 @@ fun DexOutlinedTextField(
         visualTransformation = if (isPassword) PasswordVisualTransformation() else VisualTransformation.None,
         keyboardOptions = KeyboardOptions(keyboardType = keyboardType),
         singleLine = true,
-        shape = RoundedCornerShape(20.dp),
+        shape = shape,
         isError = isError,
         leadingIcon = leadingIcon?.let {
             { Icon(imageVector = it, contentDescription = null) }

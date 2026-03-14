@@ -7,6 +7,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -21,11 +22,15 @@ data class DexBottomNavigationBarItem(
 )
 
 @Composable
-fun DexBottomNavigationBar(navController: NavController, items: List<DexBottomNavigationBarItem>) {
+fun DexBottomNavigationBar(
+    modifier: Modifier = Modifier,
+    navController: NavController,
+    items: List<DexBottomNavigationBarItem>
+) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
-    NavigationBar {
+    NavigationBar(modifier = modifier) {
         items.forEach { item ->
             val isSelected = currentDestination?.hasRoute(route = item.route::class) == true
 

@@ -19,30 +19,46 @@ import java.time.LocalDate
 
 @Composable
 fun ProfileScreen(navController: NavHostController, userId: String) {
-
+    fun mockYear(year: Int) = LocalDate.of(year, 1, 1)
     var movies by remember {
         mutableStateOf(
             listOf(
                 Movie(
                     id = "1",
                     name = "Thor: Love and Thunder",
-                    releaseDate = LocalDate.of(2023, 5, 21)
+                    genre = "Action",
+                    duration = 119,
+                    releaseDate = mockYear(2020),
+                    studio = "Marvel Studios",
+                    posterImage = "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_.jpg"
                 ),
                 Movie(
                     id = "2",
                     name = "Iron Man",
-                    releaseDate = LocalDate.of(2008, 5, 2)
+                    genre = "Action",
+                    duration = 126,
+                    releaseDate = mockYear(2015),
+                    studio = "Marvel Studios",
+                    posterImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9oRfUjbqBdsh61eWZrUlu8X-eDrcCehIvrw&s"
                 ),
                 Movie(
                     id = "3",
                     name = "Black Panther",
-                    releaseDate = LocalDate.of(2018, 2, 16)
+                    genre = "Action",
+                    duration = 134,
+                    releaseDate = mockYear(2018),
+                    studio = "Marvel Studios",
+                    posterImage = "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg"
                 ),
                 Movie(
                     id = "4",
                     name = "The Cats",
-                    releaseDate = LocalDate.of(2016, 7, 22)
-                ),
+                    genre = "Comedy",
+                    duration = 110,
+                    releaseDate = mockYear(2018),
+                    studio = "Universal Pictures",
+                    posterImage = "https://i.etsystatic.com/57313645/r/il/fdb8ee/6643013613/il_fullxfull.6643013613_sb80.jpg"
+                )
             )
         )
     }
@@ -52,7 +68,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
             url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
             username = "Alex Mercer",
             email = "alex.mercer@example.com",
-            dateJoined = LocalDate.of(2023, 5, 21)
+            dateJoined = mockYear(2026)
         )
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
             CollectionTitle()
@@ -60,8 +76,6 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
             movies.forEach { movie ->
                 MovieCard(
                     movie = movie,
-                    // TODO: Add poster property in the Movie model
-                    poster = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfq5js5aFiTSUW-apcciHfsOfb3XKy67IgA&s",
                     onDelete = { movies = movies.filter { it.id != movie.id } })
             }
         }
