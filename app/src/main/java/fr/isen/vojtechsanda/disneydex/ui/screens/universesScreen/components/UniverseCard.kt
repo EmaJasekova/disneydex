@@ -13,11 +13,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.ui.theme.ColorMaroonRed
+import fr.isen.vojtechsanda.disneydex.ui.theme.MaroonRed
 
 @Composable
 fun UniverseCard(
-    title: String, subtitle: String, posterImages: List<String>, avatars: List<String>
+    title: String,
+    subtitle: String,
+    posterImages: List<String>,
+    avatars: List<String>
 
 ) {
     Card(
@@ -28,7 +31,7 @@ fun UniverseCard(
             },
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color(0xFF1E1E1E)),
-        border = BorderStroke(1.dp, ColorMaroonRed)
+        border = BorderStroke(1.dp, MaroonRed)
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
