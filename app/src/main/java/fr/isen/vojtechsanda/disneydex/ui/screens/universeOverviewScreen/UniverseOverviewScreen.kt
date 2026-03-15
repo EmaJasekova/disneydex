@@ -25,20 +25,26 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
     val universe = Universe(
         id = universeId,
         name = "Pelíšky Dos Universe",
+        description = "Short description 1",
         sagas = listOf(
             Saga(
                 id = "test-saga-1",
                 name = "Test saga 1",
-                genre = "Action",
                 movies = listOf(
                     Movie(
                         id = "test-movie-1",
                         name = "Test movie 1",
+                        genre = "Action",
+                        duration = 120,
+                        studio = "Lucasfilm",
                         releaseDate = LocalDate.of(2023, 1, 1)
                     ),
                     Movie(
                         id = "test-movie-3",
                         name = "Test movie 3",
+                        genre = "Sci-fi",
+                        duration = 189,
+                        studio = "Marvel",
                         releaseDate = LocalDate.of(2024, 1, 1)
                     )
                 )
@@ -46,11 +52,13 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
             Saga(
                 id = "test-saga-2",
                 name = "Test saga 2",
-                genre = "Sci-Fi",
                 movies = listOf(
                     Movie(
                         id = "test-movie-2",
                         name = "Test movie 2",
+                        genre = "Comedy",
+                        studio = "Disney",
+                        duration = 90,
                         releaseDate = LocalDate.of(2025, 2, 8)
                     )
                 )
