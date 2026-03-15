@@ -3,10 +3,11 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material3.Card
@@ -16,55 +17,36 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import java.time.LocalDate
+import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 
 @Composable
-
-fun ProfileCard(
-    url: String,
-    username: String,
-    email: String,
-    dateJoined: LocalDate?
-) {
+fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
     val imageWeight = 0.28f
 
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 20.dp)
-            .drawBehind {
-                drawLine(
-                    start = Offset(0f, size.height),
-                    end = Offset(size.width, size.height),
-                    color = Gray,
-                    strokeWidth = 2.dp.toPx()
-                )
-            },
+        modifier = modifier
+            .fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(164.dp)
-                .padding(8.dp),
+                .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
-                model = url,
+                // TODO: Connect to correct url
+                model = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
                 contentDescription = null,
-                contentScale = ContentScale.Fit,
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .weight(imageWeight)
-                    .aspectRatio(1f / 2.2f)
+                    .width(90.dp)
+                    .height(90.dp)
                     .padding(8.dp)
             )
 
@@ -74,33 +56,38 @@ fun ProfileCard(
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Text(
+                    // TODO: Remove fallback when new models are done
+                    user.username ?: "TODO: Bad model placeholder",
                     fontSize = 20.sp,
                     color = Color.White,
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(bottom = 4.dp),
-                    text = username
                 )
 
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     Icon(
                         imageVector = Icons.Default.Email,
-                        contentDescription = null,
-                        tint = Color.LightGray
+                        contentDescription = "Email",
+                        tint = Color.LightGray,
+                        modifier = Modifier.size(16.dp)
                     )
                     Text(
+                        user.email ?: "TODO: Bad model placeholder",
                         fontSize = 16.sp,
                         color = Color.LightGray,
-                        text = email
                     )
                 }
 
                 Text(
                     fontSize = 14.sp,
                     color = Color.LightGray,
-                    text = "Joined in ${dateJoined?.year}"
+                    // TODO: Connect to real year
+                    text = "Joined in 2028"
                 )
             }
-
         }
 
     }

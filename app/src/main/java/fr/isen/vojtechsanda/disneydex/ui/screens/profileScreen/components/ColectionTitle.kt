@@ -31,7 +31,6 @@ fun CollectionTitle() {
                 modifier = Modifier.padding(bottom = 4.dp),
                 text = "Your Collection"
             )
-
         }
 
         Text(

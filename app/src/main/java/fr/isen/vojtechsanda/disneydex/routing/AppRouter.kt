@@ -18,7 +18,7 @@ fun AppRouter() {
 
     NavHost(
         navController = navController,
-        startDestination = Route.UniverseOverview("AASD")
+        startDestination = Route.Login
     ) {
         composable<Route.Login> {
             LoginScreen(navController)
