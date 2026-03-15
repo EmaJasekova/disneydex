@@ -1,11 +1,20 @@
 package fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.FirebaseDatabase
 import fr.isen.vojtechsanda.disneydex.domain.exception.InvalidAuthStateException
+import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.domain.repository.UserRepository
 import kotlinx.coroutines.tasks.await
+
+private fun MovieListType.toFirebaseKey(): String = when (this) {
+    MovieListType.WATCHED -> "watched"
+    MovieListType.WATCHLIST -> "watchList"
+    MovieListType.OWNED -> "owned"
+    MovieListType.FOR_TRADE -> "forTrade"
+}
 
 class FirebaseUserRepository : UserRepository {
 
@@ -16,12 +25,18 @@ class FirebaseUserRepository : UserRepository {
         val firebaseUser = auth.currentUser ?: return null
         val email = firebaseUser.email
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-        val userSnapshot = usersRef.child(firebaseUser.uid).get().await()
+        
+            val userSnapshot = usersRef.child(firebaseUser.uid).get().await()
         val username = userSnapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
+
         return User(
             uid = firebaseUser.uid,
             email = email,
-            username = username
+            username = username,
+            watchedIds = readMovieIds(userSnapshot, MovieListType.WATCHED),
+            watchlistIds = readMovieIds(userSnapshot, MovieListType.WATCHLIST),
+            ownedIds = readMovieIds(userSnapshot, MovieListType.OWNED),
+            forTradeIds = readMovieIds(userSnapshot, MovieListType.FOR_TRADE)
         )
     }
 
@@ -33,4 +48,33 @@ class FirebaseUserRepository : UserRepository {
         }
         usersRef.child(user.uid).child("username").setValue(user.username).await()
     }
+
+    override suspend fun addMovieToList(movieId: String, list: MovieListType): Result<Unit> = runCatching {
+        val uid = requireAuthenticatedUid()
+        usersRef.child(uid).child(list.toFirebaseKey()).child(movieId).setValue(true).await()
+    }
+
+    override suspend fun removeMovieFromList(movieId: String, list: MovieListType): Result<Unit> = runCatching {
+        val uid = requireAuthenticatedUid()
+        usersRef.child(uid).child(list.toFirebaseKey()).child(movieId).removeValue().await()
+    }
+
+    override suspend fun getMovieList(list: MovieListType): Result<List<String>> = runCatching {
+        val uid = requireAuthenticatedUid()
+        val snapshot = usersRef.child(uid).child(list.toFirebaseKey()).get().await()
+        snapshot.children.mapNotNull { child -> child.key }
+    }
+
+    override suspend fun isMovieInList(movieId: String, list: MovieListType): Result<Boolean> = runCatching {
+        val uid = requireAuthenticatedUid()
+        val snapshot = usersRef.child(uid).child(list.toFirebaseKey()).child(movieId).get().await()
+        snapshot.exists()
+    }
+
+    private fun requireAuthenticatedUid(): String =
+        auth.currentUser?.uid
+            ?: throw InvalidAuthStateException("User is not authenticated.")
+
+    private fun readMovieIds(snapshot: DataSnapshot, list: MovieListType): List<String> =
+        snapshot.child(list.toFirebaseKey()).children.mapNotNull { child -> child.key }
 }
