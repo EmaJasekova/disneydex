@@ -21,19 +21,22 @@ class FirebaseUserRepository : UserRepository {
     private val auth = FirebaseAuth.getInstance()
     private val usersRef = FirebaseDatabase.getInstance().getReference("users")
 
-    override suspend fun getCurrentUser(): User? {
-        val firebaseUser = auth.currentUser ?: return null
-        val email = firebaseUser.email
+    override suspend fun getUser(uid: String): Result<User?> = runCatching {
+        val userSnapshot = usersRef.child(uid).get().await()
+        if (!userSnapshot.exists()) return@runCatching null
+
+        val firebaseUser = auth.currentUser?.takeIf { it.uid == uid }
+        val email = firebaseUser?.email
+            ?: userSnapshot.child("email").getValue(String::class.java)
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-        
-            val userSnapshot = usersRef.child(firebaseUser.uid).get().await()
+
         val username = userSnapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
         val createdAt = userSnapshot.child("createdAt").getValue(Long::class.java)
-            ?: firebaseUser.metadata?.creationTimestamp
+            ?: firebaseUser?.metadata?.creationTimestamp
             ?: System.currentTimeMillis()
 
-        return User(
-            uid = firebaseUser.uid,
+        User(
+            uid = uid,
             email = email,
             username = username,
             createdAt = createdAt,

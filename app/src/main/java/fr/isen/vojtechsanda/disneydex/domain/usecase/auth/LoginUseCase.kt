@@ -10,7 +10,8 @@ class LoginUseCase(
     private val userRepository: UserRepository
 ) {
     suspend operator fun invoke(email: String, password: String): Result<User> = runCatching {
-        authRepository.login(email, password).getOrThrow()
-        userRepository.getCurrentUser() ?: throw UserProfileMissingException()
+        val authUser = authRepository.login(email, password).getOrThrow()
+        userRepository.getUser(authUser.uid).getOrThrow()
+            ?: throw UserProfileMissingException()
     }
 }

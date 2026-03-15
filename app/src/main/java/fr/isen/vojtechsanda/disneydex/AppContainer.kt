@@ -36,7 +36,7 @@ object AppContainer {
     }
 
     val getCurrentUserUseCase by lazy {
-        GetCurrentUserUseCase(userRepository)
+        GetCurrentUserUseCase(authRepository, userRepository)
     }
 
     val universeRepository: UniverseRepository by lazy {
