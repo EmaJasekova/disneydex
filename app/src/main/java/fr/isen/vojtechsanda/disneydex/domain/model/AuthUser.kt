@@ -1,9 +1,9 @@
 package fr.isen.vojtechsanda.disneydex.domain.model
 
+/**
+ * Firebase authentication credentials.
+ */
 data class AuthUser(
-    val credential: AuthCredential,
-    val username: String
-    ) {
-        val id: String get() = credential.uid
-        val email: String get() = credential.email
-    }
+    val uid: String,
+    val email: String
+)
