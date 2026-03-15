@@ -12,6 +12,10 @@ class RegisterUseCase(
         val authUser = authRepository.register(email, password).getOrThrow()
         userRepository.saveUsername(authUser.uid, username)
         // TODO: if saveUsername fails, delete the user credentials from the database and throw an exception
-        User(uid = authUser.uid, email = authUser.email, username = username)
+        User(
+            uid = authUser.uid,
+            email = authUser.email,
+            username = username
+        )
     }
 }
