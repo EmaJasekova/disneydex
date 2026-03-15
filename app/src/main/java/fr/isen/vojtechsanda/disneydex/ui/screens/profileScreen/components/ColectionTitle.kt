@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -23,21 +22,20 @@ fun CollectionTitle() {
             Icon(
                 imageVector = Icons.Default.Camera,
                 contentDescription = null,
-                tint = Color.LightGray
+                tint = Color.White
             )
             Text(
                 fontSize = 20.sp,
-                color = Color.LightGray,
+                color = Color.White,
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.padding(bottom = 4.dp),
                 text = "Your Collection"
             )
-
         }
 
         Text(
             fontSize = 16.sp,
-            color = Gray,
+            color = Color.LightGray,
             text = "Movies you own on DVD or Blu-Ray."
         )
     }

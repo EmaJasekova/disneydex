@@ -16,7 +16,6 @@ fun PublicScaffold(
     content: @Composable () -> Unit,
     hero: @Composable () -> Unit = {},
 ) {
-
     Scaffold(
         containerColor = AppBackgroundColor,
         modifier = Modifier.fillMaxSize()

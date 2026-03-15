@@ -43,7 +43,6 @@ fun SearchMovie() {
             modifier = Modifier
                 .fillMaxWidth(),
             leadingIcon = Icons.Default.Search,
-            shape = RoundedCornerShape(10.dp),
         )
 
         if (query.isNotEmpty()) {

@@ -36,10 +36,9 @@ fun AuthedScaffold(
     hero: @Composable () -> Unit = {},
 ) {
     Scaffold(
-        topBar = { DexTopAppBar(modifier = Modifier.padding(bottom = 8.dp)) },
+        topBar = { DexTopAppBar() },
         bottomBar = {
             DexBottomNavigationBar(
-                modifier = Modifier.padding(top = 8.dp),
                 navController,
                 bottomNavigationItems
             )
@@ -52,6 +51,7 @@ fun AuthedScaffold(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(innerPadding)
                 .verticalScroll(scrollState)
         ) {
             hero()
@@ -59,12 +59,7 @@ fun AuthedScaffold(
             Column(
                 Modifier
                     .fillMaxSize()
-                    .padding(
-                        top = innerPadding.calculateTopPadding(),
-                        bottom = innerPadding.calculateBottomPadding(),
-                        start = 16.dp,
-                        end = 16.dp,
-                    )
+                    .padding(16.dp)
             ) {
                 content()
             }
