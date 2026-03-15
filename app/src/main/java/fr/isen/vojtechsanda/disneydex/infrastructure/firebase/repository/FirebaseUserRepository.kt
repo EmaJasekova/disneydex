@@ -16,7 +16,6 @@ class FirebaseUserRepository : UserRepository {
         val firebaseUser = auth.currentUser ?: return null
         val email = firebaseUser.email
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-        // todo fetch the whole node at once when we add more fields
         val userSnapshot = usersRef.child(firebaseUser.uid).get().await()
         val username = userSnapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
         return User(
@@ -26,7 +25,7 @@ class FirebaseUserRepository : UserRepository {
         )
     }
 
-    override suspend fun saveUser(user: User) {
+    override suspend fun saveUser(user: User): Result<Unit> = runCatching {
         val currentUser = auth.currentUser
             ?: throw InvalidAuthStateException("No authenticated user available to save profile data.")
         if (currentUser.uid != user.uid) {
