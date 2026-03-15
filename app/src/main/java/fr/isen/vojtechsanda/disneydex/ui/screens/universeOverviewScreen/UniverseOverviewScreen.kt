@@ -77,14 +77,14 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
                         .fillMaxWidth()
                         .fillMaxHeight()
                 ) {
-                    HeroTitle(universe.name)
+                    HeroTitle(title = universe.name, subtitle = universe.description)
                     Text(universe.description, color = Color.White)
                 }
             }
         },
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(40.dp)) {
-                universe.sagas.map { saga -> SagaContainer(saga) }
+                universe.sagas.map { saga -> SagaContainer(navController, saga) }
             }
         }
     )
