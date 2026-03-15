@@ -7,19 +7,15 @@ import fr.isen.vojtechsanda.disneydex.domain.exception.InvalidAuthStateException
 import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.domain.repository.UserRepository
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.toFirebaseKey
 import kotlinx.coroutines.tasks.await
-
-private fun MovieListType.toFirebaseKey(): String = when (this) {
-    MovieListType.WATCHED -> "watched"
-    MovieListType.WATCHLIST -> "watchList"
-    MovieListType.OWNED -> "owned"
-    MovieListType.FOR_TRADE -> "forTrade"
-}
 
 class FirebaseUserRepository : UserRepository {
 
     private val auth = FirebaseAuth.getInstance()
-    private val usersRef = FirebaseDatabase.getInstance().getReference("users")
+    private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
+    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_FOR_TRADE)
 
     override suspend fun getUser(uid: String): Result<User?> = runCatching {
         val userSnapshot = usersRef.child(uid).get().await()
@@ -60,11 +56,17 @@ class FirebaseUserRepository : UserRepository {
     override suspend fun addMovieToList(movieId: String, list: MovieListType): Result<Unit> = runCatching {
         val uid = requireAuthenticatedUid()
         usersRef.child(uid).child(list.toFirebaseKey()).child(movieId).setValue(true).await()
+        if (list == MovieListType.FOR_TRADE) {
+            movieForTradeRef.child(movieId).child(uid).setValue(true).await()
+        }
     }
 
     override suspend fun removeMovieFromList(movieId: String, list: MovieListType): Result<Unit> = runCatching {
         val uid = requireAuthenticatedUid()
         usersRef.child(uid).child(list.toFirebaseKey()).child(movieId).removeValue().await()
+        if (list == MovieListType.FOR_TRADE) {
+            movieForTradeRef.child(movieId).child(uid).removeValue().await()
+        }
     }
 
     override suspend fun getMovieList(list: MovieListType): Result<List<String>> = runCatching {
