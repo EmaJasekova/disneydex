@@ -5,7 +5,7 @@ import fr.isen.vojtechsanda.disneydex.domain.model.User
 
 interface UserRepository {
 
-    suspend fun getCurrentUser(): User?
+    suspend fun getUser(uid: String): Result<User?>
 
     suspend fun saveUser(user: User): Result<Unit>
 
@@ -15,5 +15,5 @@ interface UserRepository {
 
     suspend fun getMovieList(list: MovieListType): Result<List<String>>
 
-    suspend fun isMovieInList(movieId: String, list: MovieListType): Boolean
+    suspend fun isMovieInList(movieId: String, list: MovieListType): Result<Boolean>
 }
