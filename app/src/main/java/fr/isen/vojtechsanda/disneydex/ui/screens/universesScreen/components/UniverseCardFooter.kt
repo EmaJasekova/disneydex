@@ -15,8 +15,7 @@ import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 
 @Composable
-fun UniverseCardFooter(users: List<AuthUser>) {
-
+fun UniverseCardFooter(users: List<AuthUser>, onExploreClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth(),
@@ -26,9 +25,7 @@ fun UniverseCardFooter(users: List<AuthUser>) {
         UniverseCardStackedAvatars(users)
 
         DexButton(
-            onClick = {
-                // TODO: Handle dynamic routing to the universe overview screen
-            },
+            onClick = { onExploreClick() },
             colors = ButtonDefaults.buttonColors(containerColor = Color.White),
             modifier = Modifier
                 .fillMaxWidth(0.8f)

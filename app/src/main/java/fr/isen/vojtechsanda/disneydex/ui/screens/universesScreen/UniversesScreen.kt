@@ -16,7 +16,7 @@ fun UniversesScreen(navController: NavHostController) {
         navController = navController,
         {
             Column(
-                verticalArrangement = Arrangement.spacedBy(20.dp)
+                verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
                 val users = listOf(
                     AuthUser(id = "user-1", email = "test-1@idk.idk", username = "Tester 1"),
