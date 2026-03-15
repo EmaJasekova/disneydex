@@ -6,7 +6,5 @@ interface UserRepository {
 
     suspend fun getCurrentUser(): User?
 
-    suspend fun getUsername(uid: String): String
-
-    suspend fun saveUsername(uid: String, username: String)
+    suspend fun saveUser(user: User)
 }

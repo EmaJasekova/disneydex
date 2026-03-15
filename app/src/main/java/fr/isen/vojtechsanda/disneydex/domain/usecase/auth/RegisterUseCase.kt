@@ -10,12 +10,13 @@ class RegisterUseCase(
 ) {
     suspend operator fun invoke(email: String, password: String, username: String): Result<User> = runCatching {
         val authUser = authRepository.register(email, password).getOrThrow()
-        userRepository.saveUsername(authUser.uid, username)
-        // TODO: if saveUsername fails, delete the user credentials from the database and throw an exception
-        User(
+        val user = User(
             uid = authUser.uid,
             email = authUser.email,
             username = username
         )
+        userRepository.saveUser(user)
+        // TODO: if saveUser fails, delete the user credentials from the database and throw an exception
+        user
     }
 }
