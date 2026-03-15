@@ -8,6 +8,7 @@ import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,7 +43,6 @@ fun DexAutocomplete() {
         onExpandedChange = { expanded = it }
     ) {
         DexOutlinedTextField(
-            label = "Search movies...",
             value = query,
             onValueChange = {
                 query = it
@@ -51,9 +51,13 @@ fun DexAutocomplete() {
             modifier = Modifier
                 .fillMaxWidth()
                 .menuAnchor(MenuAnchorType.PrimaryEditable),
-            leadingIcon = Icons.Default.Search,
             shape = RoundedCornerShape(10.dp),
-            contentDescription = "Search Movie"
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    contentDescription = "Search Movie"
+                )
+            },
         )
 
         ExposedDropdownMenu(

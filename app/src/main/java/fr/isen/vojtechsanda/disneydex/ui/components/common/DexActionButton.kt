@@ -15,7 +15,7 @@ fun DexActionButton(
     icon: ImageVector,
     tint: Color = Color.Unspecified,
     size: Dp,
-    contentDescription: String? = null,
+    contentDescription: String,
 ) {
     IconButton(onClick = onClick) {
         Icon(

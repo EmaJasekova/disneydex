@@ -49,7 +49,7 @@ fun ProfileCard(
                     strokeWidth = 2.dp.toPx()
                 )
             }
-            .padding(bottom = 20.dp, top = 20.dp),
+            .padding(vertical = 20.dp),
         shape = RectangleShape,
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
