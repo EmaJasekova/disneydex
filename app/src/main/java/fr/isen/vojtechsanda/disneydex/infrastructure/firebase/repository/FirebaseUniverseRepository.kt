@@ -7,6 +7,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import fr.isen.vojtechsanda.disneydex.domain.model.Universe
 import fr.isen.vojtechsanda.disneydex.domain.repository.UniverseRepository
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
 import fr.isen.vojtechsanda.disneydex.infrastructure.dto.UniverseDto
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
@@ -20,7 +21,7 @@ class FirebaseUniverseRepository : UniverseRepository {
         const val LOG_TAG = "FirebaseUniverseRepository"
     }
 
-    private val universesRef = FirebaseDatabase.getInstance().getReference("universes")
+    private val universesRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.UNIVERSES)
 
     override fun observeUniverses(): Flow<List<Universe>> = callbackFlow {
         val listener = object : ValueEventListener {
@@ -30,14 +31,14 @@ class FirebaseUniverseRepository : UniverseRepository {
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e(LOG_TAG, error.toString())
-                trySend(emptyList())
+                close(error.toException())
             }
         }
         universesRef.addValueEventListener(listener)
         awaitClose { universesRef.removeEventListener(listener) }
     }.catch { e ->
         Log.e(LOG_TAG, "Flow error", e)
-        emit(emptyList())
+        throw e
     }
 
     override fun observeUniverse(universeId: String): Flow<Universe?> =
@@ -51,6 +52,6 @@ class FirebaseUniverseRepository : UniverseRepository {
             .map { dto -> dto.toUniverse() }
     }.getOrElse { e ->
         Log.e(LOG_TAG, "Failed to parse universes", e)
-        emptyList()
+        throw e
     }
 }

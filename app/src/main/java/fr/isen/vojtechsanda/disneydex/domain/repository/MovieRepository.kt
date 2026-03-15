@@ -8,4 +8,6 @@ interface MovieRepository {
     fun observeMoviesBySaga(sagaId: String): Flow<List<Movie>>
 
     fun observeMovie(movieId: String): Flow<Movie?>
+
+    fun observeMovieTraders(movieId: String): Flow<List<String>>
 }
