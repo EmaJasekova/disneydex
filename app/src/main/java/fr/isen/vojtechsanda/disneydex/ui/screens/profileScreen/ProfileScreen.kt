@@ -10,11 +10,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileCard
-import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.SearchMovie
 import java.time.LocalDate
 
 @Composable
@@ -64,15 +64,15 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
     }
 
     AuthedScaffold(navController = navController, hero = {}, content = {
-        ProfileCard(
-            url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
-            username = "Alex Mercer",
-            email = "alex.mercer@example.com",
-            dateJoined = mockYear(2026)
-        )
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+            ProfileCard(
+                url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
+                username = "Alex Mercer",
+                email = "alex.mercer@example.com",
+                dateJoined = mockYear(2026)
+            )
             CollectionTitle()
-            SearchMovie()
+            DexAutocomplete()
             movies.forEach { movie ->
                 MovieCard(
                     movie = movie,

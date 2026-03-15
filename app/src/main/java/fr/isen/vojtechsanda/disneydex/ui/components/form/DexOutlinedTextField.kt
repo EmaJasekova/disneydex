@@ -26,7 +26,8 @@ fun DexOutlinedTextField(
     isPassword: Boolean = keyboardType == KeyboardType.Password,
     isError: Boolean = false,
     leadingIcon: ImageVector? = null,
-    shape: Shape = RoundedCornerShape(20.dp)
+    shape: Shape = RoundedCornerShape(10.dp),
+    contentDescription: String? = null
 ) {
     OutlinedTextField(
         label = { Text(label) },
@@ -40,7 +41,7 @@ fun DexOutlinedTextField(
         shape = shape,
         isError = isError,
         leadingIcon = leadingIcon?.let {
-            { Icon(imageVector = it, contentDescription = null) }
+            { Icon(imageVector = it, contentDescription = contentDescription) }
         }
     )
 }
