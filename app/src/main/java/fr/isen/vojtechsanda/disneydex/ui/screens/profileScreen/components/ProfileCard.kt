@@ -18,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -30,17 +29,8 @@ import fr.isen.vojtechsanda.disneydex.ui.utils.getYearFromMillis
 @Composable
 fun ProfileCard(user: User, modifier: Modifier = Modifier) {
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(bottom = 20.dp)
-            .drawBehind {
-                drawLine(
-                    start = Offset(0f, size.height),
-                    end = Offset(size.width, size.height),
-                    color = Gray,
-                    strokeWidth = 2.dp.toPx()
-                )
-            },
+        modifier = modifier
+            .fillMaxWidth(),
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
         Row(
