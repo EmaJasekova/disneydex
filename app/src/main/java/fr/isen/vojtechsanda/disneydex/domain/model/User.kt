@@ -9,8 +9,9 @@ data class User(
     val uid: String,
     val email: String,
     val username: String,
-    val avatar: String = generateAvatarUrl(uid),
-    
+    val avatarPath: String = generateAvatarUrl(uid),
+    val createdAt: Long = System.currentTimeMillis(),
+
     val watchedIds: List<String> = emptyList(),
     val watchlistIds: List<String> = emptyList(),
     val ownedIds: List<String> = emptyList(),

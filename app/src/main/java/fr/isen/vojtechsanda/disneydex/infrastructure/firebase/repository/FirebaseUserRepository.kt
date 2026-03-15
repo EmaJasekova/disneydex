@@ -28,11 +28,15 @@ class FirebaseUserRepository : UserRepository {
         
             val userSnapshot = usersRef.child(firebaseUser.uid).get().await()
         val username = userSnapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
+        val createdAt = userSnapshot.child("createdAt").getValue(Long::class.java)
+            ?: firebaseUser.metadata?.creationTimestamp
+            ?: System.currentTimeMillis()
 
         return User(
             uid = firebaseUser.uid,
             email = email,
             username = username,
+            createdAt = createdAt,
             watchedIds = readMovieIds(userSnapshot, MovieListType.WATCHED),
             watchlistIds = readMovieIds(userSnapshot, MovieListType.WATCHLIST),
             ownedIds = readMovieIds(userSnapshot, MovieListType.OWNED),
@@ -47,6 +51,7 @@ class FirebaseUserRepository : UserRepository {
             throw InvalidAuthStateException("Authenticated user does not match the profile being saved.")
         }
         usersRef.child(user.uid).child("username").setValue(user.username).await()
+        usersRef.child(user.uid).child("createdAt").setValue(user.createdAt).await()
     }
 
     override suspend fun addMovieToList(movieId: String, list: MovieListType): Result<Unit> = runCatching {
