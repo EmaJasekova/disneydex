@@ -17,8 +17,12 @@ class FirebaseUserRepository : UserRepository {
         val email = firebaseUser.email
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
         // todo fetch the whole node at once when we add more fields
-            val username = getUsername(firebaseUser.uid)
-        return User(uid = firebaseUser.uid, email = email, username = username)
+        val username = getUsername(firebaseUser.uid)
+        return User(
+            uid = firebaseUser.uid,
+            email = email,
+            username = username
+        )
     }
 
     override suspend fun getUsername(uid: String): String {
