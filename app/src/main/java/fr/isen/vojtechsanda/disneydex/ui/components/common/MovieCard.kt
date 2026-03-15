@@ -1,8 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.ui.components.common
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.size
@@ -15,7 +13,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,24 +27,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
-import fr.isen.vojtechsanda.disneydex.ui.theme.PaperColor
 
 @Composable
 fun MovieCard(
     movie: Movie,
-    onDelete: (() -> Unit)? = null
+    onDelete: (() -> Unit)? = null,
+    onClick: (() -> Unit)? = null,
 ) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(10.dp))
-            .background(PaperColor)
-            .border(width = 1.dp, color = Color.DarkGray, shape = RoundedCornerShape(10.dp))
-    ) {
+    val clickModifier = if (onClick != null) Modifier.clickable { onClick() } else Modifier
+
+    DexCard(clickModifier, padding = 12.dp) {
         Row(
-            modifier = Modifier
-                .padding(12.dp)
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
@@ -57,7 +48,7 @@ fun MovieCard(
                 modifier = Modifier
                     .width(80.dp)
                     .aspectRatio(2f / 3f)
-                    .clip(RoundedCornerShape(8.dp))
+                    .clip(RoundedCornerShape(6.dp))
             )
 
             Spacer(Modifier.width(12.dp))

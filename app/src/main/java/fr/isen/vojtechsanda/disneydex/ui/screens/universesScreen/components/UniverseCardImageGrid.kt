@@ -22,7 +22,6 @@ fun UniverseCardImageGrid(posterImages: List<String>) {
     ) {
         posterImages.take(3).forEachIndexed { index, url ->
             AsyncImage(
-
                 model = url,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
