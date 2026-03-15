@@ -7,7 +7,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import fr.isen.vojtechsanda.disneydex.domain.exception.InvalidAuthStateException
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthCredential
+import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.domain.model.AuthContext
 import fr.isen.vojtechsanda.disneydex.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
@@ -16,26 +16,26 @@ class FirebaseAuthRepository : AuthRepository {
 
     private val auth = FirebaseAuth.getInstance()
 
-    override suspend fun register(email: String, password: String): Result<AuthCredential> {
+    override suspend fun register(email: String, password: String): Result<AuthUser> {
         return runCatching {
             val firebaseUser = auth.createUserWithEmailAndPassword(email, password).await().user
                 ?: throw Exception("Registration failed. Please try again later.")
             val authEmail = firebaseUser.email
                 ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-            AuthCredential(uid = firebaseUser.uid, email = authEmail)
+            AuthUser(uid = firebaseUser.uid, email = authEmail)
         }.fold(
             onSuccess = { credential -> Result.success(credential) },
             onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.REGISTER), error)) }
         )
     }
 
-    override suspend fun login(email: String, password: String): Result<AuthCredential> {
+    override suspend fun login(email: String, password: String): Result<AuthUser> {
         return runCatching {
             val firebaseUser = auth.signInWithEmailAndPassword(email, password).await().user
                 ?: throw Exception("Login failed. Please try again later.")
             val authEmail = firebaseUser.email
                 ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-            AuthCredential(uid = firebaseUser.uid, email = authEmail)
+            AuthUser(uid = firebaseUser.uid, email = authEmail)
         }.fold(
             onSuccess = { credential -> Result.success(credential) },
             onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGIN), error)) }
@@ -49,11 +49,11 @@ class FirebaseAuthRepository : AuthRepository {
         onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGOUT), error)) }
     )
 
-    override suspend fun getCurrentUserCredentials(): AuthCredential? {
+    override suspend fun getCurrentUserCredentials(): AuthUser? {
         val firebaseUser = auth.currentUser ?: return null
         val authEmail = firebaseUser.email
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-        return AuthCredential(uid = firebaseUser.uid, email = authEmail)
+        return AuthUser(uid = firebaseUser.uid, email = authEmail)
     }
 
     private fun toUserFriendlyMessage(throwable: Throwable, context: AuthContext): String =
