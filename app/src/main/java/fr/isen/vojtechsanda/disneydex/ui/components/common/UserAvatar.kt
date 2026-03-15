@@ -14,14 +14,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
-import fr.isen.vojtechsanda.disneydex.ui.theme.PaperColor
+import fr.isen.vojtechsanda.disneydex.ui.theme.InPaperColor
 
 @Composable
 fun UserAvatar(user: AuthUser, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .clip(CircleShape)
-            .background(PaperColor)
+            .background(InPaperColor)
             .border(1.dp, Color.LightGray, CircleShape),
         contentAlignment = Alignment.Center
     ) {
