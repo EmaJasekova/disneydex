@@ -20,6 +20,9 @@ fun MovieDetailScreen(navController: NavHostController, movieId: String) {
     val movie = Movie(
         id = movieId,
         name = "Test movie 1",
+        genre = "Sci-fi",
+        duration = 189,
+        studio = "Marvel",
         releaseDate = LocalDate.of(2023, 1, 1)
     )
 
