@@ -19,6 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import fr.isen.vojtechsanda.disneydex.domain.model.Saga
+import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 
 @Composable
 fun SagaContainer(saga: Saga) {
@@ -50,7 +51,7 @@ fun SagaContainer(saga: Saga) {
         }
 
         Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            saga.movies.map { movie -> MovieContainer(movie = movie) }
+            saga.movies.map { movie -> MovieCard(movie) }
         }
     }
 }
