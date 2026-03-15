@@ -23,11 +23,7 @@ import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 
 @Composable
 fun SagaContainer(saga: Saga) {
-    Column(
-        modifier = Modifier.padding(
-            bottom = 40.dp
-        )
-    ) {
+    Column() {
         Row(
             modifier = Modifier
                 .height(IntrinsicSize.Min)
