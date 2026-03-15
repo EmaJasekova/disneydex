@@ -10,9 +10,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
-import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileCard
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.SearchMovie
 import java.time.LocalDate
@@ -70,6 +70,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
             email = "alex.mercer@example.com",
             dateJoined = mockYear(2026)
         )
+        
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
             CollectionTitle()
             SearchMovie()

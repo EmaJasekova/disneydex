@@ -20,7 +20,6 @@ import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Gray
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -50,7 +49,6 @@ fun ProfileCard(
                     strokeWidth = 2.dp.toPx()
                 )
             },
-        shape = RectangleShape,
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
         Row(
@@ -77,11 +75,12 @@ fun ProfileCard(
             ) {
                 Text(
                     fontSize = 20.sp,
-                    color = Color.LightGray,
+                    color = Color.White,
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(bottom = 4.dp),
                     text = username
                 )
+
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     Icon(
                         imageVector = Icons.Default.Email,
@@ -90,14 +89,14 @@ fun ProfileCard(
                     )
                     Text(
                         fontSize = 16.sp,
-                        color = Gray,
+                        color = Color.LightGray,
                         text = email
                     )
-
                 }
+
                 Text(
-                    fontSize = 12.sp,
-                    color = Gray,
+                    fontSize = 14.sp,
+                    color = Color.LightGray,
                     text = "Joined in ${dateJoined?.year}"
                 )
             }
