@@ -31,7 +31,6 @@ fun CollectionTitle() {
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.padding(bottom = 4.dp),
             )
-
         }
 
         Text(

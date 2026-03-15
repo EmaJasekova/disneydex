@@ -1,14 +1,22 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
@@ -63,14 +71,20 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
         )
     }
 
-    AuthedScaffold(navController = navController, hero = {}, content = {
-        ProfileCard(
-            url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
-            username = "Alex Mercer",
-            email = "alex.mercer@example.com",
-            dateJoined = mockYear(2026)
+    val user = AuthUser(id = userId, username = "Alex Mercer", email = "alex.mercer@example.com")
+
+    AuthedScaffold(navController = navController, content = {
+        ProfileCard(user, modifier = Modifier.padding(top = 8.dp, bottom = 24.dp))
+
+        Spacer(
+            Modifier
+                .height(1.dp)
+                .background(Color.LightGray)
+                .fillMaxWidth()
         )
-        
+
+        Spacer(Modifier.height(28.dp))
+
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
             CollectionTitle()
             DexAutocomplete()
