@@ -3,7 +3,7 @@ package fr.isen.vojtechsanda.disneydex.domain.model
 import fr.isen.vojtechsanda.disneydex.domain.AVATAR_BASE_URL
 
 /**
- * User profile, contains preferences and app-specific data.
+ * User profile, contains app-specific data.
  */
 data class User(
     val uid: String,
