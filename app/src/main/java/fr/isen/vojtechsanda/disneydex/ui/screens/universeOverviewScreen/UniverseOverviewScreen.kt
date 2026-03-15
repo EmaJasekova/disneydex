@@ -69,8 +69,7 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
     AuthedScaffold(
         navController = navController,
         hero = {
-            // TODO: Connect to universe image
-            Hero(imageUrl = "https://image.pmgstatic.com/cache/resized/w663/files/images/film/posters/165/059/165059101_56d52a.jpg") {
+            Hero(imageUrl = universe.posterImages[0]) {
                 Column(
                     verticalArrangement = Arrangement.Bottom,
                     modifier = Modifier
@@ -79,12 +78,14 @@ fun UniverseOverviewScreen(navController: NavHostController, universeId: String)
                         .fillMaxHeight()
                 ) {
                     HeroTitle(universe.name)
-                    Text("Todo some universe description", color = Color.White)
+                    Text(universe.description, color = Color.White)
                 }
             }
         },
         content = {
-            universe.sagas.map { saga -> SagaContainer(saga) }
+            Column(verticalArrangement = Arrangement.spacedBy(40.dp)) {
+                universe.sagas.map { saga -> SagaContainer(saga) }
+            }
         }
     )
 }
