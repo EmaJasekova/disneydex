@@ -10,11 +10,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileCard
-import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.SearchMovie
 import java.time.LocalDate
 
 @Composable
@@ -28,18 +28,18 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     name = "Thor: Love and Thunder",
                     genre = "Action",
                     duration = 119,
-                    releaseDate = mockYear(2020),
+                    releaseDate = mockYear(2022),
                     studio = "Marvel Studios",
-                    posterImage = "https://m.media-amazon.com/images/M/MV5BZjRiMDhiZjQtNjk5Yi00ZDcwLTkyYTEtMDc1NjdmNjFhNGIzXkEyXkFqcGc@._V1_.jpg"
+                    posterImage = "https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
                 ),
                 Movie(
                     id = "2",
                     name = "Iron Man",
                     genre = "Action",
                     duration = 126,
-                    releaseDate = mockYear(2015),
+                    releaseDate = mockYear(2008),
                     studio = "Marvel Studios",
-                    posterImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9oRfUjbqBdsh61eWZrUlu8X-eDrcCehIvrw&s"
+                    posterImage = "https://image.tmdb.org/t/p/w500/cyecB7godJ6kNHGONFjUyVN9OX5.jpg"
                 ),
                 Movie(
                     id = "3",
@@ -48,31 +48,31 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     duration = 134,
                     releaseDate = mockYear(2018),
                     studio = "Marvel Studios",
-                    posterImage = "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg"
+                    posterImage = "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
                 ),
                 Movie(
                     id = "4",
-                    name = "The Cats",
+                    name = "Cats",
                     genre = "Comedy",
                     duration = 110,
-                    releaseDate = mockYear(2018),
+                    releaseDate = mockYear(2019),
                     studio = "Universal Pictures",
-                    posterImage = "https://i.etsystatic.com/57313645/r/il/fdb8ee/6643013613/il_fullxfull.6643013613_sb80.jpg"
+                    posterImage = "https://image.tmdb.org/t/p/w500/vedB4lMoMH6bYLXAHeRGDGBqQke.jpg"
                 )
             )
         )
     }
 
     AuthedScaffold(navController = navController, hero = {}, content = {
-        ProfileCard(
-            url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
-            username = "Alex Mercer",
-            email = "alex.mercer@example.com",
-            dateJoined = mockYear(2026)
-        )
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+            ProfileCard(
+                url = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
+                username = "Alex Mercer",
+                email = "alex.mercer@example.com",
+                dateJoined = mockYear(2026)
+            )
             CollectionTitle()
-            SearchMovie()
+            DexAutocomplete()
             movies.forEach { movie ->
                 MovieCard(
                     movie = movie,

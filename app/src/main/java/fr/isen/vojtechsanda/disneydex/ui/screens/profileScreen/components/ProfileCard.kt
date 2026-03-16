@@ -4,9 +4,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material3.Card
@@ -36,12 +37,10 @@ fun ProfileCard(
     email: String,
     dateJoined: LocalDate?
 ) {
-    val imageWeight = 0.28f
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 20.dp)
             .drawBehind {
                 drawLine(
                     start = Offset(0f, size.height),
@@ -49,30 +48,30 @@ fun ProfileCard(
                     color = Gray,
                     strokeWidth = 2.dp.toPx()
                 )
-            },
+            }
+            .padding(vertical = 20.dp),
         shape = RectangleShape,
         colors = CardDefaults.cardColors(containerColor = Color.Transparent)
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(164.dp)
-                .padding(8.dp),
+                .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
                 model = url,
-                contentDescription = null,
+                contentDescription = "Profile Image",
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
-                    .weight(imageWeight)
-                    .aspectRatio(1f / 2.2f)
+                    .size(80.dp)
+                    .fillMaxHeight()
+                    .aspectRatio(1f)
                     .padding(8.dp)
             )
 
             Column(
                 modifier = Modifier
-                    .weight(1 - imageWeight),
+                    .weight(1f),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Text(
