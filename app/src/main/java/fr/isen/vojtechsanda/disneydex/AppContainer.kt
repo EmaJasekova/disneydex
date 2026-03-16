@@ -55,15 +55,15 @@ object AppContainer {
         GetMovieListUseCase(userRepository)
     }
 
-    val universeRepository: UniverseRepository by lazy {
+    private val universeRepository: UniverseRepository by lazy {
         FirebaseUniverseRepository()
     }
 
-    val sagaRepository: SagaRepository by lazy {
+    private val sagaRepository: SagaRepository by lazy {
         FirebaseSagaRepository(universeRepository)
     }
 
-    val movieRepository: MovieRepository by lazy {
+    private val movieRepository: MovieRepository by lazy {
         FirebaseMovieRepository(sagaRepository)
     }
 

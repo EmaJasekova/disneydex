@@ -20,6 +20,7 @@ class FirebaseSagaRepository(
             universe?.sagas ?: emptyList()
         }
 
+    // TODO(High): Inefficient load-all-then-filter - loads all universes to find one saga. Consider direct path or indexed lookup.
     override fun observeSaga(sagaId: String): Flow<Saga?> =
         universeRepository.observeUniverses().map { universes ->
             universes.firstNotNullOfOrNull { universe ->

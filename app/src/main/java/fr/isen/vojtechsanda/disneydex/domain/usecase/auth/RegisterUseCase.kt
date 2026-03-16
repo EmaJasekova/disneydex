@@ -15,8 +15,12 @@ class RegisterUseCase(
             email = authUser.email,
             username = username
         )
-        userRepository.saveUser(user).getOrThrow()
-        // TODO: if saveUser fails, delete the user credentials from the database and throw an exception
-        user
+        userRepository.saveUser(user).fold(
+            onSuccess = { user },
+            onFailure = { error ->
+                authRepository.deleteCurrentUser()
+                throw error
+            }
+        )
     }
 }

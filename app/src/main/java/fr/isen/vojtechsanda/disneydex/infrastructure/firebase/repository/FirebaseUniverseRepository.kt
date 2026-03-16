@@ -37,6 +37,7 @@ class FirebaseUniverseRepository : UniverseRepository {
         universesRef.addValueEventListener(listener)
         awaitClose { universesRef.removeEventListener(listener) }
     }.catch { e ->
+        // TODO(Medium): Catch-and-rethrow adds no value - either handle meaningfully or remove catch block.
         Log.e(LOG_TAG, "Flow error", e)
         throw e
     }

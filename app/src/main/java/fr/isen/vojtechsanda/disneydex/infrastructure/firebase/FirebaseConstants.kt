@@ -2,6 +2,7 @@ package fr.isen.vojtechsanda.disneydex.infrastructure.firebase
 
 import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 
+// TODO(High): FirebaseConstants mixes paths (Paths) with mapping logic (MovieListKeys, toFirebaseKey). Split into Paths object and separate mapping module.
 object FirebaseConstants {
 
     object Paths {

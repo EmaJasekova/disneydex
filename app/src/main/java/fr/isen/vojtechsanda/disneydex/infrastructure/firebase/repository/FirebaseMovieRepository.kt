@@ -29,6 +29,7 @@ class FirebaseMovieRepository(
             saga?.movies ?: emptyList()
         }
 
+    // TODO(High): Inefficient load-all-then-filter - loads all sagas to find one movie. Consider direct path or indexed lookup.
     override fun observeMovie(movieId: String): Flow<Movie?> =
         sagaRepository.observeAllSagas().map { sagas ->
             sagas.firstNotNullOfOrNull { saga ->

@@ -4,6 +4,7 @@ import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import kotlinx.coroutines.flow.Flow
 
+// TODO(Low): Inconsistent Result vs nullable - getUser returns Flow<Result<User?>>, getUsers returns Flow<List<User?>>. Standardize on one approach.
 interface UserRepository {
 
     fun getUser(uid: String): Flow<Result<User?>>
