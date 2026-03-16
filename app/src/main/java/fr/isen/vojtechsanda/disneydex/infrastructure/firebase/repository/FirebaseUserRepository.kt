@@ -15,6 +15,9 @@ import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.toFirebaseKey
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.tasks.await
 
 class FirebaseUserRepository : UserRepository {
@@ -26,6 +29,13 @@ class FirebaseUserRepository : UserRepository {
     private val auth = FirebaseAuth.getInstance()
     private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
     private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
+
+    override fun getUsers(uids: List<String>): Flow<List<User?>> {
+        if (uids.isEmpty()) return flowOf(emptyList())
+        return combine(
+            uids.map { uid -> getUser(uid).map { userResult -> userResult.getOrNull() } }
+        ) { results -> results.toList() }
+    }
 
     override fun getUser(uid: String): Flow<Result<User?>> = callbackFlow {
         val ref = usersRef.child(uid)

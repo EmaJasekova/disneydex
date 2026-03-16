@@ -8,6 +8,8 @@ interface UserRepository {
 
     fun getUser(uid: String): Flow<Result<User?>>
 
+    fun getUsers(uids: List<String>): Flow<List<User?>>
+
     suspend fun saveUser(user: User): Result<Unit>
 
     suspend fun addMovieToList(movieId: String, list: MovieListType): Result<Unit>
