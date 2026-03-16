@@ -12,6 +12,7 @@ import fr.isen.vojtechsanda.disneydex.domain.model.AuthContext
 import fr.isen.vojtechsanda.disneydex.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
 
+// TODO(Medium): Generic Exception wrapping - replace with domain-specific auth exceptions for better error handling.
 class FirebaseAuthRepository : AuthRepository {
 
     private val auth = FirebaseAuth.getInstance()
@@ -54,6 +55,10 @@ class FirebaseAuthRepository : AuthRepository {
         val authEmail = firebaseUser.email
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
         return AuthUser(uid = firebaseUser.uid, email = authEmail)
+    }
+
+    override suspend fun deleteCurrentUser(): Result<Unit> = runCatching {
+        auth.currentUser?.delete()?.await() ?: Unit
     }
 
     private fun toUserFriendlyMessage(throwable: Throwable, context: AuthContext): String =

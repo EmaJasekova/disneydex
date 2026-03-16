@@ -19,6 +19,7 @@ data class MovieDto(
         name,
         genre,
         duration,
+        // TODO: Handle parsing error
         LocalDate.parse(releaseDate, DB_DATE_FORMAT),
         studio
     )

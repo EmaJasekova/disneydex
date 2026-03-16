@@ -1,7 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository
 
 import android.util.Log
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -11,7 +10,7 @@ import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.domain.repository.UserRepository
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.toFirebaseKey
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants.toFirebaseKey
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -26,10 +25,11 @@ class FirebaseUserRepository : UserRepository {
         const val LOG_TAG = "FirebaseUserRepository"
     }
 
-    private val auth = FirebaseAuth.getInstance()
+    private val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
     private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
     private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
 
+    // TODO(High): Inconsistent with getUser - getUsers returns List<User?> without Result, getUser returns Flow<Result<User?>>. Align error handling.
     override fun getUsers(uids: List<String>): Flow<List<User?>> {
         if (uids.isEmpty()) return flowOf(emptyList())
         return combine(
@@ -56,13 +56,10 @@ class FirebaseUserRepository : UserRepository {
     private fun parseUserFromSnapshot(snapshot: DataSnapshot, uid: String): User? {
         if (!snapshot.exists()) return null
 
-        val firebaseUser = auth.currentUser?.takeIf { it.uid == uid }
-        val email = firebaseUser?.email
-            ?: snapshot.child("email").getValue(String::class.java)
-            ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
+        val email = snapshot.child("email").getValue(String::class.java)
+            ?: throw IllegalStateException("User profile at $uid is missing required email in database.")
         val username = snapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
         val createdAt = snapshot.child("createdAt").getValue(Long::class.java)
-            ?: firebaseUser?.metadata?.creationTimestamp
             ?: System.currentTimeMillis()
 
         return User(
@@ -83,6 +80,7 @@ class FirebaseUserRepository : UserRepository {
         if (currentUser.uid != user.uid) {
             throw InvalidAuthStateException("Authenticated user does not match the profile being saved.")
         }
+        usersRef.child(user.uid).child("email").setValue(user.email).await()
         usersRef.child(user.uid).child("username").setValue(user.username).await()
         usersRef.child(user.uid).child("createdAt").setValue(user.createdAt).await()
     }
