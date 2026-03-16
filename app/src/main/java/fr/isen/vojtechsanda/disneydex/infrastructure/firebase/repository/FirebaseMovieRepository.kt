@@ -22,7 +22,7 @@ class FirebaseMovieRepository(
         const val LOG_TAG = "FirebaseMovieRepository"
     }
 
-    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_FOR_TRADE)
+    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
 
     override fun observeMoviesBySaga(sagaId: String): Flow<List<Movie>> =
         sagaRepository.observeSaga(sagaId).map { saga ->
@@ -40,7 +40,7 @@ class FirebaseMovieRepository(
      * Since Firebase cannot search through all users to see who wants to trade a movie,
      * we listen directly to the denormalized "movieForTrade" node.
      */
-    override fun observeMovieTradeWanters(movieId: String): Flow<List<String>> = callbackFlow {
+    override fun observeMovieTraders(movieId: String): Flow<List<String>> = callbackFlow {
         val ref = movieForTradeRef.child(movieId)
         val listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

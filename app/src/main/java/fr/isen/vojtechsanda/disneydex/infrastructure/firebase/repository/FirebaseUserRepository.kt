@@ -25,31 +25,45 @@ class FirebaseUserRepository : UserRepository {
 
     private val auth = FirebaseAuth.getInstance()
     private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
-    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_FOR_TRADE)
+    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
 
-    override suspend fun getUser(uid: String): Result<User?> = runCatching {
-        val userSnapshot = usersRef.child(uid).get().await()
-        if (!userSnapshot.exists()) return@runCatching null
+    override fun getUser(uid: String): Flow<Result<User?>> = callbackFlow {
+        val ref = usersRef.child(uid)
+        val listener = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                trySend(runCatching { parseUserFromSnapshot(snapshot, uid) })
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e(LOG_TAG, error.toString())
+                close(error.toException())
+            }
+        }
+        ref.addValueEventListener(listener)
+        awaitClose { ref.removeEventListener(listener) }
+    }
+
+    private fun parseUserFromSnapshot(snapshot: DataSnapshot, uid: String): User? {
+        if (!snapshot.exists()) return null
 
         val firebaseUser = auth.currentUser?.takeIf { it.uid == uid }
         val email = firebaseUser?.email
-            ?: userSnapshot.child("email").getValue(String::class.java)
+            ?: snapshot.child("email").getValue(String::class.java)
             ?: throw InvalidAuthStateException("Email is required but was not provided by the authentication provider.")
-
-        val username = userSnapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
-        val createdAt = userSnapshot.child("createdAt").getValue(Long::class.java)
+        val username = snapshot.child("username").getValue(String::class.java) ?: "Disney Fan"
+        val createdAt = snapshot.child("createdAt").getValue(Long::class.java)
             ?: firebaseUser?.metadata?.creationTimestamp
             ?: System.currentTimeMillis()
 
-        User(
+        return User(
             uid = uid,
             email = email,
             username = username,
             createdAt = createdAt,
-            watchedIds = readMovieIds(userSnapshot, MovieListType.WATCHED),
-            watchlistIds = readMovieIds(userSnapshot, MovieListType.WATCHLIST),
-            ownedIds = readMovieIds(userSnapshot, MovieListType.OWNED),
-            forTradeIds = readMovieIds(userSnapshot, MovieListType.FOR_TRADE)
+            watchedIds = readMovieIds(snapshot, MovieListType.WATCHED),
+            watchlistIds = readMovieIds(snapshot, MovieListType.WATCHLIST),
+            ownedIds = readMovieIds(snapshot, MovieListType.OWNED),
+            forTradeIds = readMovieIds(snapshot, MovieListType.FOR_TRADE)
         )
     }
 

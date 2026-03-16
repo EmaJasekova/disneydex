@@ -4,6 +4,7 @@ import fr.isen.vojtechsanda.disneydex.domain.exception.UserProfileMissingExcepti
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.domain.repository.AuthRepository
 import fr.isen.vojtechsanda.disneydex.domain.repository.UserRepository
+import kotlinx.coroutines.flow.first
 
 class LoginUseCase(
     private val authRepository: AuthRepository,
@@ -11,7 +12,7 @@ class LoginUseCase(
 ) {
     suspend operator fun invoke(email: String, password: String): Result<User> = runCatching {
         val authUser = authRepository.login(email, password).getOrThrow()
-        userRepository.getUser(authUser.uid).getOrThrow()
+        userRepository.getUser(authUser.uid).first().getOrThrow()
             ?: throw UserProfileMissingException()
     }
 }
