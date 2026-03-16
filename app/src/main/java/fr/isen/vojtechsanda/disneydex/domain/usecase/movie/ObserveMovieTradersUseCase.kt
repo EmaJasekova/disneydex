@@ -10,7 +10,7 @@ class ObserveMovieTradersUseCase(
     private val movieRepository: MovieRepository,
     private val userRepository: UserRepository
 ) {
-    operator fun invoke(movieId: String): Flow<List<User?>> =
+    operator fun invoke(movieId: String): Flow<Result<List<User?>>> =
         movieRepository.observeMovieTraders(movieId)
             .flatMapLatest { uids -> userRepository.getUsers(uids) }
 }

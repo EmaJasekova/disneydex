@@ -16,7 +16,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.tasks.await
 
 class FirebaseUserRepository : UserRepository {
@@ -29,12 +28,11 @@ class FirebaseUserRepository : UserRepository {
     private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
     private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
 
-    // TODO(High): Inconsistent with getUser - getUsers returns List<User?> without Result, getUser returns Flow<Result<User?>>. Align error handling.
-    override fun getUsers(uids: List<String>): Flow<List<User?>> {
-        if (uids.isEmpty()) return flowOf(emptyList())
+    override fun getUsers(uids: List<String>): Flow<Result<List<User?>>> {
+        if (uids.isEmpty()) return flowOf(Result.success(emptyList()))
         return combine(
-            uids.map { uid -> getUser(uid).map { userResult -> userResult.getOrNull() } }
-        ) { results -> results.toList() }
+            uids.map { uid -> getUser(uid) }
+        ) { results -> runCatching { results.map { it.getOrThrow() } } }
     }
 
     override fun getUser(uid: String): Flow<Result<User?>> = callbackFlow {
