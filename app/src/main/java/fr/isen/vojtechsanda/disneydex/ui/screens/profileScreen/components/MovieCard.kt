@@ -2,12 +2,12 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
@@ -33,13 +33,12 @@ fun MovieCard(
     movie: Movie,
     onDelete: () -> Unit = {}
 ) {
-    val imageWeight = 0.28f
+    val imageWeight = 0.30f
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .background(PaperColor)
-            .height(132.dp)
             .border(width = 1.dp, color = Color.DarkGray, shape = RoundedCornerShape(8.dp))
     ) {
         Row(
@@ -48,23 +47,28 @@ fun MovieCard(
                 .padding(8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            AsyncImage(
-                model = movie.posterImage,
-                contentDescription = null,
-                contentScale = ContentScale.Fit,
+            Box(
                 modifier = Modifier
                     .weight(imageWeight)
-                    .aspectRatio(1f / 2f)
-                    .padding(12.dp)
-                    .clip(RoundedCornerShape(24.dp))
-            )
+                    .padding(4.dp)
+            ) {
+                AsyncImage(
+                    model = movie.posterImage,
+                    contentDescription = "Poster Image",
+                    contentScale = ContentScale.Fit,
+                    modifier = Modifier
+                        .size(80.dp)
+                        .clip(RoundedCornerShape(10.dp))
+                )
+            }
+
             Column(
                 modifier = Modifier
-                    .weight(1 - imageWeight)
+                    .weight(1f)
                     .padding(bottom = 8.dp, top = 8.dp)
             ) {
                 Text(
-                    fontSize = 20.sp,
+                    fontSize = 16.sp,
                     color = Color.White,
                     fontWeight = FontWeight.SemiBold,
                     modifier = Modifier.padding(bottom = 4.dp),
@@ -86,7 +90,8 @@ fun MovieCard(
                 onClick = onDelete,
                 icon = Icons.Default.Delete,
                 tint = LightGray,
-                size = 28.dp
+                size = 28.dp,
+                contentDescription = "Delete movie"
             )
         }
 

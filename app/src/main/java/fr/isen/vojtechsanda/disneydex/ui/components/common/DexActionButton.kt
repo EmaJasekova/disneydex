@@ -14,12 +14,13 @@ fun DexActionButton(
     onClick: () -> Unit,
     icon: ImageVector,
     tint: Color = Color.Unspecified,
-    size: Dp
+    size: Dp,
+    contentDescription: String,
 ) {
     IconButton(onClick = onClick) {
         Icon(
             imageVector = icon,
-            contentDescription = null,
+            contentDescription = contentDescription,
             tint = tint,
             modifier = Modifier.size(size)
         )

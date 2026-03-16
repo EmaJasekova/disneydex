@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Camera
+import androidx.compose.material.icons.filled.Album
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -21,7 +21,7 @@ fun CollectionTitle() {
     Column {
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             Icon(
-                imageVector = Icons.Default.Camera,
+                imageVector = Icons.Default.Album,
                 contentDescription = null,
                 tint = Color.LightGray
             )
@@ -36,7 +36,6 @@ fun CollectionTitle() {
         }
 
         Text(
-            fontSize = 16.sp,
             color = Gray,
             text = "Movies you own on DVD or Blu-Ray."
         )
