@@ -7,6 +7,9 @@ import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.GetCurrentUserUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LoginUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LogoutUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.RegisterUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.AddMovieToListUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.GetMovieListUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.RemoveMovieFromListUseCase
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseAuthRepository
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseMovieRepository
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseSagaRepository
@@ -37,6 +40,18 @@ object AppContainer {
 
     val getCurrentUserUseCase by lazy {
         GetCurrentUserUseCase(authRepository, userRepository)
+    }
+
+    val addMovieToListUseCase by lazy {
+        AddMovieToListUseCase(userRepository)
+    }
+
+    val removeMovieFromListUseCase by lazy {
+        RemoveMovieFromListUseCase(userRepository)
+    }
+
+    val getMovieListUseCase by lazy {
+        GetMovieListUseCase(userRepository)
     }
 
     val universeRepository: UniverseRepository by lazy {
