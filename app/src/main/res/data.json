@@ -2,7 +2,7 @@
   "universes": [
     {
       "name": "Star Wars",
-      "short_description": "An epic space opera franchise created by George Lucas, set in a galaxy far, far away.",
+      "description": "An epic space opera franchise created by George Lucas, set in a galaxy far, far away.",
       "sagas": [
         {
           "name": "Skywalker Saga",
@@ -109,7 +109,7 @@
     },
     {
       "name": "Marvel Cinematic Universe",
-      "short_description": "A shared media franchise centered on superhero films produced by Marvel Studios.",
+      "description": "A shared media franchise centered on superhero films produced by Marvel Studios.",
       "sagas": [
         {
           "name": "The Infinity Saga - Phase 1",
@@ -448,7 +448,7 @@
     },
     {
       "name": "X-Men Cinematic Universe",
-      "short_description": "A superhero film series based on the Marvel Comics mutant superhero team.",
+      "description": "A superhero film series based on the Marvel Comics mutant superhero team.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -573,7 +573,7 @@
     },
     {
       "name": "Indiana Jones",
-      "short_description": "An American media franchise based on the adventures of a fictional professor of archaeology.",
+      "description": "An American media franchise based on the adventures of a fictional professor of archaeology.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -626,7 +626,7 @@
     },
     {
       "name": "Pirates of the Caribbean",
-      "short_description": "A swashbuckling fantasy franchise based on the Disney theme park attraction.",
+      "description": "A swashbuckling fantasy franchise based on the Disney theme park attraction.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -679,7 +679,7 @@
     },
     {
       "name": "Herbie",
-      "short_description": "A comedy film series about a sentient Volkswagen Beetle named Herbie.",
+      "description": "A comedy film series about a sentient Volkswagen Beetle named Herbie.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -732,7 +732,7 @@
     },
     {
       "name": "Spider-Man",
-      "short_description": "Various film series following the Marvel Comics superhero Spider-Man and associated characters.",
+      "description": "Various film series following the Marvel Comics superhero Spider-Man and associated characters.",
       "sagas": [
         {
           "name": "Spider-Man Trilogy",
@@ -845,7 +845,7 @@
     },
     {
       "name": "Planet of the Apes",
-      "short_description": "A sci-fi franchise exploring a world where highly intelligent apes clash with humans.",
+      "description": "A sci-fi franchise exploring a world where highly intelligent apes clash with humans.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -950,7 +950,7 @@
     },
     {
       "name": "Alien & Predator",
-      "short_description": "A massive sci-fi horror franchise encompassing the Alien, Predator, and crossover series.",
+      "description": "A massive sci-fi horror franchise encompassing the Alien, Predator, and crossover series.",
       "sagas": [
         {
           "name": "Alien",
@@ -1087,7 +1087,7 @@
     },
     {
       "name": "Die Hard",
-      "short_description": "An action series following the increasingly chaotic circumstances of NYPD detective John McClane.",
+      "description": "An action series following the increasingly chaotic circumstances of NYPD detective John McClane.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1140,7 +1140,7 @@
     },
     {
       "name": "Avatar",
-      "short_description": "James Cameron's sci-fi epic set on the lush alien world of Pandora.",
+      "description": "James Cameron's sci-fi epic set on the lush alien world of Pandora.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1169,7 +1169,7 @@
     },
     {
       "name": "Tron",
-      "short_description": "A sci-fi action franchise exploring programs living inside a digital computer grid.",
+      "description": "A sci-fi action franchise exploring programs living inside a digital computer grid.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1206,7 +1206,7 @@
     },
     {
       "name": "National Treasure",
-      "short_description": "An adventure franchise following historical cryptologists and treasure hunters.",
+      "description": "An adventure franchise following historical cryptologists and treasure hunters.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1235,7 +1235,7 @@
     },
     {
       "name": "Dexter Riley",
-      "short_description": "A classic Disney comedy series following a college student who undergoes bizarre science accidents.",
+      "description": "A classic Disney comedy series following a college student who undergoes bizarre science accidents.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1272,7 +1272,7 @@
     },
     {
       "name": "Flubber",
-      "short_description": "A quirky comedy universe centered around a bouncy, high-energy rubber substance.",
+      "description": "A quirky comedy universe centered around a bouncy, high-energy rubber substance.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -1315,7 +1315,7 @@
     },
     {
       "name": "Freaky Friday",
-      "short_description": "A body-swap comedy franchise spanning multiple generations.",
+      "description": "A body-swap comedy franchise spanning multiple generations.",
       "sagas": [
         {
           "name": "Original Film",
@@ -1358,7 +1358,7 @@
     },
     {
       "name": "Homeward Bound",
-      "short_description": "An adventure franchise following the journey of loyal pets finding their way home.",
+      "description": "An adventure franchise following the journey of loyal pets finding their way home.",
       "sagas": [
         {
           "name": "Original Film",
@@ -1401,7 +1401,7 @@
     },
     {
       "name": "Witch Mountain",
-      "short_description": "A franchise about super-powered extraterrestrial children attempting to reunite with their kind.",
+      "description": "A franchise about super-powered extraterrestrial children attempting to reunite with their kind.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -1444,7 +1444,7 @@
     },
     {
       "name": "The Chronicles of Narnia",
-      "short_description": "A high fantasy film series based on the classic novels by C.S. Lewis.",
+      "description": "A high fantasy film series based on the classic novels by C.S. Lewis.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1481,7 +1481,7 @@
     },
     {
       "name": "The Muppets",
-      "short_description": "A beloved comedy franchise featuring an ensemble cast of puppet characters.",
+      "description": "A beloved comedy franchise featuring an ensemble cast of puppet characters.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1558,7 +1558,7 @@
     },
     {
       "name": "The Mighty Ducks",
-      "short_description": "A sports comedy franchise focused on an underdog youth ice hockey team.",
+      "description": "A sports comedy franchise focused on an underdog youth ice hockey team.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1595,7 +1595,7 @@
     },
     {
       "name": "The Shaggy Dog",
-      "short_description": "A fantasy comedy series where a human periodically transforms into a large sheepdog.",
+      "description": "A fantasy comedy series where a human periodically transforms into a large sheepdog.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -1638,7 +1638,7 @@
     },
     {
       "name": "The Santa Clause",
-      "short_description": "A holiday comedy franchise detailing the life of a man forced to take over the role of Santa Claus.",
+      "description": "A holiday comedy franchise detailing the life of a man forced to take over the role of Santa Claus.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1675,7 +1675,7 @@
     },
     {
       "name": "Alvin and the Chipmunks",
-      "short_description": "A live-action/CGI musical comedy franchise based on the animated music group.",
+      "description": "A live-action/CGI musical comedy franchise based on the animated music group.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1720,7 +1720,7 @@
     },
     {
       "name": "Big Momma",
-      "short_description": "A comedy series about an FBI agent who goes undercover as an eccentric grandmother.",
+      "description": "A comedy series about an FBI agent who goes undercover as an eccentric grandmother.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -1757,7 +1757,7 @@
     },
     {
       "name": "Charlie Chan",
-      "short_description": "A classic mystery franchise featuring a brilliant Chinese-American detective.",
+      "description": "A classic mystery franchise featuring a brilliant Chinese-American detective.",
       "sagas": [
         {
           "name": "Spin-offs",
@@ -2014,7 +2014,7 @@
     },
     {
       "name": "Cisco Kid",
-      "short_description": "A classic western series depicting the adventures of a heroic Mexican vaquero.",
+      "description": "A classic western series depicting the adventures of a heroic Mexican vaquero.",
       "sagas": [
         {
           "name": "Warner Baxter Saga",
@@ -2113,7 +2113,7 @@
     },
     {
       "name": "Doctor Dolittle",
-      "short_description": "A family franchise centered on a veterinarian who discovers he can communicate with animals.",
+      "description": "A family franchise centered on a veterinarian who discovers he can communicate with animals.",
       "sagas": [
         {
           "name": "Original Film",
@@ -2156,7 +2156,7 @@
     },
     {
       "name": "Flicka",
-      "short_description": "A family western franchise based on the classic novel about a wild horse.",
+      "description": "A family western franchise based on the classic novel about a wild horse.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -2207,7 +2207,7 @@
     },
     {
       "name": "Hercule Poirot",
-      "short_description": "A mystery series adapting the famed Agatha Christie novels directed by and starring Kenneth Branagh.",
+      "description": "A mystery series adapting the famed Agatha Christie novels directed by and starring Kenneth Branagh.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2244,7 +2244,7 @@
     },
     {
       "name": "Highlander",
-      "short_description": "An action-fantasy franchise centered on immortal warriors battling throughout the centuries.",
+      "description": "An action-fantasy franchise centered on immortal warriors battling throughout the centuries.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2281,7 +2281,7 @@
     },
     {
       "name": "Independence Day",
-      "short_description": "A sci-fi action franchise exploring large-scale extraterrestrial invasions of Earth.",
+      "description": "A sci-fi action franchise exploring large-scale extraterrestrial invasions of Earth.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2310,7 +2310,7 @@
     },
     {
       "name": "Jones Family",
-      "short_description": "A classic series of comedy films depicting the everyday lives of an American family.",
+      "description": "A classic series of comedy films depicting the everyday lives of an American family.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2459,7 +2459,7 @@
     },
     {
       "name": "Diary of a Wimpy Kid",
-      "short_description": "A coming-of-age comedy franchise based on the popular illustrated book series.",
+      "description": "A coming-of-age comedy franchise based on the popular illustrated book series.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2504,7 +2504,7 @@
     },
     {
       "name": "Kingsman",
-      "short_description": "A stylish spy action franchise about a secret British intelligence agency.",
+      "description": "A stylish spy action franchise about a secret British intelligence agency.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2541,7 +2541,7 @@
     },
     {
       "name": "Inspector Hornleigh",
-      "short_description": "A series of British comedy-mystery films following Scotland Yard's Inspector Hornleigh.",
+      "description": "A series of British comedy-mystery films following Scotland Yard's Inspector Hornleigh.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2578,7 +2578,7 @@
     },
     {
       "name": "The Omen",
-      "short_description": "A classic supernatural horror franchise centered around the coming of the Antichrist.",
+      "description": "A classic supernatural horror franchise centered around the coming of the Antichrist.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -2637,7 +2637,7 @@
     },
     {
       "name": "The Fly",
-      "short_description": "A sci-fi horror franchise exploring the terrifying consequences of teleportation gone wrong.",
+      "description": "A sci-fi horror franchise exploring the terrifying consequences of teleportation gone wrong.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -2696,7 +2696,7 @@
     },
     {
       "name": "Night at the Museum",
-      "short_description": "A family adventure series where museum exhibits magically come to life after sundown.",
+      "description": "A family adventure series where museum exhibits magically come to life after sundown.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2733,7 +2733,7 @@
     },
     {
       "name": "The Maze Runner",
-      "short_description": "A dystopian sci-fi franchise based on the YA novels about teens navigating a deadly maze.",
+      "description": "A dystopian sci-fi franchise based on the YA novels about teens navigating a deadly maze.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2770,7 +2770,7 @@
     },
     {
       "name": "Riders of the Purple Sage",
-      "short_description": "A series of cinematic adaptations of the classic Zane Grey western novel.",
+      "description": "A series of cinematic adaptations of the classic Zane Grey western novel.",
       "sagas": [
         {
           "name": "William Farnum Saga",
@@ -2857,7 +2857,7 @@
     },
     {
       "name": "Home Alone",
-      "short_description": "A slapstick comedy series about resourceful kids protecting themselves from burglars.",
+      "description": "A slapstick comedy series about resourceful kids protecting themselves from burglars.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2894,7 +2894,7 @@
     },
     {
       "name": "Michael Shayne",
-      "short_description": "A series of classic detective films featuring the private investigator Michael Shayne.",
+      "description": "A series of classic detective films featuring the private investigator Michael Shayne.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -2963,7 +2963,7 @@
     },
     {
       "name": "Mr. Belvedere",
-      "short_description": "A mid-century comedy series following an eccentric and overly competent genius.",
+      "description": "A mid-century comedy series following an eccentric and overly competent genius.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3000,7 +3000,7 @@
     },
     {
       "name": "Mr. Moto",
-      "short_description": "A series of mystery-action films centered on a Japanese secret agent and detective.",
+      "description": "A series of mystery-action films centered on a Japanese secret agent and detective.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -3091,7 +3091,7 @@
     },
     {
       "name": "Percy Jackson",
-      "short_description": "A fantasy-adventure series following the modern-day demigod son of Poseidon.",
+      "description": "A fantasy-adventure series following the modern-day demigod son of Poseidon.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3120,7 +3120,7 @@
     },
     {
       "name": "Porky's",
-      "short_description": "A raunchy teen comedy series set in 1950s Florida.",
+      "description": "A raunchy teen comedy series set in 1950s Florida.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3157,7 +3157,7 @@
     },
     {
       "name": "Quirt & Flagg",
-      "short_description": "A comedy franchise revolving around the rivalry of two tough US Marines.",
+      "description": "A comedy franchise revolving around the rivalry of two tough US Marines.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -3216,7 +3216,7 @@
     },
     {
       "name": "Taken",
-      "short_description": "An action-thriller franchise about an ex-CIA operative with 'a very particular set of skills'.",
+      "description": "An action-thriller franchise about an ex-CIA operative with 'a very particular set of skills'.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3253,7 +3253,7 @@
     },
     {
       "name": "Cheaper by the Dozen",
-      "short_description": "A family comedy franchise chronicling the chaotic lives of massive families.",
+      "description": "A family comedy franchise chronicling the chaotic lives of massive families.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -3304,7 +3304,7 @@
     },
     {
       "name": "Blade",
-      "short_description": "An action-horror franchise starring Marvel Comics' iconic vampire hunter.",
+      "description": "An action-horror franchise starring Marvel Comics' iconic vampire hunter.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3341,7 +3341,7 @@
     },
     {
       "name": "Fantastic Four",
-      "short_description": "Superhero films centering on Marvel's First Family.",
+      "description": "Superhero films centering on Marvel's First Family.",
       "sagas": [
         {
           "name": "Original Saga",
@@ -3384,7 +3384,7 @@
     },
     {
       "name": "Men in Black",
-      "short_description": "A sci-fi action comedy series about a secret organization policing extraterrestrials.",
+      "description": "A sci-fi action comedy series about a secret organization policing extraterrestrials.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3429,7 +3429,7 @@
     },
     {
       "name": "Ernest",
-      "short_description": "A wacky comedy franchise starring the lovable but accident-prone Ernest P. Worrell.",
+      "description": "A wacky comedy franchise starring the lovable but accident-prone Ernest P. Worrell.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3474,7 +3474,7 @@
     },
     {
       "name": "Step Up",
-      "short_description": "A series of romantic dance films featuring high-energy street and classical dance styles.",
+      "description": "A series of romantic dance films featuring high-energy street and classical dance styles.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3511,7 +3511,7 @@
     },
     {
       "name": "Halloween",
-      "short_description": "A pioneering slasher franchise revolving around the silent serial killer Michael Myers.",
+      "description": "A pioneering slasher franchise revolving around the silent serial killer Michael Myers.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3548,7 +3548,7 @@
     },
     {
       "name": "Scary Movie",
-      "short_description": "A popular horror spoof franchise poking fun at prominent scary movies.",
+      "description": "A popular horror spoof franchise poking fun at prominent scary movies.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3593,7 +3593,7 @@
     },
     {
       "name": "Scream",
-      "short_description": "A meta slasher franchise created by Wes Craven following the Ghostface killer.",
+      "description": "A meta slasher franchise created by Wes Craven following the Ghostface killer.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3630,7 +3630,7 @@
     },
     {
       "name": "Spy Kids",
-      "short_description": "An action-adventure franchise revolving around children thrust into the world of espionage.",
+      "description": "An action-adventure franchise revolving around children thrust into the world of espionage.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3667,7 +3667,7 @@
     },
     {
       "name": "Anja & Viktor",
-      "short_description": "A series of Danish romantic comedy films.",
+      "description": "A series of Danish romantic comedy films.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3704,7 +3704,7 @@
     },
     {
       "name": "Baaghi",
-      "short_description": "An Indian action thriller film series famous for high-octane stunts.",
+      "description": "An Indian action thriller film series famous for high-octane stunts.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3741,7 +3741,7 @@
     },
     {
       "name": "Hamilton",
-      "short_description": "A Swedish spy film series based on the novels by Jan Guillou.",
+      "description": "A Swedish spy film series based on the novels by Jan Guillou.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3778,7 +3778,7 @@
     },
     {
       "name": "The Wild Soccer Bunch",
-      "short_description": "A German family sports franchise focusing on a spirited neighborhood youth soccer team.",
+      "description": "A German family sports franchise focusing on a spirited neighborhood youth soccer team.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3839,7 +3839,7 @@
     },
     {
       "name": "The Unstable",
-      "short_description": "An independent comedy series.",
+      "description": "An independent comedy series.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3876,7 +3876,7 @@
     },
     {
       "name": "Lilly the Witch",
-      "short_description": "A magical family franchise based on the popular German children's books.",
+      "description": "A magical family franchise based on the popular German children's books.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3913,7 +3913,7 @@
     },
     {
       "name": "Ricky Rapper",
-      "short_description": "A Finnish musical comedy series based on the popular children's books.",
+      "description": "A Finnish musical comedy series based on the popular children's books.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3950,7 +3950,7 @@
     },
     {
       "name": "The Last Warrior",
-      "short_description": "A hit Russian fantasy comedy franchise inspired by traditional Slavic folklore.",
+      "description": "A hit Russian fantasy comedy franchise inspired by traditional Slavic folklore.",
       "sagas": [
         {
           "name": "Main Saga",
@@ -3987,7 +3987,7 @@
     },
     {
       "name": "Three Colors",
-      "short_description": "Krzysztof Kieślowski's critically acclaimed trilogy themed around the French Revolutionary ideals.",
+      "description": "Krzysztof Kieślowski's critically acclaimed trilogy themed around the French Revolutionary ideals.",
       "sagas": [
         {
           "name": "Main Saga",
