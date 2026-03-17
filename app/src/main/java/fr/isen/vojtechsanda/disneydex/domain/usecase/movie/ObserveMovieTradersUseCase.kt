@@ -12,5 +12,5 @@ class ObserveMovieTradersUseCase(
 ) {
     operator fun invoke(movieId: String): Flow<Result<List<User?>>> =
         movieRepository.observeMovieTraders(movieId)
-            .flatMapLatest { uids -> userRepository.getUsers(uids) }
+            .flatMapLatest { uids -> userRepository.observeUsers(uids) }
 }

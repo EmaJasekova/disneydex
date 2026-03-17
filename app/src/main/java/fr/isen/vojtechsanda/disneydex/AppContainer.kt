@@ -9,7 +9,7 @@ import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LogoutUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.RegisterUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieTradersUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.AddMovieToListUseCase
-import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.GetMovieListUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.ObserveMovieListUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.RemoveMovieFromListUseCase
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseAuthRepository
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseMovieRepository
@@ -51,8 +51,8 @@ object AppContainer {
         RemoveMovieFromListUseCase(userRepository)
     }
 
-    val getMovieListUseCase by lazy {
-        GetMovieListUseCase(userRepository)
+    val observeMovieListUseCase by lazy {
+        ObserveMovieListUseCase(userRepository)
     }
 
     private val universeRepository: UniverseRepository by lazy {
