@@ -28,14 +28,14 @@ class FirebaseUserRepository : UserRepository {
     private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
     private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
 
-    override fun getUsers(uids: List<String>): Flow<Result<List<User?>>> {
+    override fun observeUsers(uids: List<String>): Flow<Result<List<User?>>> {
         if (uids.isEmpty()) return flowOf(Result.success(emptyList()))
         return combine(
-            uids.map { uid -> getUser(uid) }
+            uids.map { uid -> observeUser(uid) }
         ) { results -> runCatching { results.map { it.getOrThrow() } } }
     }
 
-    override fun getUser(uid: String): Flow<Result<User?>> = callbackFlow {
+    override fun observeUser(uid: String): Flow<Result<User?>> = callbackFlow {
         val ref = usersRef.child(uid)
         val listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {

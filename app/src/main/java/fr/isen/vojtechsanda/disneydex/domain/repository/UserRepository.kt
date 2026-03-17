@@ -4,11 +4,19 @@ import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * Repository for user data operations.
+ *
+ * [observeUser] and [observeUsers] operate on any user(s) by uid.
+ * All other operations (saveUser, addMovieToList, removeMovieFromList, observeMovieList, isMovieInList)
+ * require authentication and are performed for the currently authorized user.
+ */
+
 interface UserRepository {
 
-    fun getUser(uid: String): Flow<Result<User?>>
+    fun observeUser(uid: String): Flow<Result<User?>>
 
-    fun getUsers(uids: List<String>): Flow<Result<List<User?>>>
+    fun observeUsers(uids: List<String>): Flow<Result<List<User?>>>
 
     suspend fun saveUser(user: User): Result<Unit>
 

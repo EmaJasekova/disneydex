@@ -11,6 +11,6 @@ class GetCurrentUserUseCase(
 ) {
     suspend operator fun invoke(): User? {
         val uid = authRepository.getCurrentUserCredentials()?.uid ?: return null
-        return userRepository.getUser(uid).first().getOrNull()
+        return userRepository.observeUser(uid).first().getOrNull()
     }
 }
