@@ -16,10 +16,10 @@ import fr.isen.vojtechsanda.disneydex.ui.theme.outlinedTextFieldColors
 
 @Composable
 fun DexOutlinedTextField(
+    modifier: Modifier = Modifier,
     label: String? = null,
     value: String,
     onValueChange: (String) -> Unit,
-    modifier: Modifier = Modifier,
     keyboardType: KeyboardType = KeyboardType.Text,
     isPassword: Boolean = keyboardType == KeyboardType.Password,
     isError: Boolean = false,

@@ -16,10 +16,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
-import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
+import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileCard
@@ -71,7 +71,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
         )
     }
 
-    val user = AuthUser(id = userId, username = "Alex Mercer", email = "alex.mercer@example.com")
+    val user = User(uid = userId, username = "Alex Mercer", email = "alex.mercer@example.com")
 
     AuthedScaffold(navController = navController, content = {
         ProfileCard(user, modifier = Modifier.padding(top = 8.dp, bottom = 24.dp))
