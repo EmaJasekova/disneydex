@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -22,12 +23,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
+import fr.isen.vojtechsanda.disneydex.ui.utils.getYearFromMillis
 
 @Composable
-fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
-    val imageWeight = 0.28f
-
+fun ProfileCard(user: User, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier
             .fillMaxWidth(),
@@ -39,8 +39,7 @@ fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
-                // TODO: Connect to correct url
-                model = "https://api.dicebear.com/9.x/lorelei/png?seed=1",
+                model = user.avatarPath,
                 contentDescription = "Profile Image",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
@@ -55,8 +54,7 @@ fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
                 Text(
-                    // TODO: Remove fallback when new models are done
-                    user.username ?: "TODO: Bad model placeholder",
+                    user.username,
                     fontSize = 20.sp,
                     color = Color.White,
                     fontWeight = FontWeight.SemiBold,
@@ -74,7 +72,7 @@ fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
                         modifier = Modifier.size(16.dp)
                     )
                     Text(
-                        user.email ?: "TODO: Bad model placeholder",
+                        user.email,
                         fontSize = 16.sp,
                         color = Color.LightGray,
                     )
@@ -83,8 +81,7 @@ fun ProfileCard(user: AuthUser, modifier: Modifier = Modifier) {
                 Text(
                     fontSize = 14.sp,
                     color = Color.LightGray,
-                    // TODO: Connect to real year
-                    text = "Joined in 2028"
+                    text = "Joined in ${getYearFromMillis(user.createdAt)}"
                 )
             }
         }
