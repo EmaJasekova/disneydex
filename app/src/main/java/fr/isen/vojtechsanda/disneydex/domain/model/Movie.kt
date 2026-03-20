@@ -10,5 +10,5 @@ data class Movie(
     val duration: Int,
     val releaseDate: LocalDate,
     val studio: String,
-    val posterImage: String = DEFAULT_POSTER_IMAGE
+    val imageUrl: String = DEFAULT_POSTER_IMAGE
 )

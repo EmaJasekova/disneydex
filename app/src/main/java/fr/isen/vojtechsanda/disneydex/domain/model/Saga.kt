@@ -6,5 +6,5 @@ data class Saga(
     val id: String,
     val name: String,
     val movies: List<Movie>,
-    val posterImage: String = DEFAULT_POSTER_IMAGE
+    val imageUrl: String = DEFAULT_POSTER_IMAGE
 )

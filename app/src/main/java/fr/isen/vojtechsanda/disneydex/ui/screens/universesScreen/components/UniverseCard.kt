@@ -14,7 +14,7 @@ import fr.isen.vojtechsanda.disneydex.ui.components.common.DexCard
 fun UniverseCard(
     title: String,
     description: String,
-    posterImages: List<String>,
+    imageUrls: List<String>,
     users: List<User>,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {}
@@ -25,7 +25,7 @@ fun UniverseCard(
 
             Spacer(Modifier.height(20.dp))
 
-            UniverseCardImageGrid(posterImages = posterImages)
+            UniverseCardImageGrid(imageUrls = imageUrls)
 
             Spacer(Modifier.height(24.dp))
 

@@ -37,7 +37,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     duration = 119,
                     releaseDate = mockYear(2022),
                     studio = "Marvel Studios",
-                    posterImage = "https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
+                    imageUrl = "https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg"
                 ),
                 Movie(
                     id = "2",
@@ -46,7 +46,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     duration = 126,
                     releaseDate = mockYear(2008),
                     studio = "Marvel Studios",
-                    posterImage = "https://image.tmdb.org/t/p/w500/cyecB7godJ6kNHGONFjUyVN9OX5.jpg"
+                    imageUrl = "https://image.tmdb.org/t/p/w500/cyecB7godJ6kNHGONFjUyVN9OX5.jpg"
                 ),
                 Movie(
                     id = "3",
@@ -55,7 +55,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     duration = 134,
                     releaseDate = mockYear(2018),
                     studio = "Marvel Studios",
-                    posterImage = "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+                    imageUrl = "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
                 ),
                 Movie(
                     id = "4",
@@ -64,7 +64,7 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
                     duration = 110,
                     releaseDate = mockYear(2019),
                     studio = "Universal Pictures",
-                    posterImage = "https://image.tmdb.org/t/p/w500/vedB4lMoMH6bYLXAHeRGDGBqQke.jpg"
+                    imageUrl = "https://image.tmdb.org/t/p/w500/vedB4lMoMH6bYLXAHeRGDGBqQke.jpg"
                 )
             )
         )
