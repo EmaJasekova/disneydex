@@ -39,7 +39,7 @@ fun MovieDetailScreen(
     ) {
         DexLoader(movieState) { movie ->
             Column(Modifier.padding(top = 12.dp)) {
-                CollectionStatusCard()
+                CollectionStatusCard(movie)
 
                 Spacer(Modifier.padding(vertical = 16.dp))
 
