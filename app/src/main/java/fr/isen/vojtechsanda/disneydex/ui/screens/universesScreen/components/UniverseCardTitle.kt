@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun UniverseCardTitle(title: String, subtitle: String) {
+fun UniverseCardTitle(title: String, description: String) {
     Column(
         modifier = Modifier
             .fillMaxWidth(),
@@ -30,7 +30,7 @@ fun UniverseCardTitle(title: String, subtitle: String) {
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = subtitle,
+            text = description,
             fontSize = 20.sp,
             color = Color.LightGray,
             maxLines = 1,

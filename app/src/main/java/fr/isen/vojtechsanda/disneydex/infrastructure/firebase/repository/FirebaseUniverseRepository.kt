@@ -1,6 +1,5 @@
 package fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository
 
-import android.util.Log
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -26,7 +25,11 @@ class FirebaseUniverseRepository : UniverseRepository {
     override fun observeUniverses(): Flow<List<Universe>> = callbackFlow {
         val listener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                trySend(parseSnapshot(snapshot))
+                try {
+                    trySend(parseSnapshot(snapshot))
+                } catch (e: Exception) {
+                    trySend(emptyList())
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {
