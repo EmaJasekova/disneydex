@@ -13,7 +13,7 @@ import fr.isen.vojtechsanda.disneydex.ui.components.common.DexCard
 @Composable
 fun UniverseCard(
     title: String,
-    subtitle: String,
+    description: String,
     posterImages: List<String>,
     users: List<User>,
     modifier: Modifier = Modifier,
@@ -21,7 +21,7 @@ fun UniverseCard(
 ) {
     DexCard(modifier = modifier.clickable { onClick() }) {
         Column {
-            UniverseCardTitle(title = title, subtitle = subtitle)
+            UniverseCardTitle(title = title, description = description)
 
             Spacer(Modifier.height(20.dp))
 
