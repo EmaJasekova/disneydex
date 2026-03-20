@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -22,7 +21,7 @@ import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
-import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileCard
+import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileInfo
 import java.time.LocalDate
 
 @Composable
@@ -73,29 +72,32 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
 
     val user = User(uid = userId, username = "Alex Mercer", email = "alex.mercer@example.com")
 
-    AuthedScaffold(navController = navController, content = {
-        ProfileCard(user, modifier = Modifier.padding(top = 8.dp, bottom = 24.dp))
+    AuthedScaffold(
+        navController = navController,
+        content = {
+            ProfileInfo(user)
 
-        Spacer(
-            Modifier
-                .height(1.dp)
-                .background(Color.LightGray)
-                .fillMaxWidth()
-        )
-
-        Spacer(Modifier.height(28.dp))
-
-        Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-            CollectionTitle()
-            DexAutocomplete(
-                label = "Add Movie to Collection",
-                placeholder = "Search by title...",
+            Spacer(
+                Modifier
+                    .height(1.dp)
+                    .background(Color.Gray)
+                    .fillMaxWidth()
             )
-            movies.forEach { movie ->
-                MovieCard(
-                    movie = movie,
-                    onDelete = { movies = movies.filter { it.id != movie.id } })
+
+            Spacer(Modifier.height(28.dp))
+
+            Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+                CollectionTitle()
+                DexAutocomplete(
+                    label = "Add Movie to Collection",
+                    placeholder = "Search by title...",
+                )
+                movies.forEach { movie ->
+                    MovieCard(
+                        movie = movie,
+                        onDelete = { movies = movies.filter { it.id != movie.id } })
+                }
             }
         }
-    })
+    )
 }
