@@ -1,75 +1,53 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import fr.isen.vojtechsanda.disneydex.domain.model.Movie
-import fr.isen.vojtechsanda.disneydex.domain.model.Saga
-import fr.isen.vojtechsanda.disneydex.domain.model.Universe
 import fr.isen.vojtechsanda.disneydex.ui.components.common.hero.Hero
 import fr.isen.vojtechsanda.disneydex.ui.components.common.hero.HeroTitle
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.universeOverviewScreen.components.SagaContainer
-import java.time.LocalDate
 
 @Composable
-fun UniverseOverviewScreen(navController: NavHostController, universeId: String) {
-    val universe = Universe(
-        id = universeId,
-        name = "Pelíšky Dos Universe",
-        description = "Short description 1",
-        sagas = listOf(
-            Saga(
-                id = "test-saga-1",
-                name = "Test saga 1",
-                movies = listOf(
-                    Movie(
-                        id = "test-movie-1",
-                        name = "Test movie 1",
-                        genre = "Action",
-                        duration = 120,
-                        studio = "Lucasfilm",
-                        releaseDate = LocalDate.of(2023, 1, 1)
-                    ),
-                    Movie(
-                        id = "test-movie-3",
-                        name = "Test movie 3",
-                        genre = "Sci-fi",
-                        duration = 189,
-                        studio = "Marvel",
-                        releaseDate = LocalDate.of(2024, 1, 1)
-                    )
-                )
-            ),
-            Saga(
-                id = "test-saga-2",
-                name = "Test saga 2",
-                movies = listOf(
-                    Movie(
-                        id = "test-movie-2",
-                        name = "Test movie 2",
-                        genre = "Comedy",
-                        studio = "Disney",
-                        duration = 90,
-                        releaseDate = LocalDate.of(2025, 2, 8)
-                    )
-                )
-            )
-        )
-    );
+fun UniverseOverviewScreen(
+    navController: NavHostController,
+    viewModel: UniverseOverviewViewModel = viewModel()
+) {
+    val universe by viewModel.universe.collectAsState()
 
     AuthedScaffold(
         navController = navController,
         hero = {
-            Hero(imageUrl = universe.posterImages[0]) {
-                HeroTitle(title = universe.name, subtitle = universe.description)
+            universe?.let { u ->
+                Hero(imageUrl = u.posterImages.firstOrNull()) {
+                    HeroTitle(title = u.name, subtitle = u.description)
+                }
             }
         },
         content = {
-            Column(verticalArrangement = Arrangement.spacedBy(40.dp)) {
-                universe.sagas.map { saga -> SagaContainer(navController, saga) }
+            val u = universe
+            when (u) {
+                null -> Box(
+                    modifier = Modifier.fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+                else -> Column(verticalArrangement = Arrangement.spacedBy(40.dp)) {
+                    u.sagas.map { saga ->
+                        SagaContainer(navController, saga)
+                    }
+                }
             }
         }
     )
