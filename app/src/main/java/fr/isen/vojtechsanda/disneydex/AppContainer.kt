@@ -8,6 +8,7 @@ import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LoginUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LogoutUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.RegisterUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieTradersUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.SearchMovieSuggestionsUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.AddMovieToListUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.ObserveMovieListUseCase
@@ -76,6 +77,10 @@ object AppContainer {
 
     private val movieRepository: MovieRepository by lazy {
         FirebaseMovieRepository(sagaRepository)
+    }
+
+    val observeMovieUseCase: ObserveMovieUseCase by lazy {
+        ObserveMovieUseCase(movieRepository)
     }
 
     val observeMovieTradersUseCase: ObserveMovieTradersUseCase by lazy {

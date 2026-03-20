@@ -36,9 +36,8 @@ fun AppRouter() {
             UniverseOverviewScreen(navController)
         }
 
-        composable<Route.MovieDetail> { backStackEntry ->
-            val args = backStackEntry.toRoute<Route.MovieDetail>()
-            MovieDetailScreen(navController, movieId = args.movieId)
+        composable<Route.MovieDetail> {
+            MovieDetailScreen(navController)
         }
 
         composable<Route.Profile> { backStackEntry ->
