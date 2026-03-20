@@ -7,12 +7,17 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.R
 import fr.isen.vojtechsanda.disneydex.routing.Route
+import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
 import fr.isen.vojtechsanda.disneydex.ui.theme.AppBackgroundColor
 
 val bottomNavigationItems = listOf(
@@ -35,7 +40,16 @@ fun AuthedScaffold(
     content: @Composable () -> Unit,
     hero: @Composable () -> Unit = {},
 ) {
+    val snackbarHostState = remember { SnackbarHostState() }
+
+    LaunchedEffect(Unit) {
+        SnackbarController.events.collect { message ->
+            snackbarHostState.showSnackbar(message)
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = { DexTopAppBar() },
         bottomBar = {
             DexBottomNavigationBar(
