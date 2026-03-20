@@ -7,7 +7,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexCard
 
 @Composable
@@ -15,7 +15,7 @@ fun UniverseCard(
     title: String,
     subtitle: String,
     posterImages: List<String>,
-    users: List<AuthUser>,
+    users: List<User>,
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {}
 ) {
