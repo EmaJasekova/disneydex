@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -18,7 +19,7 @@ fun HeroTitle(title: String, subtitle: String) {
     Column(
         verticalArrangement = Arrangement.Bottom,
         modifier = Modifier
-            .padding(horizontal = 16.dp, vertical = 32.dp)
+            .padding(start = 16.dp, end = 16.dp, bottom = 32.dp)
             .fillMaxWidth()
             .fillMaxHeight()
     ) {
@@ -28,7 +29,14 @@ fun HeroTitle(title: String, subtitle: String) {
             fontWeight = FontWeight.Bold,
             fontSize = 48.sp,
             lineHeight = 52.sp,
+            maxLines = 3,
+            overflow = TextOverflow.Ellipsis
         )
-        Text(subtitle, color = Color.LightGray)
+        Text(
+            subtitle,
+            color = Color.LightGray,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
+        )
     }
 }
