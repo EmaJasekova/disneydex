@@ -15,12 +15,12 @@ import coil.compose.AsyncImage
 
 @Composable
 
-fun UniverseCardImageGrid(posterImages: List<String>) {
+fun UniverseCardImageGrid(imageUrls: List<String>) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-        posterImages.take(3).forEachIndexed { index, url ->
+        imageUrls.take(3).forEachIndexed { index, url ->
             AsyncImage(
                 model = url,
                 contentDescription = null,

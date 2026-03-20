@@ -29,7 +29,7 @@ fun UniverseOverviewScreen(
         navController = navController,
         hero = {
             universe?.let { u ->
-                Hero(imageUrl = u.posterImages.firstOrNull()) {
+                Hero(imageUrl = u.imageUrls.firstOrNull()) {
                     HeroTitle(title = u.name, subtitle = u.description)
                 }
             }

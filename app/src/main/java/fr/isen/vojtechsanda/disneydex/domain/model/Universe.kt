@@ -7,5 +7,5 @@ data class Universe(
     val name: String,
     val sagas: List<Saga>,
     val description: String,
-    val posterImages: List<String> = listOf(DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE)
+    val imageUrls: List<String> = listOf(DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE)
 )

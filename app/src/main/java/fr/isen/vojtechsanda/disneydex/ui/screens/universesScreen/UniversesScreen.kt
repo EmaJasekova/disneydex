@@ -29,7 +29,7 @@ fun UniversesScreen(
                     UniverseCard(
                         title = universe.name,
                         description = universe.description,
-                        posterImages = universe.posterImages,
+                        imageUrls = universe.imageUrls,
                         users = emptyList(), // TODO(High): Add users
                         onClick = { navController.navigate(Route.UniverseOverview(universe.id)) }
                     )

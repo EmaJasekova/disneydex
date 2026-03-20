@@ -29,7 +29,7 @@ fun MovieDetailScreen(navController: NavHostController, movieId: String) {
     AuthedScaffold(
         navController = navController,
         hero = {
-            Hero(imageUrl = movie.posterImage) {
+            Hero(imageUrl = movie.imageUrl) {
                 HeroTitle(
                     title = movie.name,
                     subtitle = "${movie.releaseDate.year} • ${movie.studio} • ${movie.duration} min • ${movie.genre}"

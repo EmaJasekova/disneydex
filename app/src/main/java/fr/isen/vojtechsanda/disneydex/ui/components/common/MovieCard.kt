@@ -42,7 +42,7 @@ fun MovieCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             AsyncImage(
-                model = movie.posterImage,
+                model = movie.imageUrl,
                 contentDescription = "Poster Image",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier

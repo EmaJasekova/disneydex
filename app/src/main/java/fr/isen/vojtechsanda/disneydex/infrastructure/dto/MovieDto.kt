@@ -1,5 +1,6 @@
 package fr.isen.vojtechsanda.disneydex.infrastructure.dto
 
+import fr.isen.vojtechsanda.disneydex.domain.DEFAULT_POSTER_IMAGE
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -13,6 +14,7 @@ data class MovieDto(
     val duration: Int = 0,
     val releaseDate: String = "",
     val studio: String = "",
+    val imageUrl: String = "",
 ) {
     fun toMovie(): Movie = Movie(
         id,
@@ -21,6 +23,7 @@ data class MovieDto(
         duration,
         // TODO: Handle parsing error
         LocalDate.parse(releaseDate, DB_DATE_FORMAT),
-        studio
+        studio,
+        imageUrl = imageUrl.ifBlank { DEFAULT_POSTER_IMAGE }
     )
 }
