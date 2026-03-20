@@ -20,6 +20,7 @@ class FirebaseMovieRepository(
 
     private companion object {
         const val LOG_TAG = "FirebaseMovieRepository"
+        const val MAX_SUGGESTIONS = 10
     }
 
     private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
@@ -35,6 +36,16 @@ class FirebaseMovieRepository(
             sagas.firstNotNullOfOrNull { saga ->
                 saga.movies.find { movie -> movie.id == movieId }
             }
+        }
+
+    override fun searchMovieSuggestions(query: String): Flow<List<Movie>> =
+        sagaRepository.observeAllSagas().map { sagas ->
+            val trimmed = query.trim()
+            if (trimmed.length < 2) return@map emptyList()
+            val allMovies = sagas.flatMap { saga -> saga.movies }
+            allMovies
+                .filter { movie -> movie.name.contains(trimmed, ignoreCase = true) }
+                .take(MAX_SUGGESTIONS)
         }
 
     /**
