@@ -17,13 +17,13 @@ import androidx.compose.ui.graphics.Color.Companion.Gray
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.UserAvatar
 import fr.isen.vojtechsanda.disneydex.ui.theme.DarkGray
 
 @Composable
 fun UniverseCardStackedAvatars(
-    users: List<AuthUser>,
+    users: List<User>,
     maxVisible: Int = 2,
     modifier: Modifier = Modifier
 ) {

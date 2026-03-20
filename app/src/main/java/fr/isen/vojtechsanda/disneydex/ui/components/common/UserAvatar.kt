@@ -13,11 +13,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.theme.InPaperColor
 
 @Composable
-fun UserAvatar(user: AuthUser, modifier: Modifier = Modifier) {
+fun UserAvatar(user: User, modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .clip(CircleShape)
@@ -26,8 +26,7 @@ fun UserAvatar(user: AuthUser, modifier: Modifier = Modifier) {
         contentAlignment = Alignment.Center
     ) {
         AsyncImage(
-            // TODO: Connect it to user profile
-            model = "https://api.dicebear.com/9.x/lorelei/png?seed=${user.id}",
+            model = user.avatarPath,
             contentDescription = user.username,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()

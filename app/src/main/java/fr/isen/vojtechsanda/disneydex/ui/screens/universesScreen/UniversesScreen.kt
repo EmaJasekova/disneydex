@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.routing.Route
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen.components.UniverseCard
@@ -19,10 +19,10 @@ fun UniversesScreen(navController: NavHostController) {
                 verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
                 val users = listOf(
-                    AuthUser(id = "user-1", email = "test-1@idk.idk", username = "Tester 1"),
-                    AuthUser(id = "user-2", email = "test-2@idk.idk", username = "Tester 2"),
-                    AuthUser(id = "user-3", email = "test-3@idk.idk", username = "Tester 3"),
-                    AuthUser(id = "user-4", email = "test-4@idk.idk", username = "Tester 4")
+                    User(uid = "user-1", email = "test-1@idk.idk", username = "Tester 1"),
+                    User(uid = "user-2", email = "test-2@idk.idk", username = "Tester 2"),
+                    User(uid = "user-3", email = "test-3@idk.idk", username = "Tester 3"),
+                    User(uid = "user-4", email = "test-4@idk.idk", username = "Tester 4")
                 )
 
                 UniverseCard(

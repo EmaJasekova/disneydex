@@ -11,11 +11,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 
 @Composable
-fun UniverseCardFooter(users: List<AuthUser>, onExploreClick: () -> Unit) {
+fun UniverseCardFooter(users: List<User>, onExploreClick: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth(),

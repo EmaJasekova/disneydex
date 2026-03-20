@@ -24,15 +24,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.UserAvatar
 import fr.isen.vojtechsanda.disneydex.ui.theme.DarkGray
 import fr.isen.vojtechsanda.disneydex.ui.theme.HighlightRed
 import fr.isen.vojtechsanda.disneydex.ui.theme.InPaperColor
 
 @Composable
-fun CommunityUserCard(user: AuthUser, movie: Movie) {
+fun CommunityUserCard(user: User, movie: Movie) {
     val context = LocalContext.current
 
     Row(
@@ -60,8 +60,7 @@ fun CommunityUserCard(user: AuthUser, movie: Movie) {
 
             Column {
                 Text(
-                    text = user.username
-                        ?: "TODO: REMOVE THIS FALLBACK AFTER NEW MODELS ARE MERGED",
+                    text = user.username,
                     color = Color.White
                 )
 
