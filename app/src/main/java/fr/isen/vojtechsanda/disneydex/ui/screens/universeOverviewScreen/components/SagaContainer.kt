@@ -16,12 +16,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Saga
-import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 import fr.isen.vojtechsanda.disneydex.routing.Route
+import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 
 @Composable
 fun SagaContainer(navController: NavHostController, saga: Saga) {
@@ -44,7 +45,10 @@ fun SagaContainer(navController: NavHostController, saga: Saga) {
                 text = saga.name,
                 color = Color.White,
                 fontSize = 28.sp,
-                fontWeight = FontWeight.SemiBold
+                lineHeight = 32.sp,
+                fontWeight = FontWeight.SemiBold,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis
             )
         }
 

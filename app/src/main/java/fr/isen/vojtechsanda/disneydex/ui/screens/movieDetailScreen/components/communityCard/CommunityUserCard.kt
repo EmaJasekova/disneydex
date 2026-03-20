@@ -22,8 +22,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.net.toUri
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.ui.components.common.UserAvatar
@@ -43,9 +45,12 @@ fun CommunityUserCard(user: User, movie: Movie) {
             .background(InPaperColor)
             .fillMaxWidth()
             .border(1.dp, DarkGray, RoundedCornerShape(10.dp))
-            .padding(12.dp),
+            .padding(12.dp)
     ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.weight(1f)
+        ) {
             UserAvatar(
                 user, Modifier
                     .size(48.dp)
@@ -61,7 +66,9 @@ fun CommunityUserCard(user: User, movie: Movie) {
             Column {
                 Text(
                     text = user.username,
-                    color = Color.White
+                    color = Color.White,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
                 )
 
                 Text("Physical Copy", color = Color.LightGray, fontSize = 14.sp)
@@ -71,7 +78,7 @@ fun CommunityUserCard(user: User, movie: Movie) {
         TextButton(onClick = {
             val intent = Intent(Intent.ACTION_SENDTO).apply {
                 data =
-                    Uri.parse("mailto:${user.email}?subject=${Uri.encode(movie.name)}")
+                    "mailto:${user.email}?subject=${Uri.encode(movie.name)}".toUri()
             }
 
             context.startActivity(intent)
