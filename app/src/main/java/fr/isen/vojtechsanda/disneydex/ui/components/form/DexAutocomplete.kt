@@ -21,7 +21,10 @@ import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DexAutocomplete() {
+fun DexAutocomplete(
+    placeholder: String? = null,
+    label: String? = null,
+) {
     var query by remember { mutableStateOf("") }
     var expanded by remember { mutableStateOf(false) }
 
@@ -58,6 +61,8 @@ fun DexAutocomplete() {
                     contentDescription = "Search Movie"
                 )
             },
+            placeholder = placeholder,
+            label = label,
         )
 
         ExposedDropdownMenu(

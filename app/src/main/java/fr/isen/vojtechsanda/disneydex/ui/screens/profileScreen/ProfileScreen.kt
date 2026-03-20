@@ -87,7 +87,10 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
 
         Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
             CollectionTitle()
-            DexAutocomplete()
+            DexAutocomplete(
+                label = "Add Movie to Collection",
+                placeholder = "Search by title...",
+            )
             movies.forEach { movie ->
                 MovieCard(
                     movie = movie,

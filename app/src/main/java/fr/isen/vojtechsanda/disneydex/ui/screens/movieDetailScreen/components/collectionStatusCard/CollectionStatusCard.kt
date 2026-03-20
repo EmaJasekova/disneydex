@@ -38,11 +38,12 @@ fun CollectionStatusCard() {
                 onValueChange = { ownOnPhysicalMediaState = it }
             )
 
-            CollectionStatusRow(
-                title = "Available for Trade",
-                value = availableForTradeState,
-                onValueChange = { availableForTradeState = it }
-            )
+            if (ownOnPhysicalMediaState)
+                CollectionStatusRow(
+                    title = "Available for Trade",
+                    value = availableForTradeState,
+                    onValueChange = { availableForTradeState = it }
+                )
         }
     }
 }

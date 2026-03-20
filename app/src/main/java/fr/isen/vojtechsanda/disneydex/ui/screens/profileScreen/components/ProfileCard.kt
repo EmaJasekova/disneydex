@@ -21,12 +21,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
 import fr.isen.vojtechsanda.disneydex.domain.model.User
-import fr.isen.vojtechsanda.disneydex.ui.utils.getYearFromMillis
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexCard
 import fr.isen.vojtechsanda.disneydex.ui.components.common.UserAvatar
 import fr.isen.vojtechsanda.disneydex.ui.theme.DarkGray
+import fr.isen.vojtechsanda.disneydex.ui.utils.getYearFromMillis
 
 @Composable
 fun ProfileCard(user: User, modifier: Modifier = Modifier) {
