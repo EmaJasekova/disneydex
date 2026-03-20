@@ -12,6 +12,7 @@ import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.SearchMovieSuggestion
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.AddMovieToListUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.ObserveMovieListUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.RemoveMovieFromListUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.universe.ObserveUniverseUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.universe.ObserveUniversesUseCase
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseAuthRepository
 import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.repository.FirebaseMovieRepository
@@ -63,6 +64,10 @@ object AppContainer {
 
     val observeUniversesUseCase: ObserveUniversesUseCase by lazy {
         ObserveUniversesUseCase(universeRepository)
+    }
+
+    val observeUniverseUseCase: ObserveUniverseUseCase by lazy {
+        ObserveUniverseUseCase(universeRepository)
     }
 
     private val sagaRepository: SagaRepository by lazy {
