@@ -9,19 +9,25 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import fr.isen.vojtechsanda.disneydex.AppContainer
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexOutlinedTextField
+import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
+import kotlinx.coroutines.launch
 
 @Composable
 fun RegisterForm(
     onRegister: () -> Unit
 ) {
+    val scope = rememberCoroutineScope()
+
     var username by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -62,7 +68,6 @@ fun RegisterForm(
             isError = passwordTooShort
         )
 
-
         Spacer(modifier = Modifier.height(8.dp))
 
         DexOutlinedTextField(
@@ -78,14 +83,25 @@ fun RegisterForm(
 
         DexButton(
             onClick = {
-                // TODO: Add validation check
-                // TODO: Handle registration logic here
-                username = ""
-                email = ""
-                password = ""
-                confirmPassword = ""
+                scope.launch {
+                    val result =
+                        AppContainer.registerUseCase(
+                            email = email,
+                            username = username,
+                            password = password
+                        )
 
-                onRegister()
+                    result.onSuccess {
+                        username = ""
+                        email = ""
+                        password = ""
+                        confirmPassword = ""
+
+                        onRegister()
+                    }.onFailure { error ->
+                        SnackbarController.showSnackbar("Error: ${error.message}")
+                    }
+                }
             },
             modifier = Modifier
                 .fillMaxWidth()

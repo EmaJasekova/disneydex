@@ -9,17 +9,23 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import fr.isen.vojtechsanda.disneydex.AppContainer
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexOutlinedTextField
+import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
+import kotlinx.coroutines.launch
 
 @Composable
 fun LoginForm(onLogin: () -> Unit) {
+    val scope = rememberCoroutineScope()
+
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
@@ -49,11 +55,18 @@ fun LoginForm(onLogin: () -> Unit) {
 
         DexButton(
             onClick = {
-                // TODO: Add validation checks
-                // TODO: Handle login logic here
-                email = ""
-                password = ""
-                onLogin()
+                scope.launch {
+                    val result = AppContainer.loginUseCase(email = email, password = password)
+
+                    email = ""
+                    password = ""
+
+                    result.onSuccess {
+                        onLogin()
+                    }.onFailure { error ->
+                        SnackbarController.showSnackbar("Error: ${error.message}")
+                    }
+                }
             },
             modifier = Modifier
                 .fillMaxWidth()
