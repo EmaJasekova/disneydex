@@ -6,28 +6,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.AppContainer
+import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexOutlinedTextField
-import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
-import kotlinx.coroutines.launch
+import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.LoginViewModel
 
 @Composable
-fun LoginForm(onLogin: () -> Unit) {
-    val scope = rememberCoroutineScope()
-
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
+fun LoginForm(
+    onLogin: () -> Unit,
+    viewModel: LoginViewModel = viewModel()
+) {
+    val state = viewModel.uiState
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -35,44 +29,38 @@ fun LoginForm(onLogin: () -> Unit) {
     ) {
         DexOutlinedTextField(
             label = "Email",
-            value = email,
-            onValueChange = { email = it },
+            value = state.email,
+            onValueChange = { viewModel.onEmailChange(it) },
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Email,
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         DexOutlinedTextField(
             label = "Password",
-            value = password,
-            onValueChange = { password = it },
+            value = state.password,
+            onValueChange = { viewModel.onPasswordChange(it) },
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Password,
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(24.dp))
 
         DexButton(
-            onClick = {
-                scope.launch {
-                    val result = AppContainer.loginUseCase(email = email, password = password)
-
-                    email = ""
-                    password = ""
-
-                    result.onSuccess {
-                        onLogin()
-                    }.onFailure { error ->
-                        SnackbarController.showSnackbar("Error: ${error.message}")
-                    }
-                }
-            },
+            onClick = { viewModel.login(onLogin) },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(52.dp)
+                .height(52.dp),
+            enabled = !state.isLoading
         ) {
-            Text("Login", color = Color.White)
+            if (state.isLoading) {
+                Text("Logging in...", color = Color.White)
+            } else {
+                Text("Login", color = Color.White)
+            }
         }
     }
 }

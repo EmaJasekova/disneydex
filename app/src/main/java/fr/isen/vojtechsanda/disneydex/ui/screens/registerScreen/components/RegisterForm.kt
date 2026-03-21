@@ -6,35 +6,22 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.AppContainer
+import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexButton
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexOutlinedTextField
-import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
-import kotlinx.coroutines.launch
+import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.RegisterViewModel
 
 @Composable
 fun RegisterForm(
-    onRegister: () -> Unit
+    onRegister: () -> Unit,
+    viewModel: RegisterViewModel = viewModel()
 ) {
-    val scope = rememberCoroutineScope()
-
-    var username by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var confirmPassword by remember { mutableStateOf("") }
-    val passwordTooShort = password.isNotEmpty() && password.length < 8
-    val passwordMismatch = confirmPassword.isNotEmpty() && confirmPassword != password
-
+    val state = viewModel.uiState
 
     Column(
         modifier = Modifier.fillMaxWidth(),
@@ -42,74 +29,60 @@ fun RegisterForm(
     ) {
         DexOutlinedTextField(
             label = "Username",
-            value = username,
-            onValueChange = { username = it },
+            value = state.username,
+            onValueChange = { viewModel.onUsernameChange(it) },
             modifier = Modifier.fillMaxWidth(),
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         DexOutlinedTextField(
             label = "Email",
-            value = email,
-            onValueChange = { email = it },
+            value = state.email,
+            onValueChange = { viewModel.onEmailChange(it) },
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Email,
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         DexOutlinedTextField(
             label = "Password",
-            value = password,
-            onValueChange = { password = it },
+            value = state.password,
+            onValueChange = { viewModel.onPasswordChange(it) },
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Password,
-            isError = passwordTooShort
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         DexOutlinedTextField(
             label = "Confirm Password",
-            value = confirmPassword,
-            onValueChange = { confirmPassword = it },
+            value = state.confirmPassword,
+            onValueChange = { viewModel.onConfirmPasswordChange(it) },
             modifier = Modifier.fillMaxWidth(),
             keyboardType = KeyboardType.Password,
-            isError = passwordMismatch
+            isError = state.isPasswordMismatch,
+            supportingText = { if (state.isPasswordMismatch) Text("Passwords do not match") },
+            enabled = !state.isLoading
         )
 
         Spacer(modifier = Modifier.height(24.dp))
 
         DexButton(
-            onClick = {
-                scope.launch {
-                    val result =
-                        AppContainer.registerUseCase(
-                            email = email,
-                            username = username,
-                            password = password
-                        )
-
-                    result.onSuccess {
-                        SnackbarController.showSnackbar("Successfully registered!")
-
-                        username = ""
-                        email = ""
-                        password = ""
-                        confirmPassword = ""
-
-                        onRegister()
-                    }.onFailure { error ->
-                        SnackbarController.showSnackbar("Error: ${error.message}")
-                    }
-                }
-            },
+            onClick = { viewModel.register(onRegister) },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(52.dp)
+                .height(52.dp),
+            enabled = !state.isLoading
         ) {
-            Text("Register", color = Color.White)
+            Text(
+                text = if (state.isLoading) "Creating Account..." else "Register",
+                color = Color.White
+            )
         }
     }
 }
