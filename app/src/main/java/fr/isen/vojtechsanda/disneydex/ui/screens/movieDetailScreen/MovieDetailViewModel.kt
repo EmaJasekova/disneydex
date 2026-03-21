@@ -14,7 +14,6 @@ import kotlinx.coroutines.flow.stateIn
 class MovieDetailViewModel(
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
-
     private val movieId: String = savedStateHandle.toRoute<Route.MovieDetail>().movieId
 
     val movie: StateFlow<Movie?> = AppContainer.observeMovieUseCase(movieId)
@@ -23,4 +22,5 @@ class MovieDetailViewModel(
             started = SharingStarted.Eagerly,
             initialValue = null
         )
+
 }
