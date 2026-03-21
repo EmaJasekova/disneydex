@@ -18,8 +18,8 @@ import fr.isen.vojtechsanda.disneydex.ui.theme.AppBackgroundColor
 
 @Composable
 fun PublicScaffold(
-    content: @Composable () -> Unit,
     hero: @Composable () -> Unit = {},
+    content: @Composable () -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
 

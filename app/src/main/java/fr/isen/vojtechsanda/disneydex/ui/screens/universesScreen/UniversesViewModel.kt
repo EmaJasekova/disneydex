@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.stateIn
 
 class UniversesViewModel : ViewModel() {
 
-    val universes: StateFlow<List<Universe>> = AppContainer.observeUniversesUseCase()
+    val universes: StateFlow<List<Universe>?> = AppContainer.observeUniversesUseCase()
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.Eagerly,
-            initialValue = emptyList()
+            initialValue = null
         )
 }
