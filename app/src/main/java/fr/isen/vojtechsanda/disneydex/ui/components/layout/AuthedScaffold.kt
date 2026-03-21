@@ -37,8 +37,8 @@ val bottomNavigationItems = listOf(
 @Composable
 fun AuthedScaffold(
     navController: NavHostController,
-    content: @Composable () -> Unit,
     hero: @Composable () -> Unit = {},
+    content: @Composable () -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
 

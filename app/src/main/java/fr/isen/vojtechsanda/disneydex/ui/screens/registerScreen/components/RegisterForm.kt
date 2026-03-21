@@ -92,6 +92,8 @@ fun RegisterForm(
                         )
 
                     result.onSuccess {
+                        SnackbarController.showSnackbar("Successfully registered!")
+
                         username = ""
                         email = ""
                         password = ""
