@@ -26,8 +26,7 @@ fun UniverseCard(
 
             Spacer(Modifier.height(24.dp))
 
-            // TODO(High): Add users
-            UniverseCardFooter(users = emptyList(), onExploreClick = onClick)
+            UniverseCardFooter(onExploreClick = onClick)
         }
     }
 }
