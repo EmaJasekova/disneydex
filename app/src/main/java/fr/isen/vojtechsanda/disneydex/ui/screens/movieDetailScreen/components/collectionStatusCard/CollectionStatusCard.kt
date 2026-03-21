@@ -3,70 +3,47 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.components.c
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
-import fr.isen.vojtechsanda.disneydex.AppContainer
-import fr.isen.vojtechsanda.disneydex.domain.model.Movie
-import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
-import fr.isen.vojtechsanda.disneydex.ui.core.SnackbarController
+import androidx.lifecycle.viewmodel.compose.viewModel
+import fr.isen.vojtechsanda.disneydex.ui.components.common.DexLoader
 import fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.components.DetailContainer
-import kotlinx.coroutines.launch
 
 @Composable
-fun CollectionStatusCard(movie: Movie) {
-    val scope = rememberCoroutineScope()
+fun CollectionStatusCard(viewModel: CollectionStatusCardViewModel = viewModel()) {
 
-    var wantToWatchState by remember { mutableStateOf(false) }
-    var watchedState by remember { mutableStateOf(false) }
-    var ownOnPhysicalMediaState by remember { mutableStateOf(false) }
-    var availableForTradeState by remember { mutableStateOf(false) }
+    val collectionStatusesState by viewModel.collectionLists.collectAsState()
 
-    fun updateList(movieList: MovieListType, value: Boolean) {
-        scope.launch {
-            if (value) {
-                AppContainer.addMovieToListUseCase(movieId = movie.id, movieList = movieList)
-                    .onFailure { error ->
-                        SnackbarController.showSnackbar("Error: ${error.message}")
-                    }
-            } else {
-                AppContainer.removeMovieFromListUseCase(movieId = movie.id, list = movieList)
-                    .onFailure { error ->
-                        SnackbarController.showSnackbar("Error: ${error.message}")
-                    }
-            }
-        }
-    }
 
     DetailContainer(title = "Collection status") {
-        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            CollectionStatusRow(
-                title = "Want to watch",
-                value = wantToWatchState,
-                onValueChange = { updateList(MovieListType.WATCHLIST, it) }
-            )
-
-            CollectionStatusRow(
-                title = "Watched",
-                value = watchedState,
-                onValueChange = { updateList(MovieListType.WATCHED, it) }
-            )
-
-            CollectionStatusRow(
-                title = "Own on Physical Media",
-                value = ownOnPhysicalMediaState,
-                onValueChange = { updateList(MovieListType.OWNED, it) }
-            )
-
-            if (ownOnPhysicalMediaState)
+        DexLoader(collectionStatusesState) { collectionStatuses ->
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 CollectionStatusRow(
-                    title = "Available for Trade",
-                    value = availableForTradeState,
-                    onValueChange = { updateList(MovieListType.FOR_TRADE, it) }
+                    title = "Want to watch",
+                    value = collectionStatuses.isOnWatchlist,
+                    onValueChange = { viewModel.updateWatchlist(it) }
                 )
+
+                CollectionStatusRow(
+                    title = "Watched",
+                    value = collectionStatuses.isWatched,
+                    onValueChange = { viewModel.updateWatchedList(it) }
+                )
+
+                CollectionStatusRow(
+                    title = "Own on Physical Media",
+                    value = collectionStatuses.isOwned,
+                    onValueChange = { viewModel.updateOwnedList(it) }
+                )
+
+                if (collectionStatuses.isOwned)
+                    CollectionStatusRow(
+                        title = "Available for Trade",
+                        value = collectionStatuses.isForTrade,
+                        onValueChange = { viewModel.updateForTradeList(it) }
+                    )
+            }
         }
     }
 }
