@@ -6,13 +6,13 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import fr.isen.vojtechsanda.disneydex.domain.exception.AuthFailureException
 import fr.isen.vojtechsanda.disneydex.domain.exception.InvalidAuthStateException
 import fr.isen.vojtechsanda.disneydex.domain.model.AuthUser
-import fr.isen.vojtechsanda.disneydex.domain.model.AuthContext
+import fr.isen.vojtechsanda.disneydex.domain.auth.AuthContext
 import fr.isen.vojtechsanda.disneydex.domain.repository.AuthRepository
 import kotlinx.coroutines.tasks.await
 
-// TODO(Medium): Generic Exception wrapping - replace with domain-specific auth exceptions for better error handling.
 class FirebaseAuthRepository : AuthRepository {
 
     private val auth = FirebaseAuth.getInstance()
@@ -26,7 +26,7 @@ class FirebaseAuthRepository : AuthRepository {
             AuthUser(uid = firebaseUser.uid, email = authEmail)
         }.fold(
             onSuccess = { credential -> Result.success(credential) },
-            onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.REGISTER), error)) }
+            onFailure = { error -> Result.failure(AuthFailureException(toUserFriendlyMessage(error, AuthContext.REGISTER), error)) }
         )
     }
 
@@ -39,7 +39,7 @@ class FirebaseAuthRepository : AuthRepository {
             AuthUser(uid = firebaseUser.uid, email = authEmail)
         }.fold(
             onSuccess = { credential -> Result.success(credential) },
-            onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGIN), error)) }
+            onFailure = { error -> Result.failure(AuthFailureException(toUserFriendlyMessage(error, AuthContext.LOGIN), error)) }
         )
     }
 
@@ -47,7 +47,7 @@ class FirebaseAuthRepository : AuthRepository {
         auth.signOut()
     }.fold(
         onSuccess = { Result.success(Unit) },
-        onFailure = { error -> Result.failure(Exception(toUserFriendlyMessage(error, AuthContext.LOGOUT), error)) }
+        onFailure = { error -> Result.failure(AuthFailureException(toUserFriendlyMessage(error, AuthContext.LOGOUT), error)) }
     )
 
     override suspend fun getCurrentUserCredentials(): AuthUser? {
