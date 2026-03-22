@@ -1,5 +1,8 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.components.communityCard
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -30,4 +33,28 @@ class CommunityCardViewModel(
                 initialValue = null
             )
 
+    /**
+     * Traders paging
+     */
+
+    val pageSize = 5;
+
+    var currentOffset by mutableStateOf(0)
+        private set
+
+    fun nextPage() {
+        currentOffset += pageSize
+    }
+
+    fun previousPage() {
+        currentOffset -= pageSize
+    }
+
+    fun canGoNext(totalSize: Int): Boolean {
+        return totalSize >= currentOffset + pageSize
+    }
+
+    fun canGoBack(): Boolean {
+        return 0 <= currentOffset - pageSize
+    }
 }
