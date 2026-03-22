@@ -1,10 +1,12 @@
 package fr.isen.vojtechsanda.disneydex.infrastructure.dto
 
+import android.util.Log
 import fr.isen.vojtechsanda.disneydex.domain.DEFAULT_POSTER_IMAGE
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
+private const val LOG_TAG = "MovieDto"
 private val DB_DATE_FORMAT: DateTimeFormatter = DateTimeFormatter.ISO_LOCAL_DATE
 
 data class MovieDto(
@@ -16,14 +18,19 @@ data class MovieDto(
     val studio: String = "",
     val imageUrl: String = "",
 ) {
-    fun toMovie(): Movie = Movie(
-        id,
-        name,
-        genre,
-        duration,
-        // TODO: Handle parsing error
-        LocalDate.parse(releaseDate, DB_DATE_FORMAT),
-        studio,
-        imageUrl = imageUrl.ifBlank { DEFAULT_POSTER_IMAGE }
-    )
+    fun toMovie(): Movie {
+        val parsedDate = runCatching { LocalDate.parse(releaseDate, DB_DATE_FORMAT) }.getOrElse { e ->
+            Log.w(LOG_TAG, "Invalid release date '$releaseDate' for movie '$id', using fallback", e)
+            LocalDate.EPOCH
+        }
+        return Movie(
+            id,
+            name,
+            genre,
+            duration,
+            parsedDate,
+            studio,
+            imageUrl = imageUrl.ifBlank { DEFAULT_POSTER_IMAGE }
+        )
+    }
 }
