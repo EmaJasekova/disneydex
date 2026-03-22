@@ -9,8 +9,8 @@ import fr.isen.vojtechsanda.disneydex.domain.exception.InvalidAuthStateException
 import fr.isen.vojtechsanda.disneydex.domain.model.MovieListType
 import fr.isen.vojtechsanda.disneydex.domain.model.User
 import fr.isen.vojtechsanda.disneydex.domain.repository.UserRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants.toFirebaseKey
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebasePaths
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.toFirebaseKey
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -25,8 +25,8 @@ class FirebaseUserRepository : UserRepository {
     }
 
     private val auth = com.google.firebase.auth.FirebaseAuth.getInstance()
-    private val usersRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.USERS)
-    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
+    private val usersRef = FirebaseDatabase.getInstance().getReference(FirebasePaths.USERS)
+    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebasePaths.MOVIE_TRADERS)
 
     override fun observeUsers(uids: List<String>): Flow<Result<List<User?>>> {
         if (uids.isEmpty()) return flowOf(Result.success(emptyList()))

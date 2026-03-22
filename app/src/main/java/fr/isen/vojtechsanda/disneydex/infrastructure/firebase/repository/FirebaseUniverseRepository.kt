@@ -7,12 +7,11 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import fr.isen.vojtechsanda.disneydex.domain.model.Universe
 import fr.isen.vojtechsanda.disneydex.domain.repository.UniverseRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebasePaths
 import fr.isen.vojtechsanda.disneydex.infrastructure.dto.UniverseDto
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
-import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 
 class FirebaseUniverseRepository : UniverseRepository {
@@ -21,7 +20,7 @@ class FirebaseUniverseRepository : UniverseRepository {
         const val LOG_TAG = "FirebaseUniverseRepository"
     }
 
-    private val universesRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.UNIVERSES)
+    private val universesRef = FirebaseDatabase.getInstance().getReference(FirebasePaths.UNIVERSES)
 
     override fun observeUniverses(): Flow<List<Universe>> = callbackFlow {
         val listener = object : ValueEventListener {
@@ -40,10 +39,6 @@ class FirebaseUniverseRepository : UniverseRepository {
         }
         universesRef.addValueEventListener(listener)
         awaitClose { universesRef.removeEventListener(listener) }
-    }.catch { e ->
-        // TODO(Medium): Catch-and-rethrow adds no value - either handle meaningfully or remove catch block.
-        Log.e(LOG_TAG, "Flow error", e)
-        throw e
     }
 
     override fun observeUniverse(universeId: String): Flow<Universe?> =
@@ -55,8 +50,5 @@ class FirebaseUniverseRepository : UniverseRepository {
         snapshot.children
             .mapNotNull { child -> child.getValue(UniverseDto::class.java) }
             .map { dto -> dto.toUniverse() }
-    }.getOrElse { e ->
-        Log.e(LOG_TAG, "Failed to parse universes", e)
-        throw e
-    }
+    }.onFailure { Log.e(LOG_TAG, "Failed to parse universes", it) }.getOrThrow()
 }

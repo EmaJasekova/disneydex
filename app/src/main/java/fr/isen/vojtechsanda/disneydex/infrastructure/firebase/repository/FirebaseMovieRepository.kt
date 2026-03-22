@@ -8,7 +8,7 @@ import com.google.firebase.database.ValueEventListener
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.domain.repository.MovieRepository
 import fr.isen.vojtechsanda.disneydex.domain.repository.SagaRepository
-import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebaseConstants
+import fr.isen.vojtechsanda.disneydex.infrastructure.firebase.FirebasePaths
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
@@ -23,7 +23,7 @@ class FirebaseMovieRepository(
         const val MAX_SUGGESTIONS = 10
     }
 
-    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebaseConstants.Paths.MOVIE_TRADERS)
+    private val movieForTradeRef = FirebaseDatabase.getInstance().getReference(FirebasePaths.MOVIE_TRADERS)
 
     override fun observeMoviesBySaga(sagaId: String): Flow<List<Movie>> =
         sagaRepository.observeSaga(sagaId).map { saga ->

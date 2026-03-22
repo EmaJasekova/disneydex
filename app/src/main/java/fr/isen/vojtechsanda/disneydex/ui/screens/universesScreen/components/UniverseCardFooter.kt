@@ -22,7 +22,7 @@ fun UniverseCardFooter(onExploreClick: () -> Unit) {
         DexButton(
             onClick = { onExploreClick() },
             colors = ButtonDefaults.buttonColors(containerColor = Color.White),
-            modifier = Modifier.fillMaxWidth(0.8f)
+            modifier = Modifier.fillMaxWidth()
         ) { Text("Explore", color = Color.Black) }
     }
 }
