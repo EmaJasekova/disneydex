@@ -1,7 +1,8 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.universesScreen
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -22,12 +23,14 @@ fun UniversesScreen(
 
     AuthedScaffold(
         navController = navController,
-    ) {
+        disableScaffoldScrolling = true
+    ) { innerPadding ->
         DexLoader(universesState) { universes ->
-            Column(
+            LazyColumn(
+                contentPadding = innerPadding,
                 verticalArrangement = Arrangement.spacedBy(24.dp)
             ) {
-                universes.forEach { universe ->
+                items(items = universes, key = { universe -> universe.id }) { universe ->
                     UniverseCard(
                         universe = universe,
                         onClick = { navController.navigate(Route.UniverseOverview(universe.id)) }
