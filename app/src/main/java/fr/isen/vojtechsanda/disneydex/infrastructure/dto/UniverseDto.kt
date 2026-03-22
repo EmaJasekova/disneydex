@@ -16,7 +16,7 @@ data class UniverseDto(
         sagas.map { sagaDto -> sagaDto.toSaga() },
         description,
         imageUrls = imageUrls.ifEmpty {
-            listOf(DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE, DEFAULT_POSTER_IMAGE)
+            listOf(DEFAULT_POSTER_IMAGE)
         }
     )
 }
