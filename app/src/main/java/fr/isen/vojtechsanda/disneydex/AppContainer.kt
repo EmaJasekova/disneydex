@@ -6,6 +6,7 @@ import fr.isen.vojtechsanda.disneydex.domain.repository.UniverseRepository
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.GetCurrentUserUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LoginUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.LogoutUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.ObserveCurrentUserUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.RegisterUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieTradersUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieUseCase
@@ -45,6 +46,10 @@ object AppContainer {
 
     val getCurrentUserUseCase by lazy {
         GetCurrentUserUseCase(authRepository, userRepository)
+    }
+
+    val observeCurrentUserUseCase by lazy {
+        ObserveCurrentUserUseCase(userRepository)
     }
 
     val addMovieToListUseCase by lazy {
