@@ -48,6 +48,7 @@ class ProfileViewModel : ViewModel() {
     fun addToOwned(movie: Movie) {
         viewModelScope.launch {
             AppContainer.addMovieToListUseCase(movie.id, movieList = MovieListType.OWNED)
+                .onSuccess { SnackbarController.showSnackbar("Movie added to collection") }
                 .onFailure { error ->
                     SnackbarController.showSnackbar("Error: ${error.message}")
                 }
