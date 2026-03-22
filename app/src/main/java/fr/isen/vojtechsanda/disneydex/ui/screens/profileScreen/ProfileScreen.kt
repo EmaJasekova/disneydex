@@ -22,10 +22,10 @@ import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexLoader
 import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
-import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.CollectionTitle
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.ProfileInfo
+import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.moviesAutocomplete.MoviesAutocomplete
 import java.time.LocalDate
 
 @Composable
@@ -102,9 +102,10 @@ fun ProfileScreen(navController: NavHostController, viewModel: ProfileViewModel 
                     item { Spacer(Modifier.height(20.dp)) }
 
                     item {
-                        DexAutocomplete(
+                        MoviesAutocomplete(
                             label = "Add Movie to Collection",
                             placeholder = "Search by title...",
+                            onSelected = { movie -> viewModel.addToOwned(movie) }
                         )
                     }
 

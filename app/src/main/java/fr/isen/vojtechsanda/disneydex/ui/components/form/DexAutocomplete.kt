@@ -17,38 +17,32 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DexAutocomplete(
+fun <T> DexAutocomplete(
     placeholder: String? = null,
     label: String? = null,
+    options: List<T>,
+    getTitle: (T) -> String,
+    onSelected: (T) -> Unit,
+    onQueryChange: (String) -> Unit,
+    query: String,
 ) {
-    var query by remember { mutableStateOf("") }
+    val focusManager = LocalFocusManager.current
+
     var expanded by remember { mutableStateOf(false) }
 
-    val mockMovies = listOf(
-        "Thor: Love and Thunder",
-        "Iron Man",
-        "Black Panther",
-        "Spider-Man: No Way Home",
-        "Avengers: Endgame",
-        "Doctor Strange",
-        "Captain America",
-        "Guardians of the Galaxy"
-    )
-
-    val filtered = mockMovies.filter { it.contains(query, ignoreCase = true) }
-
     ExposedDropdownMenuBox(
-        expanded = expanded && filtered.isNotEmpty(),
+        expanded = expanded && options.isNotEmpty(),
         onExpandedChange = { expanded = it }
     ) {
         DexOutlinedTextField(
             value = query,
             onValueChange = {
-                query = it
+                onQueryChange(it)
                 expanded = true
             },
             modifier = Modifier
@@ -66,15 +60,18 @@ fun DexAutocomplete(
         )
 
         ExposedDropdownMenu(
-            expanded = expanded && filtered.isNotEmpty(),
+            expanded = expanded && options.isNotEmpty(),
             onDismissRequest = { expanded = false }
         ) {
-            filtered.forEach { title ->
+            options.forEach { option ->
                 DropdownMenuItem(
-                    text = { Text(title) },
+                    text = { Text(getTitle(option)) },
                     onClick = {
-                        query = title
+                        onQueryChange("")
                         expanded = false
+                        onSelected(option)
+
+                        focusManager.clearFocus()
                     },
                     contentPadding = ExposedDropdownMenuDefaults.ItemContentPadding
                 )
