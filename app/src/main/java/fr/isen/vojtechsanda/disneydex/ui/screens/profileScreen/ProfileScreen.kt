@@ -1,12 +1,11 @@
 package fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -75,32 +74,48 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
 
     AuthedScaffold(
         navController = navController,
-        content = { innerPadding ->
-            Column(Modifier.padding(innerPadding)) {
-                ProfileInfo(user)
+        disableScaffoldScrolling = true
+    ) { innerPadding ->
+        LazyColumn(contentPadding = innerPadding) {
+            item { ProfileInfo(user) }
 
+            item {
                 Spacer(
                     Modifier
                         .height(1.dp)
                         .background(Color.Gray)
                         .fillMaxWidth()
                 )
+            }
 
-                Spacer(Modifier.height(28.dp))
+            item { Spacer(Modifier.height(28.dp)) }
 
-                Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-                    CollectionTitle()
-                    DexAutocomplete(
-                        label = "Add Movie to Collection",
-                        placeholder = "Search by title...",
-                    )
-                    movies.forEach { movie ->
-                        MovieCard(
-                            movie = movie,
-                            onDelete = { movies = movies.filter { it.id != movie.id } })
-                    }
-                }
+            item { CollectionTitle() }
+
+            item { Spacer(Modifier.height(20.dp)) }
+
+            item {
+                DexAutocomplete(
+                    label = "Add Movie to Collection",
+                    placeholder = "Search by title...",
+                )
+            }
+
+            item { Spacer(Modifier.height(20.dp)) }
+
+            itemsIndexed(
+                items = movies,
+                key = { _, movie -> movie.id }
+            ) { index, movie ->
+                MovieCard(
+                    movie = movie,
+                    onDelete = { }
+                )
+
+                if (index < movies.size - 1)
+                    Spacer(Modifier.height(20.dp))
+
             }
         }
-    )
+    }
 }
