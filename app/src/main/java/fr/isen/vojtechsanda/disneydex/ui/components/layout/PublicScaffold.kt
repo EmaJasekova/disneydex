@@ -1,8 +1,8 @@
 package fr.isen.vojtechsanda.disneydex.ui.components.layout
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Scaffold
@@ -18,8 +18,9 @@ import fr.isen.vojtechsanda.disneydex.ui.theme.AppBackgroundColor
 
 @Composable
 fun PublicScaffold(
+    disableScaffoldScrolling: Boolean = false,
     hero: @Composable () -> Unit = {},
-    content: @Composable () -> Unit,
+    content: @Composable (innerPadding: PaddingValues) -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -35,26 +36,24 @@ fun PublicScaffold(
         modifier = Modifier.fillMaxSize()
     ) { innerPadding ->
         val scrollState = rememberScrollState()
+        val scrollingModifier =
+            if (disableScaffoldScrolling) Modifier else Modifier.verticalScroll(scrollState)
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(scrollState)
+                .then(scrollingModifier)
         ) {
             hero()
 
-            Column(
-                Modifier
-                    .fillMaxSize()
-                    .padding(
-                        top = 0.dp,
-                        bottom = innerPadding.calculateBottomPadding(),
-                        start = 24.dp,
-                        end = 24.dp,
-                    )
-            ) {
-                content()
-            }
+            content(
+                PaddingValues(
+                    top = 0.dp,
+                    bottom = innerPadding.calculateBottomPadding(),
+                    start = 24.dp,
+                    end = 24.dp,
+                )
+            )
         }
     }
 }

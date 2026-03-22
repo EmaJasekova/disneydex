@@ -1,6 +1,7 @@
 package fr.isen.vojtechsanda.disneydex.ui.components.layout
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
@@ -37,8 +38,9 @@ val bottomNavigationItems = listOf(
 @Composable
 fun AuthedScaffold(
     navController: NavHostController,
+    disableScaffoldScrolling: Boolean = false,
     hero: @Composable () -> Unit = {},
-    content: @Composable () -> Unit,
+    content: @Composable (innerPadding: PaddingValues) -> Unit,
 ) {
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -61,22 +63,18 @@ fun AuthedScaffold(
         containerColor = AppBackgroundColor,
     ) { innerPadding ->
         val scrollState = rememberScrollState()
+        val scrollingModifier =
+            if (disableScaffoldScrolling) Modifier else Modifier.verticalScroll(scrollState)
 
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-                .verticalScroll(scrollState)
+                .then(scrollingModifier)
         ) {
             hero()
 
-            Column(
-                Modifier
-                    .fillMaxSize()
-                    .padding(16.dp)
-            ) {
-                content()
-            }
+            content(PaddingValues(16.dp))
         }
     }
 }

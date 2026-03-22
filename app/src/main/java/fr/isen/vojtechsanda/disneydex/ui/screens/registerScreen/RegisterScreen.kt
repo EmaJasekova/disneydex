@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -24,7 +25,8 @@ import fr.isen.vojtechsanda.disneydex.ui.screens.registerScreen.components.Regis
 fun RegisterScreen(navController: NavHostController) {
     PublicScaffold(
         hero = { Hero(imageRes = R.drawable.heroimagebackground) { AuthenticationHeroContent() } },
-        content = {
+    ) { innerPadding ->
+        Column(Modifier.padding(innerPadding)) {
             Column(Modifier.fillMaxSize()) {
                 AuthenticationBody {
                     AuthenticationTitle(
@@ -43,5 +45,6 @@ fun RegisterScreen(navController: NavHostController) {
                     }
                 }
             }
-        })
+        }
+    }
 }
