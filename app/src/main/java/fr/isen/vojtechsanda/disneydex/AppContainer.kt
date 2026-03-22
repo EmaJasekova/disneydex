@@ -10,6 +10,7 @@ import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.ObserveCurrentUserUseC
 import fr.isen.vojtechsanda.disneydex.domain.usecase.auth.RegisterUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieTradersUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMovieUseCase
+import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.ObserveMoviesUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movie.SearchMovieSuggestionsUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.AddMovieToListUseCase
 import fr.isen.vojtechsanda.disneydex.domain.usecase.movielist.ObserveMovieListUseCase
@@ -86,6 +87,10 @@ object AppContainer {
 
     val observeMovieUseCase: ObserveMovieUseCase by lazy {
         ObserveMovieUseCase(movieRepository)
+    }
+    
+    val observeMoviesUseCase: ObserveMoviesUseCase by lazy {
+        ObserveMoviesUseCase(movieRepository)
     }
 
     val observeMovieTradersUseCase: ObserveMovieTradersUseCase by lazy {
