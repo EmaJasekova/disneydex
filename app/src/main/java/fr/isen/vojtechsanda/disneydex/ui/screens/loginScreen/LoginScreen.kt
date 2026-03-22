@@ -3,6 +3,7 @@ package fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -28,31 +29,30 @@ fun LoginScreen(navController: NavHostController) {
                 AuthenticationHeroContent()
             }
         },
-        content = {
-            Column {
-                AuthenticationBody {
-                    AuthenticationTitle(
-                        title = "Welcome back!",
-                        subtitle = "Continue your journey in the Multiverse!"
-                    )
+    ) { innerPadding ->
+        Column(Modifier.padding(innerPadding)) {
+            AuthenticationBody {
+                AuthenticationTitle(
+                    title = "Welcome back!",
+                    subtitle = "Continue your journey in the Multiverse!"
+                )
 
-                    LoginForm(
-                        onLogin = {
-                            navController.navigate(Route.Universes) {
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    inclusive = true
-                                }
+                LoginForm(
+                    onLogin = {
+                        navController.navigate(Route.Universes) {
+                            popUpTo(navController.graph.findStartDestination().id) {
+                                inclusive = true
                             }
                         }
-                    )
-
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    TextButton(onClick = { navController.navigate(Route.Register) }) {
-                        Text("I don't have any account. Register.", color = Color.LightGray)
                     }
+                )
+
+                Spacer(modifier = Modifier.height(8.dp))
+
+                TextButton(onClick = { navController.navigate(Route.Register) }) {
+                    Text("I don't have any account. Register.", color = Color.LightGray)
                 }
             }
         }
-    )
+    }
 }

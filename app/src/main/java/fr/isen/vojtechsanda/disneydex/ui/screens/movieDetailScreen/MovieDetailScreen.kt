@@ -36,16 +36,18 @@ fun MovieDetailScreen(
                 }
             }
         },
-    ) {
-        DexLoader(movieState) { movie ->
-            Column(Modifier.padding(top = 12.dp)) {
-                CollectionStatusCard()
+    ) { innerPadding ->
+        Column(Modifier.padding(innerPadding)) {
+            DexLoader(movieState) { movie ->
+                Column(Modifier.padding(top = 12.dp)) {
+                    CollectionStatusCard()
 
-                Spacer(Modifier.padding(vertical = 16.dp))
+                    Spacer(Modifier.padding(vertical = 16.dp))
 
-                CommunityCard(movie)
+                    CommunityCard(movie)
+                }
+
             }
-
         }
     }
 }
