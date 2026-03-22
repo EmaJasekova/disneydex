@@ -18,6 +18,8 @@ interface UserRepository {
 
     fun observeUsers(uids: List<String>): Flow<Result<List<User?>>>
 
+    fun observeCurrentUser(): Flow<Result<User?>>
+
     suspend fun saveUser(user: User): Result<Unit>
 
     suspend fun addMovieToList(movieId: String, list: MovieListType): Result<Unit>

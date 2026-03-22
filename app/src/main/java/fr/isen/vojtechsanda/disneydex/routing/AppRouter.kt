@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.toRoute
 import fr.isen.vojtechsanda.disneydex.ui.screens.loginScreen.LoginScreen
 import fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.MovieDetailScreen
 import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.ProfileScreen
@@ -40,9 +39,8 @@ fun AppRouter() {
             MovieDetailScreen(navController)
         }
 
-        composable<Route.Profile> { backStackEntry ->
-            val args = backStackEntry.toRoute<Route.Profile>()
-            ProfileScreen(navController, userId = args.userId)
+        composable<Route.Profile> {
+            ProfileScreen(navController)
         }
     }
 }

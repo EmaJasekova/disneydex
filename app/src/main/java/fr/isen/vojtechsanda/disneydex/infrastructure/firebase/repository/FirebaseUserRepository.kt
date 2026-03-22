@@ -51,6 +51,11 @@ class FirebaseUserRepository : UserRepository {
         awaitClose { ref.removeEventListener(listener) }
     }
 
+    override fun observeCurrentUser(): Flow<Result<User?>> {
+        val uid = requireAuthenticatedUid()
+        return observeUser(uid)
+    }
+
     private fun parseUserFromSnapshot(snapshot: DataSnapshot, uid: String): User? {
         if (!snapshot.exists()) return null
 
