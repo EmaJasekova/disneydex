@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -74,28 +75,30 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
 
     AuthedScaffold(
         navController = navController,
-        content = {
-            ProfileInfo(user)
+        content = { innerPadding ->
+            Column(Modifier.padding(innerPadding)) {
+                ProfileInfo(user)
 
-            Spacer(
-                Modifier
-                    .height(1.dp)
-                    .background(Color.Gray)
-                    .fillMaxWidth()
-            )
-
-            Spacer(Modifier.height(28.dp))
-
-            Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-                CollectionTitle()
-                DexAutocomplete(
-                    label = "Add Movie to Collection",
-                    placeholder = "Search by title...",
+                Spacer(
+                    Modifier
+                        .height(1.dp)
+                        .background(Color.Gray)
+                        .fillMaxWidth()
                 )
-                movies.forEach { movie ->
-                    MovieCard(
-                        movie = movie,
-                        onDelete = { movies = movies.filter { it.id != movie.id } })
+
+                Spacer(Modifier.height(28.dp))
+
+                Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+                    CollectionTitle()
+                    DexAutocomplete(
+                        label = "Add Movie to Collection",
+                        placeholder = "Search by title...",
+                    )
+                    movies.forEach { movie ->
+                        MovieCard(
+                            movie = movie,
+                            onDelete = { movies = movies.filter { it.id != movie.id } })
+                    }
                 }
             }
         }
