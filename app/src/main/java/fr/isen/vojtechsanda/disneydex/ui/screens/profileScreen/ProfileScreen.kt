@@ -6,17 +6,21 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
-import fr.isen.vojtechsanda.disneydex.domain.model.User
+import fr.isen.vojtechsanda.disneydex.ui.components.common.DexLoader
 import fr.isen.vojtechsanda.disneydex.ui.components.common.MovieCard
 import fr.isen.vojtechsanda.disneydex.ui.components.form.DexAutocomplete
 import fr.isen.vojtechsanda.disneydex.ui.components.layout.AuthedScaffold
@@ -25,7 +29,7 @@ import fr.isen.vojtechsanda.disneydex.ui.screens.profileScreen.components.Profil
 import java.time.LocalDate
 
 @Composable
-fun ProfileScreen(navController: NavHostController, userId: String) {
+fun ProfileScreen(navController: NavHostController, viewModel: ProfileViewModel = viewModel()) {
     fun mockYear(year: Int) = LocalDate.of(year, 1, 1)
     var movies by remember {
         mutableStateOf(
@@ -70,51 +74,68 @@ fun ProfileScreen(navController: NavHostController, userId: String) {
         )
     }
 
-    val user = User(uid = userId, username = "Alex Mercer", email = "alex.mercer@example.com")
+    val ownedMoviesState by viewModel.ownedMovies.collectAsState()
+    val currentUserState by viewModel.currentUser.collectAsState()
 
     AuthedScaffold(
         navController = navController,
         disableScaffoldScrolling = true
     ) { innerPadding ->
-        LazyColumn(contentPadding = innerPadding) {
-            item { ProfileInfo(user) }
+        DexLoader(ownedMoviesState) { ownedMovies ->
+            DexLoader(currentUserState) { currentUser ->
+                LazyColumn(contentPadding = innerPadding) {
+                    item { ProfileInfo(currentUser) }
 
-            item {
-                Spacer(
-                    Modifier
-                        .height(1.dp)
-                        .background(Color.Gray)
-                        .fillMaxWidth()
-                )
-            }
+                    item {
+                        Spacer(
+                            Modifier
+                                .height(1.dp)
+                                .background(Color.Gray)
+                                .fillMaxWidth()
+                        )
+                    }
 
-            item { Spacer(Modifier.height(28.dp)) }
+                    item { Spacer(Modifier.height(28.dp)) }
 
-            item { CollectionTitle() }
+                    item { CollectionTitle() }
 
-            item { Spacer(Modifier.height(20.dp)) }
+                    item { Spacer(Modifier.height(20.dp)) }
 
-            item {
-                DexAutocomplete(
-                    label = "Add Movie to Collection",
-                    placeholder = "Search by title...",
-                )
-            }
+                    item {
+                        DexAutocomplete(
+                            label = "Add Movie to Collection",
+                            placeholder = "Search by title...",
+                        )
+                    }
 
-            item { Spacer(Modifier.height(20.dp)) }
+                    item { Spacer(Modifier.height(20.dp)) }
 
-            itemsIndexed(
-                items = movies,
-                key = { _, movie -> movie.id }
-            ) { index, movie ->
-                MovieCard(
-                    movie = movie,
-                    onDelete = { }
-                )
+                    itemsIndexed(
+                        items = ownedMovies,
+                        key = { _, movie -> movie.id }
+                    ) { index, movie ->
+                        MovieCard(
+                            movie = movie,
+                            onDelete = { viewModel.removeFromOwned(movie) }
+                        )
 
-                if (index < movies.size - 1)
-                    Spacer(Modifier.height(20.dp))
+                        if (index < ownedMovies.size - 1)
+                            Spacer(Modifier.height(20.dp))
+                    }
 
+                    if (ownedMovies.isEmpty()) {
+                        item { Spacer(Modifier.height(20.dp)) }
+
+                        item {
+                            Text(
+                                "There are no movies in your collection",
+                                color = Color.LightGray,
+                                modifier = Modifier.fillMaxWidth(),
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    }
+                }
             }
         }
     }
