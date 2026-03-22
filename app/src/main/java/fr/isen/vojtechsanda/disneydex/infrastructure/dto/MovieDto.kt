@@ -21,7 +21,7 @@ data class MovieDto(
     fun toMovie(): Movie {
         val parsedDate = runCatching { LocalDate.parse(releaseDate, DB_DATE_FORMAT) }.getOrElse { e ->
             Log.w(LOG_TAG, "Invalid release date '$releaseDate' for movie '$id', using fallback", e)
-            LocalDate.EPOCH
+            LocalDate.of(1970, 1, 1)
         }
         return Movie(
             id,
