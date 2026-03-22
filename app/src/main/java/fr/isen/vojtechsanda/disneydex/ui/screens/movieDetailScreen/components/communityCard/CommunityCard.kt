@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import fr.isen.vojtechsanda.disneydex.domain.model.Movie
+import fr.isen.vojtechsanda.disneydex.extensions.list.sliceSafe
 import fr.isen.vojtechsanda.disneydex.ui.components.common.DexLoader
 import fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.components.DetailContainer
 
@@ -22,14 +23,24 @@ fun CommunityCard(movie: Movie, viewModel: CommunityCardViewModel = viewModel())
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             DexLoader(movieTradersState) { traders ->
-                if (traders.isEmpty()) {
+                val visibleTraders =
+                    traders.sliceSafe(
+                        viewModel.currentOffset,
+                        viewModel.currentOffset + viewModel.pageSize
+                    )
+
+                if (visibleTraders.isEmpty()) {
                     Text(
                         text = "There are no copies of this movie available.",
                         color = Color.LightGray
                     )
                 }
 
-                traders.map { trader -> CommunityUserCard(trader, movie) }
+                visibleTraders.map { trader -> CommunityUserCard(trader, movie) }
+
+                if (viewModel.canGoBack() || viewModel.canGoNext(traders.size)) {
+                    CommunityCardFooter(totalOffers = traders.size)
+                }
             }
         }
     }
