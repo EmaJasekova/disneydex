@@ -12,9 +12,7 @@ import fr.isen.vojtechsanda.disneydex.ui.screens.movieDetailScreen.components.De
 
 @Composable
 fun CollectionStatusCard(viewModel: CollectionStatusCardViewModel = viewModel()) {
-
     val collectionStatusesState by viewModel.collectionLists.collectAsState()
-
 
     DetailContainer(title = "Collection status") {
         DexLoader(collectionStatusesState) { collectionStatuses ->
